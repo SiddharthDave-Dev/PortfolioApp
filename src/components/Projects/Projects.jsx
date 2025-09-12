@@ -111,13 +111,29 @@ const Projects = () => {
       variants={containerVariants}
     >
       <div className="projects-container">
-        {/* Header */}
+        {/* Header with Visibility Fixes */}
         <motion.div className="projects-header" variants={itemVariants}>
-          <motion.h2 className="projects-title">
-            {portfolioContent.projects.title}
+          <motion.h2 
+            className="projects-title"
+            style={{ 
+              display: 'block',
+              visibility: 'visible',
+              opacity: 1,
+              color: '#ffffff'
+            }}
+          >
+            {portfolioContent.projects?.title || "My Projects"}
           </motion.h2>
-          <motion.p className="projects-subtitle">
-            {portfolioContent.projects.subtitle}
+          <motion.p 
+            className="projects-subtitle"
+            style={{ 
+              display: 'block',
+              visibility: 'visible',
+              opacity: 1,
+              color: '#b8b8b8'
+            }}
+          >
+            {portfolioContent.projects?.subtitle || "Showcasing my latest work and achievements"}
           </motion.p>
         </motion.div>
 
