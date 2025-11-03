@@ -1,8 +1,8 @@
 .skills {
   padding: 8rem 0;
   position: relative;
-  overflow: hidden;
-  min-height: 100vh;
+  /* overflow: hidden; */
+  /* min-height: 100vh; */
   background: relative;
 }
 

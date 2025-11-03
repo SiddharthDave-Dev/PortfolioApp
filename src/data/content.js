@@ -142,6 +142,17 @@ export const portfolioContent = {
 
         technical: [
             {
+                name: "Working with Tableau",
+                level: 100,
+                levelText: "Advanced",
+                icon: "/images/tableau-icon.png",
+                fallback: "📊",
+                color: "#2F4B7C",
+                colorEnd: "#A05195",
+                description:
+                    "Advanced Tableau developer: builds interactive dashboards, parameter-driven views, and level-of-detail (LOD) calculations; optimizes extracts and data models; integrates with SQL/REST sources; automates publishing and permissions; and applies best practices for performance, UX, and storytelling."
+            },
+            {
                 name: "Swift & iOS",
                 level: 85,
                 levelText: "Advanced",
@@ -184,12 +195,12 @@ export const portfolioContent = {
             {
                 name: "Database Management",
                 level: 75,
-                levelText: "Proficient",
+                levelText: "Beginner–Intermediate",
                 icon: "/images/database-icon.png",
                 fallback: "🗄️",
                 color: "#fa709a",
                 colorEnd: "#fee140",
-                description: "Worked with SQL, Core Data, and Firebase for mobile applications. Skilled in designing and integrating databases."
+                description: "Learning SQL and Worked with Core Data, and Firebase for mobile applications. Skilled in designing and integrating databases."
             },
             {
                 name: "Version Control & Tools",

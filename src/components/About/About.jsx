@@ -154,8 +154,8 @@ const About = () => {
                 >
                   <motion.div 
                     className="highlight-icon-container"
-                    whileHover={{ rotate: 360, scale: 1.2 }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    // whileHover={{ rotate: 360, scale: 1.2 }}
+                    // transition={{ duration: 0.6, ease: "easeInOut" }}
                   >
                     <motion.img
                       src={highlight.icon}

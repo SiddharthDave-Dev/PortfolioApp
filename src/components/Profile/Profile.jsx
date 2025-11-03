@@ -215,7 +215,7 @@ const Profile = () => {
                   "0 5px 20px rgba(102, 126, 234, 0.2)"
                 ]
               }}
-              transition={{ duration: 2, repeat: Infinity }}
+              transition={{ duration: 2, repeat: false }}
             >
               <span>{portfolioContent.profile.resumeText}</span>
               <motion.div 

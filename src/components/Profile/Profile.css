@@ -134,7 +134,7 @@
 .btn-primary {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #ffffff;
-  border: 2px solid transparent;
+  border: 2px solid #667eea;
 }
 
 .btn-primary::before {

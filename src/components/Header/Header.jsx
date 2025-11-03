@@ -22,8 +22,8 @@ const Header = () => {
 
   const headerVariants = {
     hidden: { y: -100, opacity: 0 },
-    visible: { 
-      y: 0, 
+    visible: {
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
@@ -36,8 +36,8 @@ const Header = () => {
 
   const logoVariants = {
     hidden: { scale: 0, rotate: -180 },
-    visible: { 
-      scale: 1, 
+    visible: {
+      scale: 1,
       rotate: 0,
       transition: {
         type: "spring",
@@ -49,8 +49,8 @@ const Header = () => {
 
   const navItemVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
@@ -61,18 +61,18 @@ const Header = () => {
   };
 
   return (
-    <motion.header 
+    <motion.header
       className={`header ${isScrolled ? 'scrolled' : ''}`}
       variants={headerVariants}
       initial="hidden"
       animate="visible"
     >
       <div className="header-container glass-effect">
-        <motion.div 
+        <motion.div
           className="logo"
           onClick={handleLogoClick} // Navigate to home on click
           variants={logoVariants}
-          whileHover={{ 
+          whileHover={{
             scale: 1.1,
             rotate: 360,
             boxShadow: "0 0 30px rgba(102, 126, 234, 0.6)"
@@ -82,20 +82,20 @@ const Header = () => {
           style={{ cursor: 'pointer' }} // Show it's clickable
         >
           <span className="logo-text">{portfolioContent.header.logo}</span>
-          <motion.div 
+          <motion.div
             className="logo-glow"
-            animate={{ 
+            animate={{
               scale: [1, 1.2, 1],
               opacity: [0.5, 1, 0.5]
             }}
-            transition={{ 
+            transition={{
               duration: 2,
               repeat: Infinity,
               ease: "easeInOut"
             }}
           />
         </motion.div>
-        
+
         <nav className="nav">
           {portfolioContent.header.navItems.map((item, index) => (
             <motion.a
@@ -103,17 +103,21 @@ const Header = () => {
               href={`#${item.toLowerCase()}`}
               className="nav-link"
               variants={navItemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.1,
                 y: -2,
                 color: "#667eea",
                 textShadow: "0 0 10px rgba(102, 126, 234, 0.8)"
               }}
               whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              transition={{
+                type: "tween",
+                duration: 0.15,     // Very short duration
+                ease: "easeOut"     // Quick start, smooth finish
+              }}
             >
               <span className="nav-text">{item}</span>
-              <motion.div 
+              <motion.div
                 className="nav-underline"
                 whileHover={{ scaleX: 1 }}
                 initial={{ scaleX: 0 }}
@@ -122,26 +126,26 @@ const Header = () => {
           ))}
         </nav>
 
-        <motion.button 
+        <motion.button
           className="menu-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           animate={isMobileMenuOpen ? "open" : "closed"}
         >
-          <motion.span 
+          <motion.span
             variants={{
               closed: { rotate: 0, y: 0 },
               open: { rotate: 45, y: 6 }
             }}
           />
-          <motion.span 
+          <motion.span
             variants={{
               closed: { opacity: 1 },
               open: { opacity: 0 }
             }}
           />
-          <motion.span 
+          <motion.span
             variants={{
               closed: { rotate: 0, y: 0 },
               open: { rotate: -45, y: -6 }
