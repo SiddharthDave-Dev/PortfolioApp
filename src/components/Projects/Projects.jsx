@@ -417,6 +417,9 @@
 
 // export default Projects;
 
+
+/* eslint-disable no-unused-vars */
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioContent } from '../../data/content';
