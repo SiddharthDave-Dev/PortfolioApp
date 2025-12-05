@@ -47,22 +47,14 @@ export const portfolioContent = {
     about: {
         title: "About Me",
         subtitle: "Discover my journey & passion",
-        description: "I'm a dedicated iOS developer with a passion for creating exceptional user experiences. My journey spans from crafting pixel-perfect mobile interfaces to exploring the fascinating world of Artificial Intelligence, Machine Learning, and Data Science.",
+        description: `
+                    I began my career as an iOS Developer, building user-focused mobile applications and developing strong skills in clean architecture, problem-solving, and structured thinking. Along the way, I discovered a deep interest in data—understanding patterns, uncovering insights, and solving real-world challenges through analytics.
 
+                Today, I am transitioning into Data Analytics and Data Science with growing expertise in Python, SQL, data visualization, and statistical analysis. My goal is to combine my development experience with analytical thinking to help organizations make smarter, data-driven decisions.
+        `,
         education: {
             title: "Education",
             degrees: [
-                {
-                    degree: "Diploma in Information Technology",
-                    university: "LJ Polytechnic",
-                    year: "2019 - 2022",
-                    gpa: "9.03/10.0",
-                    achievements: [
-                        "Graduated with Distinction",
-                        "Completed Final Year Project"
-                    ],
-                    description: "Built a solid foundation in software development, databases, and Android application programming. Gained hands-on experience through coursework and team-based projects."
-                },
                 {
                     degree: "B.E. / B.Tech. in Information Technology",
                     university: "LJ University",
@@ -73,6 +65,17 @@ export const portfolioContent = {
                         "Completed Multiple Academic Projects"
                     ],
                     description: "Specializing in software engineering and programming with exposure to emerging technologies. Focused on developing real-world projects and currently exploring Artificial Intelligence, Machine Learning, and Data Science."
+                },
+                {
+                    degree: "Diploma in Information Technology",
+                    university: "LJ Polytechnic",
+                    year: "2019 - 2022",
+                    gpa: "9.03/10.0",
+                    achievements: [
+                        "Graduated with Distinction",
+                        "Completed Final Year Project"
+                    ],
+                    description: "Built a solid foundation in software development, databases, and Android application programming. Gained hands-on experience through coursework and team-based projects."
                 }
             ]
         },
@@ -81,19 +84,29 @@ export const portfolioContent = {
             {
                 icon: "/images/ios-icon.png",
                 title: "iOS Development",
-                description: "Skilled in Swift, SwiftUI, UIKit, Core Data, and iOS frameworks. Developed multiple iOS applications through academic, professional, and personal projects with a focus on clean architecture and user experience.",
-                skills: ["Swift", "SwiftUI", "UIKit", "Core Data", "Xcode", "Packages"]
+                description:
+                    "Experienced in building high-quality iOS applications using Swift, SwiftUI, UIKit, and Core Data. Developed multiple apps with clean architecture, reusable components, and a strong focus on performance and user experience.",
+                skills: ["Swift", "SwiftUI", "UIKit", "Core Data", "Xcode", "Swift Packages"]
             },
             {
                 icon: "/images/data-science-icon.png",
                 title: "Data Science",
-                description: "Currently learning Python, Machine Learning, TensorFlow, and Statistical Analysis. Building a strong foundation to apply data-driven solutions in future projects.",
-                skills: ["Python", "Data cleaning", "Tableau", "SQL", "Pandas", "Numpy"]
+                description:
+                    "Building a strong foundation in Python, machine learning basics, data cleaning, and exploratory analysis. Applying analytical thinking to derive meaningful insights from raw data.",
+                skills: ["Python", "Data Cleaning", "SQL", "Pandas", "NumPy"]
+            },
+            {
+                icon: "/images/data-viz-icon.png",
+                title: "Data Visualization & Analytics",
+                description:
+                    "Proficient in creating interactive dashboards and analytical reports using Tableau and Matplotlib. Skilled at transforming complex data into clear, actionable insights through visual storytelling and performance-optimized dashboards.",
+                skills: ["Tableau", "Matplotlib", "Seaborn", "Dashboards", "Data Storytelling"]
             },
             {
                 icon: "/images/innovation-icon.png",
                 title: "Innovation",
-                description: "Passionate about creating meaningful solutions through technology. Continuously exploring new tools, frameworks, and ideas to drive innovation.",
+                description:
+                    "Driven by curiosity and focused on solving real-world problems through technology. Continually exploring new tools, frameworks, and ideas to build impactful prototypes and creative solutions.",
                 skills: ["Problem Solving", "Creative Thinking", "Research", "Prototyping"]
             }
         ],
@@ -151,18 +164,29 @@ export const portfolioContent = {
                 color: "#2F4B7C",
                 colorEnd: "#A05195",
                 description:
-                    "Advanced Tableau developer: builds interactive dashboards, parameter-driven views, and level-of-detail (LOD) calculations; optimizes extracts and data models; integrates with SQL/REST sources; automates publishing and permissions; and applies best practices for performance, UX, and storytelling."
+                    "Advanced in Tableau: builds interactive dashboards, creates LOD expressions, performs data modeling, connects to SQL & cloud sources, applies performance optimization, publishes dashboards, and designs visually compelling analytics."
+            },
+            {
+                name: "Data Cleaning",
+                level: 70,
+                levelText: "Intermediate",
+                icon: "/images/data-cleaning-icon.png",
+                fallback: "🧹",
+                color: "#3E5151",
+                colorEnd: "#DECBA4",
+                description:
+                    "Skilled in identifying, correcting, and transforming raw data for analytics. Experienced with handling missing values, duplicates, formatting issues, outliers, and preparing clean datasets using SQL, Pandas, and Tableau."
             },
             {
                 name: "SQL",
-                level: 100,
+                level: 85,
                 levelText: "Advanced",
-                icon: "/images/tableau-icon.png",
-                fallback: "📊",
-                color: "#2F4B7C",
-                colorEnd: "#A05195",
+                icon: "/images/SQL.png",
+                fallback: "🧩",
+                color: "#3A7BD5",
+                colorEnd: "#00D2FF",
                 description:
-                    "Advanced Tableau developer: builds interactive dashboards, parameter-driven views, and level-of-detail (LOD) calculations; optimizes extracts and data models; integrates with SQL/REST sources; automates publishing and permissions; and applies best practices for performance, UX, and storytelling."
+                    "Strong SQL skills: writing complex queries, joins, CTEs, views, stored procedures, data cleaning, aggregation, and using SQL for analytics and dashboard integration."
             },
             {
                 name: "Swift & iOS",
@@ -170,19 +194,21 @@ export const portfolioContent = {
                 levelText: "Advanced",
                 icon: "/images/swift-icon.png",
                 fallback: "📱",
-                color: "#667eea",
-                colorEnd: "#764ba2",
-                description: "Experienced in iOS development with Swift, SwiftUI, UIKit, Core Data, and Swift Package Manager. Built multiple apps through professional and personal projects."
+                color: "#FF6A00",
+                colorEnd: "#EE0979",
+                description:
+                    "Experienced iOS developer skilled in Swift, SwiftUI, UIKit, Core Data, REST APIs, and building production-ready mobile apps with clean architecture and performance optimization."
             },
             {
                 name: "SwiftUI",
-                level: 50,
+                level: 60,
                 levelText: "Intermediate",
                 icon: "/images/swiftui-icon.png",
-                fallback: "🖥️",
-                color: "#43e97b",
-                colorEnd: "#38f9d7",
-                description: "Proficient in building modern, declarative UIs using SwiftUI. Focused on clean, scalable, and responsive app design."
+                fallback: "🧩",
+                color: "#11998E",
+                colorEnd: "#38EF7D",
+                description:
+                    "Intermediate SwiftUI developer: builds scalable, declarative UI components, animations, adaptive layouts, and integrates MVVM patterns."
             },
             {
                 name: "React (Web)",
@@ -190,62 +216,78 @@ export const portfolioContent = {
                 levelText: "Intermediate",
                 icon: "/images/react-icon.png",
                 fallback: "⚛️",
-                color: "#61dafb",
-                colorEnd: "#21a1f1",
-                description: "Hands-on experience with React for building component-based web applications. Familiar with JavaScript ES6+ and modern frontend practices."
+                color: "#1F4037",
+                colorEnd: "#99F2C8",
+                description:
+                    "Experience with React for component-driven web development. Familiar with hooks, state management, reusable UI components, and REST API integration."
             },
             {
-                name: "Python (Learning Data Science)",
+                name: "Python (Data Science)",
                 level: 60,
                 levelText: "Beginner–Intermediate",
                 icon: "/images/python-icon.png",
                 fallback: "🐍",
-                color: "#f093fb",
-                colorEnd: "#f5576c",
-                description: "Learning Python for Data Science and Machine Learning. Exploring NumPy, Pandas, and scikit-learn."
+                color: "#FDB99B",
+                colorEnd: "#CF8BF3",
+                description:
+                    "Learning Python for Data Science: working with NumPy, Pandas, Matplotlib, and basic machine learning concepts using scikit-learn."
             },
             {
                 name: "Database Management",
-                level: 75,
-                levelText: "Beginner–Intermediate",
+                level: 70,
+                levelText: "Intermediate",
                 icon: "/images/database-icon.png",
                 fallback: "🗄️",
-                color: "#fa709a",
-                colorEnd: "#fee140",
-                description: "Learning SQL and Worked with Core Data, and Firebase for mobile applications. Skilled in designing and integrating databases."
+                color: "#4568DC",
+                colorEnd: "#B06AB3",
+                description:
+                    "Experience with Firebase, Core Data, and basic SQL databases. Skilled in designing schemas, managing data flow, and integrating storage with applications."
             },
             {
                 name: "Version Control & Tools",
                 level: 80,
                 levelText: "Proficient",
                 icon: "/images/git-icon.png",
-                fallback: "🔧",
-                color: "#667eea",
-                colorEnd: "#f093fb",
-                description: "Proficient with Git, GitHub, Xcode, and project management tools. Familiar with CI/CD and app deployment."
+                fallback: "🛠️",
+                color: "#FF512F",
+                colorEnd: "#DD2476",
+                description:
+                    "Proficient in Git, GitHub, Xcode, VS Code, Postman, and command-line tools. Familiar with version control best practices and workflow automation."
             }
         ],
 
         tools: [
             {
-                category: "Development",
-                items: ["Xcode", "VS Code", "Juypter" , "Git", "GitHub", "SoureTree", "Terminal", "Postman", "Anaconda"]
+                category: "Programming Languages",
+                items: ["Swift", "Python", "SQL", "HTML", "CSS"]
             },
             {
-                category: "Languages",
-                items: ["Swift", "Python", "SQL", "HTML", "CSS", "SwiftUI", "Data Cleaning"]
+                category: "Frameworks & Libraries",
+                items: ["SwiftUI", "UIKit", "React"]
             },
             {
                 category: "Data Visualization",
                 items: ["Tableau", "Matplotlib", "Seaborn"]
             },
             {
-                category: "Frameworks",
-                items: ["SwiftUI", "UIKit", "React", "TensorFlow", "Core Data", "Firebase", "Realm"]
+                category: "Data Handling & Analysis",
+                items: ["Data Cleaning", "Pandas", "NumPy"]
             },
             {
-                category: "Cloud & Services",
-                items: ["Firebase", "MongoDB", "App Store Connect", "Analytics", "Realm"]
+                category: "Tools & Platforms",
+                items: ["Xcode", "VS Code", "Jupyter", " Git", "GitHub", "SourceTree", "Terminal", "Postman", "Anaconda"]
+            },
+            {
+                category: "Cloud & Backend Services",
+                items: ["Firebase", "MondoDB", "Realm", "App Store Connect", "Analytics"]
+            },
+            {
+                category: "Database Management",
+                items: ["SQL", "MongoDB", "Realm", "Core Data", "Firebase", "Swift Data"]
+            },
+            {
+                category: "Soft Skills",
+                items: ["Teamwork", "Communication", "Problem-Solving", "Adaptability", "Time Management", "Leadership", "Creativity"]
             }
         ],
 
@@ -253,32 +295,56 @@ export const portfolioContent = {
             {
                 name: "Problem Solving",
                 icon: "🧩",
-                description: "Analytical thinking and creative problem-solving approach to complex technical challenges."
+                description:
+                    "Strong analytical thinking with the ability to break down complex challenges and find efficient, creative solutions."
             },
             {
                 name: "Team Leadership",
                 icon: "👥",
-                description: "Experience leading development teams and mentoring junior developers."
+                description:
+                    "Experience guiding teams, providing technical direction, and mentoring peers to achieve high-quality outcomes."
+            },
+            {
+                name: "Teamwork",
+                icon: "🤗",
+                description:
+                    "Works effectively with diverse teams, contributes proactively, supports others, and helps maintain a positive and collaborative work environment."
             },
             {
                 name: "Communication",
                 icon: "💬",
-                description: "Clear technical communication with stakeholders and cross-functional teams."
+                description:
+                    "Clear and effective communicator, skilled at explaining technical concepts to teammates, stakeholders, and non-technical audiences."
             },
             {
                 name: "Adaptability",
                 icon: "🔄",
-                description: "Quick learner who adapts to new technologies and changing project requirements."
+                description:
+                    "Quick learner who adapts easily to new technologies, tools, and evolving project needs."
             },
             {
                 name: "Time Management",
                 icon: "⏰",
-                description: "Efficient project management and ability to deliver high-quality work on schedule."
+                description:
+                    "Highly organized with the ability to prioritize tasks, manage deadlines, and consistently deliver work on time."
             },
             {
                 name: "Innovation",
                 icon: "💡",
-                description: "Always exploring new technologies and innovative solutions to improve user experience."
+                description:
+                    "Passionate about exploring new ideas, experimenting with technologies, and building innovative, user-focused solutions."
+            },
+            {
+                name: "Collaboration",
+                icon: "🤝",
+                description:
+                    "Works cooperatively in group environments, shares knowledge, and ensures smooth coordination across roles and responsibilities."
+            },
+            {
+                name: "Attention to Detail",
+                icon: "🔍",
+                description:
+                    "Detail-oriented approach ensuring accuracy in coding, data analysis, debugging, and UI/UX quality."
             }
         ],
 
