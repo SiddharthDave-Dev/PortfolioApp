@@ -21,7 +21,7 @@ function App() {
         <Profile />
         <About />
         <Skills /> 
-        {/* <Projects /> */}
+        <Projects />
          <Contact />
          <Footer />
       </motion.main>

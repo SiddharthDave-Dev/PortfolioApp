@@ -1083,3 +1083,45 @@
   .category-section { margin-bottom: 2rem; }
   .subcategory-section { margin-bottom: 1.5rem; }
 }
+
+
+
+/* Coming Soon CSS */
+
+.coming-soon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.coming-soon-box {
+  padding: 40px;                /* Increase padding for perfect circle */
+  width: 180px;                 /* Fixed width for circle */
+  height: 180px;                /* Fixed height for circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;           /* Circle shape */
+  
+  font-size: 2rem;
+  text-align: center;
+
+  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  
+  cursor: default;
+}
+
+/* Hover glow effect */
+.coming-soon-wrapper:hover .coming-soon-box {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+  transform: scale(1.05);
+}

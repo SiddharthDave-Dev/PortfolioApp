@@ -2,8 +2,8 @@ export const portfolioContent = {
     // Header Content
     header: {
         name: "Siddharth Dave",
-        // navItems: ["Home", "About", "Skills", "Projects", "Contact"],
-        navItems: ["Home", "About", "Skills", "Contact"],
+        navItems: ["Home", "About", "Skills", "Projects", "Contact"],
+        // navItems: ["Home", "About", "Skills", "Contact"],
         logo: "SD"
     },
 
