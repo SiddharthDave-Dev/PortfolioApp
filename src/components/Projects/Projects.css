@@ -1052,3 +1052,34 @@
     color: #b8b8b8 !important;
   }
 }
+
+/* Category styling */
+.category-section {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 5;
+}
+.category-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #f093fb;
+  margin: 0 0 2rem 0;
+  text-shadow: 0 2px 20px rgba(240, 147, 251, 0.12);
+}
+.subcategory-section {
+  margin-bottom: 3rem;
+}
+.subcategory-title {
+  font-size: 1.4rem;
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .category-title { font-size: 1.4rem; }
+  .subcategory-title { font-size: 1rem; }
+  .category-section { margin-bottom: 2rem; }
+  .subcategory-section { margin-bottom: 1.5rem; }
+}
