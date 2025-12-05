@@ -39,6 +39,11 @@ export const portfolioContent = {
                 icon: "/images/twitter.png",
                 name: "X (Twitter)",
                 url: "https://x.com/Siddharth012304"
+            },
+            {
+                icon: "/images/tableau-icon.png",
+                name: "Tableau Public",
+                url: "https://public.tableau.com/app/profile/siddharth.dave2404/vizzes"
             }
         ]
     },
@@ -1358,6 +1363,10 @@ export const portfolioContent = {
             {
                 icon: "/images/twitter.png",
                 url: "https://x.com/Siddharth012304"
+            },
+            {
+                icon: "/images/tableau-icon.png",
+                url: "https://public.tableau.com/app/profile/siddharth.dave2404/vizzes"
             }
         ]
     }
