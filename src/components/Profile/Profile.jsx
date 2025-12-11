@@ -35,7 +35,7 @@ const Profile = () => {
   // Function to handle resume download
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = portfolioContent.profile.resumeUrl || '/resume/SiddharthDaveResume.pdf';
+    link.href = portfolioContent.profile.resumeUrl || '/resume/Siddharth_Resume.pdf';
     link.download = portfolioContent.profile.resumeFileName || 'Siddharth_Dave_Resume.pdf';
     document.body.appendChild(link);
     link.click();

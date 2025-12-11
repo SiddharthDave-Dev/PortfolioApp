@@ -85,6 +85,32 @@ export const portfolioContent = {
             ]
         },
 
+        // NEW: Experience Section
+        experience: {
+            title: "Experience",
+            jobs: [
+                {
+                    role: "iOS Developer",
+                    company: "DotPixel Ventures",
+                    period: "Aug 2023 – Aug 2025",
+                    location: "Ahmedabad, India",
+                    description: "Developed scalable, high-performance native iOS applications with emphasis on clean architecture, modular code, and smooth user experience.",
+                    responsibilities: [
+                        "Developed native iOS applications using Swift, focusing on performance and clean architectural patterns.",
+                        "Integrated RESTful APIs to ensure reliable and smooth backend communication.",
+                        "Built user-friendly interfaces using UIKit and basic SwiftUI components.",
+                        "Performed debugging, profiling, and testing to enhance app stability and performance.",
+                        "Managed App Store submissions, provisioning profiles, and application updates."
+                    ],
+                    tech: ["Swift", "UIKit", "SwiftUI", "REST APIs", "Xcode", "App Store Connect"],
+                    achievements: [
+                        "Delivered multiple production-ready app features within deadlines",
+                        "Improved app performance and reduced crash rates through optimization"
+                    ]
+                }
+            ]
+        },
+
         highlights: [
             {
                 icon: "/images/ios-icon.png",

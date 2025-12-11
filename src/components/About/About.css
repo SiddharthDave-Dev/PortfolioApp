@@ -364,6 +364,13 @@
   justify-content: center;
 }
 
+.emoji-colored {
+  -webkit-text-fill-color: initial !important;
+  color: initial !important;
+  background: none !important;
+  filter: none !important;
+}
+
 .timeline-icon {
   font-size: 1rem;
 }
@@ -746,4 +753,113 @@
   .about-description {
     font-size: 1.5rem;
   }
+}
+
+
+/* ---------------------- EXPERIENCE SECTION (MATCH EDUCATION) ---------------------- */
+
+.experience-section {
+  margin: 4rem 0;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.experience-card {
+  padding: 3rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 5px solid #667eea;           /* SAME AS EDUCATION */
+  background: rgba(255,255,255,0.05);       /* glass effect match */
+  backdrop-filter: blur(12px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experience-role {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.experience-company {
+  font-size: 1.2rem;
+  color: #f093fb;
+  font-weight: 600;
+}
+
+.experience-period {
+  font-size: 1rem;
+  color: #667eea;
+  font-weight: 600;
+  background: rgba(102,126,234,0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(102,126,234,0.2);
+}
+
+/* ⭐ Description DIFFERENT from Education (as you requested) */
+.experience-description {
+  color: #c8c8c8;
+  line-height: 1.7;
+  margin: 1rem 0 1.5rem;
+  font-size: 1.05rem;
+  font-style: italic;       /* 🔥 DIFFERENCE HERE */
+  opacity: 0.95;
+}
+
+/* Responsibilities (bullet points) */
+.responsibilities-list {
+  margin-left: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #d8d8d8;
+  line-height: 1.6;
+}
+
+.responsibility-item {
+  margin-bottom: 0.5rem;
+}
+
+/* Skills / Tech Tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-tag {
+  background: rgba(102,126,234,0.1);
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(102,126,234,0.2);
+}
+
+/* Achievements */
+.job-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.job-achievements .achievement-tag {
+  background: rgba(240,147,251,0.1);
+  color: #f093fb;
+  border: 1px solid rgba(240,147,251,0.2);
 }
