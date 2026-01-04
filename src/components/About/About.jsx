@@ -1,5 +1,6 @@
 // About.jsx
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { motion } from 'framer-motion';
 import { portfolioContent } from '../../data/content';
 import './About.css';
@@ -68,8 +69,66 @@ const About = () => {
     }
   };
 
+  const getCertificateIcon = (issuer) => {
+    switch (issuer.toLowerCase()) {
+      case 'google':
+        return '/images/google.png';
+      case 'ibm':
+        return '/images/ibm.png';
+      case 'microsoft':
+        return '/images/microsoft.png';
+      case 'aws':
+        return '/images/aws.png';
+      case 'coursera':
+        return '/images/coursera.png';
+      case 'udemy':
+        return '/images/udemy.png';
+      case 'linkedin':
+        return '/images/linkedin.png';
+      case 'meta':
+        return '/images/meta.png';
+      case 'learnquest':
+        return '/images/learnquest.png';
+      case 'johns hopkins university':
+        return '/images/johns-hopkins-university.png';
+      case 'rice university':
+        return '/images/rice-university.png';
+      case 'ec-council':
+        return '/images/ec-council.png';
+      default:
+        return '/images/coursera.png';
+    }
+  };
+
+  const getCertificateColor = (issuer) => {
+    switch (issuer.toLowerCase()) {
+      case 'google':
+        return '#4285F4';
+      case 'ibm':
+        return '#054ADA';
+      case 'microsoft':
+        return '#00A4EF';
+      case 'aws':
+        return '#FF9900';
+      case 'coursera':
+        return '#0056D2';
+      case 'udemy':
+        return '#A435F0';
+      case 'linkedin':
+        return '#0A66C2';
+      case 'meta':
+        return '#0081FB';
+      default:
+        return '#667eea';
+    }
+  };
+
   // defensive access
   const about = portfolioContent?.about || {};
+
+  const handleCertificateClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="about" className="about">
@@ -98,7 +157,7 @@ const About = () => {
           variants={containerVariants}
         >
           <motion.p className="about-description" variants={itemVariants}>
-            {about.description}
+            <ReactMarkdown>{about.description}</ReactMarkdown>
           </motion.p>
 
           {/* Education */}
@@ -200,55 +259,126 @@ const About = () => {
             </motion.div>
           )}
 
+          {/* Certifications */}
+          {/* Professional Certifications Section */}
+          {about.certifications && (
+            <motion.div className="certifications-section" variants={itemVariants}>
+              <motion.h3 className="section-title" variants={itemVariants}>
+                <span className="emoji-colored">🏅</span> Certifications
+              </motion.h3>
+              <div className="cert-modern-grid">
+                {about.certifications.map((cert, idx) => (
+                  <motion.div
+                    key={idx}
+                    // Dynamically add 'featured' class if cert.featured is true
+                    className={`cert-modern-card ${cert.featured ? 'featured-cert' : ''}`}
+                    variants={cardVariants}
+                    whileHover={{ y: -10 }}
+                    onClick={() => cert.certificateUrl && handleCertificateClick(cert.certificateUrl)}
+                  >
+                    <div className="cert-shine"></div>
+
+                    {/* Top Badge for highlighted certificates */}
+                    {cert.featured && <div className="featured-badge">TOP CREDENTIAL</div>}
+
+                    <div className="cert-header">
+                      <div
+                        className="cert-logo-box"
+                        style={{
+                          borderColor: getCertificateColor(cert.issuer),
+                          background: `${getCertificateColor(cert.issuer)}15`,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          overflow: 'hidden' // Keeps the image inside the border radius
+                        }}
+                      >
+                        {/* Use an img tag instead of a span */}
+                        <img
+                          src={getCertificateIcon(cert.issuer)}
+                          alt={cert.issuer}
+                          className="cert-logo-img"
+                          style={{
+                            width: '70%',       // Adjust as needed
+                            height: '70%',      // Adjust as needed
+                            objectFit: 'contain'
+                          }}
+                        />
+                      </div>
+                      <div className="cert-verify-badge">VERIFIED ✓</div>
+                    </div>
+
+                    <div className="cert-body">
+                      <h4 className="cert-name">{cert.title}</h4>
+                      <p className="cert-issuer">🏢 {cert.issuer}</p>
+                      <div className="cert-id-container">
+                        <span className="cert-id-label">CREDENTIAL ID</span>
+                        <span className="cert-id-value">{cert.certificateId}</span>
+                      </div>
+                    </div>
+
+                    <div className="cert-footer">
+                      {/* <span className="cert-date-text">{cert.date}</span> */}
+                      <span className="cert-date-text"></span>
+                      {cert.certificateUrl && (
+                        <span className="cert-view-link">View ↗</span>
+                      )}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
           {/* Highlights */}
           {about.highlights && (
-             <motion.div className="experience-section" variants={itemVariants}>
+            <motion.div className="experience-section" variants={itemVariants}>
               <motion.h3 className="section-title" variants={itemVariants}>
                 <span className="emoji-colored">🌟</span> Highlights
               </motion.h3>
-            <motion.div className="highlights-grid" variants={containerVariants}>
-              {about.highlights.map((h, i) => (
-                <motion.div
-                  key={i}
-                  className="highlight-card glass-effect"
-                  variants={cardVariants}
-                  whileHover={{ scale: 1.05, y: -8 }}
-                >
-                  <div className="highlight-icon-container">
-                    <img
-                      src={h.icon}
-                      alt={h.title}
-                      className="highlight-icon-img"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        const fallback = e.currentTarget.nextSibling;
-                        if (fallback) fallback.style.display = 'block';
-                      }}
-                    />
-                    <div className="highlight-icon-fallback">{i === 0 ? '📱' : i === 1 ? '📊' : '🚀'}</div>
-                  </div>
+              <motion.div className="highlights-grid" variants={containerVariants}>
+                {about.highlights.map((h, i) => (
+                  <motion.div
+                    key={i}
+                    className="highlight-card glass-effect"
+                    variants={cardVariants}
+                    whileHover={{ scale: 1.05, y: -8 }}
+                  >
+                    <div className="highlight-icon-container">
+                      <img
+                        src={h.icon}
+                        alt={h.title}
+                        className="highlight-icon-img"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          const fallback = e.currentTarget.nextSibling;
+                          if (fallback) fallback.style.display = 'block';
+                        }}
+                      />
+                      <div className="highlight-icon-fallback">{i === 0 ? '📱' : i === 1 ? '📊' : '🚀'}</div>
+                    </div>
 
-                  <h3 className="highlight-title">{h.title}</h3>
-                  <p className="highlight-description">{h.description}</p>
+                    <h3 className="highlight-title">{h.title}</h3>
+                    <p className="highlight-description">{h.description}</p>
 
-                  <div className="skills-tags">
-                    {h.skills?.map((s, si) => (
-                      <span className="skill-tag" key={si}>
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
+                    <div className="skills-tags">
+                      {h.skills?.map((s, si) => (
+                        <span className="skill-tag" key={si}>
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
             </motion.div>
-             </motion.div>
           )}
 
           {/* Stats */}
           {about.stats && (
             <motion.div className="stats-section" variants={itemVariants}>
-               <motion.h3 className="section-title" variants={itemVariants}>
-                <span className="emoji-colored">🏆</span> My Achievements
+              <motion.h3 className="section-title" variants={itemVariants}>
+                <span className="emoji-colored">📈</span> Technical Impact & Experience
               </motion.h3>
 
               <div className="stats-grid">
@@ -267,7 +397,7 @@ const About = () => {
           {about.journey && (
             <motion.div className="journey-section" variants={itemVariants}>
               <motion.h3 className="section-title" variants={itemVariants}>
-                <span className="emoji-colored">🚀</span> My Achievements
+                <span className="emoji-colored">🚀</span> My Journey
               </motion.h3>
 
               <div className="timeline">
@@ -303,4 +433,3 @@ const About = () => {
 };
 
 export default About;
-

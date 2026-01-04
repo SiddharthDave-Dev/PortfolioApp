@@ -482,3 +482,37 @@
     height: 18px;
   }
 }
+
+
+
+/* Make the entire cell look like a card, not a link */
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  /* Adjust this value for more or less space (e.g., 1rem, 1.2rem, 1.5rem) */
+  gap: 1.2rem; 
+  margin-top: 1.5rem;
+}
+
+.contact-method-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  /* Standardizes the width if they look uneven */
+  width: 100%; 
+}
+
+/* Optional: Slight color shift on hover to make the separation clearer */
+.contact-method-card:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.3);
+}

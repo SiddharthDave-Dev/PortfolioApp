@@ -3,7 +3,6 @@ export const portfolioContent = {
     header: {
         name: "Siddharth Dave",
         navItems: ["Home", "About", "Skills", "Projects", "Contact"],
-        // navItems: ["Home", "About", "Skills", "Contact"],
         logo: "SD"
     },
 
@@ -12,14 +11,14 @@ export const portfolioContent = {
         greeting: "Hi there!",
         name: "Siddharth Dave",
         roles: [
-            "iOS Developer",
-            "Data Science Enthusiast",
+            "Data Science",
+            "Data Analyst",
             "Mobile App Creator",
+            "iOS Developer",
             "Problem Solver",
-            "Swift Expert",
-            "AIML Explorer"
+            "Swift Expert"
         ],
-        description: "Passionate iOS developer with 2+ years of professional experience building high-quality mobile applications. Currently expanding expertise in Data Science, focusing on leveraging data-driven insights to enhance user experiences and solve real-world problems through innovative technology solutions.",
+        description: "TechnData Analyst with a 2+ year professional foundation in iOS Engineering. I bridge the gap between technical development and strategic insights by leveraging Advanced SQL, Python, and Tableau to transform complex datasets into actionable business intelligence. Specialized in cleaning large-scale data and building interactive stories that drive decision-making.",
         resumeText: "Download Resume",
         contactText: "Let's Connect",
         profileImage: "/images/profile-avatar.jpg",
@@ -52,11 +51,7 @@ export const portfolioContent = {
     about: {
         title: "About Me",
         subtitle: "Discover my journey & passion",
-        description: `
-                    I began my career as an iOS Developer, building user-focused mobile applications and developing strong skills in clean architecture, problem-solving, and structured thinking. Along the way, I discovered a deep interest in data—understanding patterns, uncovering insights, and solving real-world challenges through analytics.
-
-                Today, I am transitioning into Data Analytics and Data Science with growing expertise in Python, SQL, data visualization, and statistical analysis. My goal is to combine my development experience with analytical thinking to help organizations make smarter, data-driven decisions.
-        `,
+        description: "### From Building Apps to Building Insights\n\nAfter **2+ years of engineering high-performance mobile applications**, I pivoted into Data Science to focus on the 'why' behind the technology. My background as an iOS Developer gives me a unique technical edge; I approach every dataset with a developer’s focus on **performance optimization, clean code, and data integrity.**\n\nToday, I specialize in the full analytical lifecycle across multiple domains:\n\n* **Advanced SQL Analytics:** Expert in writing high-performance queries to solve complex business questions. Proficient in multi-level joins, window functions (Ranking, Lead/Lag), and CTEs to extract insights from massive relational databases.\n* **Python Data Engineering:** Specialized in building robust data cleaning pipelines. I leverage **Pandas and NumPy** to sanitize raw datasets, handle missing values, and perform complex data transformations for analytical readiness.\n* **Strategic Data Storytelling:** Expert in transforming dry numbers into interactive visual narratives using **Tableau**. I focus on building dynamic dashboards with advanced filtering and 'Story' flows that guide stakeholders to data-driven decisions.\n\nI am dedicated to helping organizations turn raw numbers into the **strategic clarity** that shapes their future.",
         education: {
             title: "Education",
             degrees: [
@@ -117,14 +112,14 @@ export const portfolioContent = {
                 title: "iOS Development",
                 description:
                     "Experienced in building high-quality iOS applications using Swift, SwiftUI, UIKit, and Core Data. Developed multiple apps with clean architecture, reusable components, and a strong focus on performance and user experience.",
-                skills: ["Swift", "SwiftUI", "UIKit", "Core Data", "Xcode", "Swift Packages"]
+                skills: ["Swift", "SwiftUI", "UIKit", "Core Data", "Swift Data", "Xcode", "Swift Packages"]
             },
             {
                 icon: "/images/data-science-icon.png",
                 title: "Data Science",
                 description:
                     "Building a strong foundation in Python, machine learning basics, data cleaning, and exploratory analysis. Applying analytical thinking to derive meaningful insights from raw data.",
-                skills: ["Python", "Data Cleaning", "SQL", "Pandas", "NumPy"]
+                skills: ["Python", "Data Cleaning", "SQL", "Pandas", "NumPy", "Tableau", "Statistics"]
             },
             {
                 icon: "/images/data-viz-icon.png",
@@ -142,42 +137,492 @@ export const portfolioContent = {
             }
         ],
 
-        stats: [
-            { number: "10+", label: "iOS Projects Developed", icon: "" },
-            { number: "2+", label: "Years Experience", icon: "" },
-            { number: "Currently", label: "Learning Data Science", icon: "" },
-            { number: "0", label: "Published Apps (Self-Learning Focus)", icon: "" }
+
+        "stats": [
+            {
+                "number": "2+",
+                "label": "Years Technical Experience",
+                "icon": ""
+            },
+            {
+                "number": "15+",
+                "label": "Advanced SQL & Python Projects",
+                "icon": ""
+            },
+            {
+                "number": "5+",
+                "label": "Business Intelligence Dashboards",
+                "icon": ""
+            },
+            {
+                "number": "10+",
+                "label": "Mobile Architectures Engineered",
+                "icon": ""
+            },
+            {
+                "number": "100%",
+                "label": "Data-Driven Focus",
+                "icon": ""
+            },
+            {
+                "number": "Active",
+                "label": "ML & Predictive Analytics",
+                "icon": ""
+            }
         ],
-        journey: {
-            title: "My Professional Journey",
-            milestones: [
+
+        "journey": {
+            "title": "My Professional Journey",
+            "milestones": [
                 {
-                    year: "2019",
-                    title: "Started Diploma in IT",
-                    description: "Began academic journey in Information Technology at LJ Polytechnic, building a foundation in programming, databases, and Android development.",
-                    type: "education"
+                    "year": "2019",
+                    "title": "Diploma in Information Technology",
+                    "description": "Established core technical foundations at LJ Polytechnic, mastering data structures, logic design, and relational database fundamentals.",
+                    "type": "education"
                 },
                 {
-                    year: "2022",
-                    title: "Started B.E. in IT",
-                    description: "Enrolled in LJ University to pursue a Bachelor's degree in Information Technology, focusing on software engineering and emerging technologies.",
-                    type: "education"
+                    "year": "2022",
+                    "title": "Bachelor of Engineering (IT)",
+                    "description": "Pursued advanced software engineering at LJ University, focusing on enterprise-level system design and emerging technologies.",
+                    "type": "education"
                 },
                 {
-                    year: "2023",
-                    title: "First iOS Developer Role",
-                    description: "Started professional career as an iOS Developer, working on real-world projects using Swift, UIKit, SwiftUI, and Core Data.",
-                    type: "work"
+                    "year": "2023",
+                    "title": "iOS Engineering Phase",
+                    "description": "Built high-performance mobile applications professionally. Specialized in clean architecture and complex state management using Swift and UIKit.",
+                    "type": "work"
                 },
                 {
-                    year: "2025",
-                    title: "Exploring Data Science",
-                    description: "Currently expanding knowledge in Data Science and Machine Learning with Python, aiming to integrate AI/ML capabilities into mobile applications.",
-                    type: "current"
+                    "year": "2025",
+                    "title": "Data Analytics Specialization",
+                    "description": "In August 2025, transitioned fully from mobile development to Data Science. Dedicated to engineering robust data pipelines and delivering business intelligence through SQL, Python, and Tableau.",
+                    "type": "current"
                 }
             ]
-
-        }
+        },
+        // In your data/content.js file
+        certifications: [
+            {
+                title: "Accelerate Your Job Search with AI",
+                issuer: "Google",
+                certificateId: "XIDUCGI2LDJU",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/XIDUCGI2LDJU",
+                featured: false
+            },
+            {
+                title: "Google Advanced Data Analytics Capstone",
+                issuer: "Google",
+                certificateId: "SLMUDG9Y4TKM",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/SLMUDG9Y4TKM",
+                featured: false
+            },
+            {
+                title: "Regression Analysis- Simplify Complex Data Relationships",
+                issuer: "Google",
+                certificateId: "O69YOET4RB98 ",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/O69YOET4RB98",
+                featured: false
+            },
+            {
+                title: "The Nuts and Bolts of Machine Learning",
+                issuer: "Google",
+                certificateId: "9TO2KO34RYTM",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/9TO2KO34RYTM",
+                featured: false
+            },
+            {
+                title: "Applied Data Science Capstone",
+                issuer: "IBM",
+                certificateId: "WVJ45IWCAJPY",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/WVJ45IWCAJPY",
+                featured: false
+            },
+            {
+                title: "Data Analysis with Python",
+                issuer: "IBM",
+                certificateId: "CFSK7J8OK333",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/CFSK7J8OK333",
+                featured: false
+            },
+            {
+                title: "Data Science Methodology",
+                issuer: "IBM",
+                certificateId: "NG2P7TZ1Y30N",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/NG2P7TZ1Y30N",
+                featured: false
+            },
+            {
+                title: "Data Scientist Career Guide and Interview Preparation",
+                issuer: "IBM",
+                certificateId: "YCGP6C2IVMK3",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/YCGP6C2IVMK3",
+                featured: false
+            },
+            {
+                title: "Data Visualization with Python",
+                issuer: "IBM",
+                certificateId: "RV2IOBA2KS9I",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/RV2IOBA2KS9I",
+                featured: false
+            },
+            {
+                title: "Databases and SQL for Data Science with Python",
+                issuer: "IBM",
+                certificateId: "BGXK5XBU3SAE",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/BGXK5XBU3SAE",
+                featured: false
+            },
+            {
+                title: "Generative AI- Elevate Your Data Science Career",
+                issuer: "IBM",
+                certificateId: "WKMCXQJ8442J",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/WKMCXQJ8442J",
+                featured: false
+            },
+            {
+                title: "IBM Data Science",
+                issuer: "IBM",
+                certificateId: "55I693RQH89E",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/professional-cert/55I693RQH89E",
+                featured: true
+            },
+            {
+                title: "Machine Learning with Python",
+                issuer: "IBM",
+                certificateId: "BR58KFIRD85A",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/BR58KFIRD85A",
+                featured: false
+            },
+            {
+                title: "Python for Data Science, AI & Development",
+                issuer: "IBM",
+                certificateId: "AO6QQSBTNJ85",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/AO6QQSBTNJ85",
+                featured: false
+            },
+            {
+                title: "Python Project for Data Science",
+                issuer: "IBM",
+                certificateId: "84KMVIC1MJ1Y",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/84KMVIC1MJ1Y",
+                featured: false
+            },
+            {
+                title: "Tools for Data Science",
+                issuer: "IBM",
+                certificateId: "I05KEINZDJAI",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/I05KEINZDJAI",
+                featured: false
+            },
+            {
+                title: "What is Data Science?",
+                issuer: "IBM",
+                certificateId: "XMTQJDFI0KCX",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/XMTQJDFI0KCX",
+                featured: false
+            },
+            {
+                title: "Decisions, Decisions- Dashboards and Reports",
+                issuer: "Google",
+                certificateId: "FF3CO8ONQHBN",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/FF3CO8ONQHBN",
+                featured: false
+            },
+            {
+                title: "Foundations of Business Intelligence",
+                issuer: "Google",
+                certificateId: "PIFBK3YBEZGN",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/PIFBK3YBEZGN",
+                featured: false
+            },
+            {
+                title: "Google Business Intelligence",
+                issuer: "Google",
+                certificateId: "9BO1IHURHPFV",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/professional-cert/9BO1IHURHPFV",
+                featured: true
+            },
+            {
+                title: "The Path to Insights- Data Models and Pipelines",
+                issuer: "Google",
+                certificateId: "UQTKL9OKV10R",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/UQTKL9OKV10R",
+                featured: false
+            },
+            {
+                title: "Foundations- Data, Data, Everywhere",
+                issuer: "Google",
+                certificateId: "N12D1D192PN3",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/N12D1D192PN3",
+                featured: false
+            },
+            {
+                title: "Creative Designing in Power BI",
+                issuer: "Microsoft",
+                certificateId: "9SSF2HSZKHT3",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/9SSF2HSZKHT3",
+                featured: false
+            },
+            {
+                title: "Data Analysis and Visualization with Power BI",
+                issuer: "Microsoft",
+                certificateId: "6JKHO33MUOXL",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/6JKHO33MUOXL",
+                featured: false
+            },
+            {
+                title: "Data Modeling in Power BI",
+                issuer: "Microsoft",
+                certificateId: "PPCAAM0RJ26R",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/PPCAAM0RJ26R",
+                featured: false
+            },
+            {
+                title: "Deploy and Maintain Power BI Assets and Capstone project",
+                issuer: "Microsoft",
+                certificateId: "XZ0JPV7FANX2",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/XZ0JPV7FANX2",
+                featured: false
+            },
+            {
+                title: "Extract, Transform and Load Data in Power BI",
+                issuer: "Microsoft",
+                certificateId: "DB2TH1UCZ45E",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/DB2TH1UCZ45E",
+                featured: false
+            },
+            {
+                title: "Harnessing the Power of Data with Power BI",
+                issuer: "Microsoft",
+                certificateId: "0BEY4SV651D0",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/0BEY4SV651D0",
+                featured: false
+            },
+            {
+                title: "Microsoft PL-300 Exam Preparation and Practice",
+                issuer: "Microsoft",
+                certificateId: "321ZOKD5R0L8",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/321ZOKD5R0L8",
+                featured: false
+            },
+            {
+                title: "Microsoft Power BI Data Analyst",
+                issuer: "Microsoft",
+                certificateId: "O19PVRW3NVLZ",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/professional-cert/O19PVRW3NVLZ",
+                featured: true
+            },
+            {
+                title: "Preparing Data for Analysis with Microsoft Excel",
+                issuer: "Microsoft",
+                certificateId: "MWR7V3T3PYK5",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/MWR7V3T3PYK5",
+                featured: false
+            },
+            {
+                title: "Exploratory Data Analysis for Machine Learning",
+                issuer: "IBM",
+                certificateId: "EBRCFRQ6EESU",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/EBRCFRQ6EESU",
+                featured: false
+            },
+            {
+                title: "Introduction to iOS App Development with Swift 5",
+                issuer: "LearnQuest",
+                certificateId: "QE7DMPPUKWR7",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/QE7DMPPUKWR7",
+                featured: false
+            },
+            {
+                title: "Introduction to iOS Mobile Application Development",
+                issuer: "Meta",
+                certificateId: "CZ6MSV5LVGSW",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/CZ6MSV5LVGSW",
+                featured: false
+            },
+            {
+                title: "Building Generative AI-Powered Applications with Python",
+                issuer: "IBM",
+                certificateId: "E2CQ4RTY6R5L",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/E2CQ4RTY6R5L",
+                featured: false
+            },
+            {
+                title: "Back-End Development with .NET",
+                issuer: "Microsoft",
+                certificateId: "4W47NY8P5C2M",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/4W47NY8P5C2M",
+                featured: false
+            },
+            {
+                title: "HTML, CSS, and Javascript for Web Developers",
+                issuer: "Johns Hopkins University",
+                certificateId: "B6YFKJN9W3YU",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/B6YFKJN9W3YU",
+                featured: false
+            },
+            {
+                title: "Algorithmic Thinking (Part 1)",
+                issuer: "RICE University",
+                certificateId: "Y24BB5UBNJEQ",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/Y24BB5UBNJEQ",
+                featured: false
+            },
+            {
+                title: "Algorithmic Thinking (Part 2)",
+                issuer: "RICE University",
+                certificateId: "5P6TQVGHX9G9",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/5P6TQVGHX9G9",
+                featured: false
+            },
+            {
+                title: "iOS & Swift - The Complete iOS App Development Bootcamp",
+                issuer: "Udemy",
+                certificateId: "UC-e3be0d4c-f8ba-4541-bc3a-78bc1c68cba4",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://ude.my/UC-e3be0d4c-f8ba-4541-bc3a-78bc1c68cba4",
+                featured: false
+            },
+            {
+                title: "HTML & CSS - Certification Course for Beginners",
+                issuer: "Udemy",
+                certificateId: "UC-da1745a4-1d67-438e-a536-2df9d836efb7",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://ude.my/UC-da1745a4-1d67-438e-a536-2df9d836efb7",
+                featured: false
+            },
+            {
+                title: "Ethical Hacking Essentials (EHE)",
+                issuer: "EC-Council",
+                certificateId: "HX2I3WP5BYE1",
+                date: "June 2023",
+                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+                certificateUrl: "https://coursera.org/verify/HX2I3WP5BYE1",
+                featured: false
+            }
+        ]
     },
 
     // Skills Section Content
@@ -377,984 +822,763 @@ export const portfolioContent = {
                 description:
                     "Detail-oriented approach ensuring accuracy in coding, data analysis, debugging, and UI/UX quality."
             }
-        ],
-
-        certifications: [
-            {
-                name: "iOS App Development",
-                issuer: "Apple Developer",
-                date: "2023",
-                badge: "/images/apple-cert.png",
-                fallback: "🍎",
-                credentialId: "APD-2023-001"
-            },
-            {
-                name: "Machine Learning Engineer",
-                issuer: "Google Cloud",
-                date: "2024",
-                badge: "/images/google-cert.png",
-                fallback: "🎓",
-                credentialId: "GCP-ML-2024"
-            },
-            {
-                name: "AWS Cloud Practitioner",
-                issuer: "Amazon Web Services",
-                date: "2024",
-                badge: "/images/aws-cert.png",
-                fallback: "☁️",
-                credentialId: "AWS-CP-2024"
-            },
-            {
-                name: "React Native Specialist",
-                issuer: "Meta",
-                date: "2023",
-                badge: "/images/meta-cert.png",
-                fallback: "⚛️",
-                credentialId: "META-RN-2023"
-            }
         ]
     },
-    // projects: {
-    //     title: "My Projects",
-    //     subtitle: "A showcase of my recent work and creative solutions",
-
-    //     items: [
-    //         {
-    //             id: "music-nest",
-    //             name: "Music Nest",
-    //             category: "Music & Entertainment",
-    //             summary: "A comprehensive music streaming app built with Swift and Core Data",
-    //             description: "Music Nest is a feature-rich music streaming application that provides users with an intuitive interface to discover, organize, and play their favorite tracks. Built using Swift and UIKit, it offers seamless playlist management, offline downloads, and social sharing features.",
-    //             thumbnail: "/images/projects/music-nest/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/MusicNest/Screen1.jpg",
-    //                 "/images/projects/MusicNest/Screen2.jpg",
-    //                 "/images/projects/MusicNest/Screen3.jpg",
-    //                 "/images/projects/MusicNest/Screen4.jpg",
-    //                 "/images/projects/MusicNest/Screen5.jpg",
-    //                 "/images/projects/MusicNest/Screen6.jpg",
-    //                 "/images/projects/MusicNest/Screen7.jpg",
-    //                 "/images/projects/MusicNest/Screen8.jpg",
-    //                 "/images/projects/MusicNest/Screen9.jpg",
-    //                 "/images/projects/MusicNest/Screen10.jpg",
-    //                 "/images/projects/MusicNest/Screen11.jpg",
-    //                 "/images/projects/MusicNest/Screen12.jpg",
-    //                 "/images/projects/MusicNest/Screen13.jpg",
-    //                 "/images/projects/MusicNest/Screen14.jpg",
-    //                 "/images/projects/MusicNest/Screen15.jpg",
-    //                 "/images/projects/MusicNest/Screen16.jpg",
-    //                 "/images/projects/MusicNest/Screen17.jpg",
-    //                 "/images/projects/MusicNest/Screen18.jpg",
-    //                 "/images/projects/MusicNest/Screen19.jpg",
-    //                 "/images/projects/MusicNest/Screen20.jpg",
-    //                 "/images/projects/MusicNest/Screen21.jpg",
-    //                 "/images/projects/MusicNest/Screen22.jpg",
-    //                 "/images/projects/MusicNest/Screen23.jpg",
-    //                 "/images/projects/MusicNest/Screen24.jpg",
-    //                 "/images/projects/MusicNest/Screen25.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Core Data", "AVFoundation"],
-    //             duration: "4 months",
-    //             status: "Completed",
-    //             role: "Lead iOS Developer",
-    //             features: [
-    //                 "Music streaming and offline downloads",
-    //                 "Custom playlist creation and management",
-    //                 "Social sharing and friend recommendations",
-    //                 "Dark mode and customizable themes",
-    //                 "Audio equalizer and sound effects",
-    //                 "Background playback and lock screen controls"
-    //             ],
-    //             demoUrl: "https://apps.apple.com/music-nest",
-    //             githubUrl: "https://github.com/siddharthdave/music-nest"
-    //         },
-    //         {
-    //             id: "chatter-box",
-    //             name: "Chatter Box",
-    //             category: "Social & Communication",
-    //             summary: "Real-time messaging app with advanced chat features",
-    //             description: "Chatter Box is a modern messaging application built with Swift and UIKit. It provides real-time communication with features like group chats, media sharing, message encryption, and custom chat themes for an engaging user experience.",
-    //             thumbnail: "/images/projects/chatter-box/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/chatter-box/screen1.jpg",
-    //                 "/images/projects/chatter-box/screen2.jpg",
-    //                 "/images/projects/chatter-box/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Firebase", "Push Notifications"],
-    //             duration: "3 months",
-    //             status: "In Development",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Real-time messaging with Socket.IO",
-    //                 "Group chats and broadcast messages",
-    //                 "Media sharing (photos, videos, documents)",
-    //                 "End-to-end message encryption",
-    //                 "Custom chat themes and wallpapers",
-    //                 "Voice messages and video calls"
-    //             ],
-    //             demoUrl: "https://chatterbox-demo.netlify.app",
-    //             githubUrl: "https://github.com/siddharthdave/chatter-box"
-    //         },
-    //         {
-    //             id: "photo-heaven",
-    //             name: "Photo Heaven",
-    //             category: "Photography & Social",
-    //             summary: "Social photo sharing platform with advanced editing tools",
-    //             description: "Photo Heaven is a comprehensive photo sharing platform that combines social networking with powerful editing capabilities. Built with Swift and UIKit, it offers professional-grade filters, community features, and seamless sharing across platforms.",
-    //             thumbnail: "/images/projects/photo-heaven/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/photo-heaven/screen1.jpg",
-    //                 "/images/projects/photo-heaven/screen2.jpg",
-    //                 "/images/projects/photo-heaven/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Core Image", "CloudKit"],
-    //             duration: "5 months",
-    //             status: "Beta Testing",
-    //             role: "Lead Developer",
-    //             features: [
-    //                 "Advanced photo editing with filters and effects",
-    //                 "Social feed with likes, comments, and shares",
-    //                 "Professional camera controls and RAW support",
-    //                 "Community challenges and photography contests",
-    //                 "Portfolio creation and showcase galleries",
-    //                 "Cross-platform sharing and export options"
-    //             ],
-    //             demoUrl: "https://photo-heaven-demo.com",
-    //             githubUrl: "https://github.com/siddharthdave/photo-heaven"
-    //         },
-    //         {
-    //             id: "tier-list",
-    //             name: "Tier List",
-    //             category: "Productivity & Tools",
-    //             summary: "Interactive ranking and tier list creation app",
-    //             description: "Tier List is an intuitive app for creating custom ranking systems and tier lists for any topic. Built with Swift and UIKit, it provides drag-and-drop functionality, customizable tiers, and sharing capabilities for personal or collaborative ranking projects.",
-    //             thumbnail: "/images/projects/tier-list/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/tier-list/screen1.jpg",
-    //                 "/images/projects/tier-list/screen2.jpg",
-    //                 "/images/projects/tier-list/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Core Data", "CloudKit"],
-    //             duration: "2 months",
-    //             status: "Completed",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Drag-and-drop tier list creation",
-    //                 "Customizable tier colors and labels",
-    //                 "Import images from gallery or camera",
-    //                 "Save and share tier lists with friends",
-    //                 "Template library for popular categories",
-    //                 "Export as image or PDF formats"
-    //             ],
-    //             demoUrl: null,
-    //             githubUrl: "https://github.com/siddharthdave/tier-list"
-    //         },
-    //         {
-    //             id: "gesture-masters",
-    //             name: "GestureMasters",
-    //             category: "Accessibility & Innovation",
-    //             summary: "Hand gesture recognition app using machine learning",
-    //             description: "GestureMasters leverages Core ML and Vision frameworks to recognize and interpret hand gestures in real-time. Built with Swift and advanced ML models, it provides accessible interaction methods and gesture-based controls for various applications.",
-    //             thumbnail: "/images/projects/gesture-masters/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/gesture-masters/screen1.jpg",
-    //                 "/images/projects/gesture-masters/screen2.jpg",
-    //                 "/images/projects/gesture-masters/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Core ML", "Vision", "AVFoundation"],
-    //             duration: "4 months",
-    //             status: "Completed",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Real-time hand gesture recognition",
-    //                 "Custom gesture training and learning",
-    //                 "Accessibility features for motor impairments",
-    //                 "Integration with system controls",
-    //                 "Gesture library and preset commands",
-    //                 "Performance analytics and accuracy tracking"
-    //             ],
-    //             demoUrl: "https://gesture-masters-demo.com",
-    //             githubUrl: "https://github.com/siddharthdave/gesture-masters"
-    //         },
-    //         {
-    //             id: "weather-app-swiftui",
-    //             name: "Weather App SwiftUI",
-    //             category: "Utility & Lifestyle",
-    //             summary: "Modern weather app built entirely with SwiftUI",
-    //             description: "A beautifully designed weather application showcasing SwiftUI's capabilities. Features real-time weather data, interactive animations, and location-based forecasts with a clean, modern interface that adapts to different weather conditions.",
-    //             thumbnail: "/images/projects/weather-app/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/weather-app/screen1.jpg",
-    //                 "/images/projects/weather-app/screen2.jpg",
-    //                 "/images/projects/weather-app/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "SwiftUI", "Core Location", "WeatherKit"],
-    //             duration: "1.5 months",
-    //             status: "Completed",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Real-time weather data and forecasts",
-    //                 "Location-based weather detection",
-    //                 "Interactive weather animations",
-    //                 "7-day weather forecast with hourly details",
-    //                 "Weather alerts and notifications",
-    //                 "Multiple location management"
-    //             ],
-    //             demoUrl: "https://weather-swiftui-demo.com",
-    //             githubUrl: "https://github.com/siddharthdave/weather-app-swiftui"
-    //         },
-    //         {
-    //             id: "streak-app",
-    //             name: "Streak App",
-    //             category: "Productivity & Habits",
-    //             summary: "Habit tracking app with streak counting and motivation",
-    //             description: "Streak App helps users build and maintain positive habits through visual tracking, streak counting, and motivational features. Built with Swift and UIKit, it provides customizable habits, progress analytics, and reminder systems.",
-    //             thumbnail: "/images/projects/streak-app/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/streak-app/screen1.jpg",
-    //                 "/images/projects/streak-app/screen2.jpg",
-    //                 "/images/projects/streak-app/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Core Data", "UserNotifications"],
-    //             duration: "2.5 months",
-    //             status: "App Store Review",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Custom habit creation and tracking",
-    //                 "Visual streak counters and progress bars",
-    //                 "Daily reminders and notifications",
-    //                 "Progress analytics and insights",
-    //                 "Achievement badges and milestones",
-    //                 "Data export and backup functionality"
-    //             ],
-    //             demoUrl: null,
-    //             githubUrl: "https://github.com/siddharthdave/streak-app"
-    //         },
-    //         {
-    //             id: "glycemic",
-    //             name: "Glycemic",
-    //             category: "Health & Fitness",
-    //             summary: "Blood glucose tracking app for diabetes management",
-    //             description: "Glycemic is a comprehensive diabetes management app built with Swift and HealthKit integration. It helps users track blood glucose levels, manage medication schedules, and monitor dietary habits with detailed analytics and health insights.",
-    //             thumbnail: "/images/projects/glycemic/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/glycemic/screen1.jpg",
-    //                 "/images/projects/glycemic/screen2.jpg",
-    //                 "/images/projects/glycemic/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "HealthKit", "Core Data", "Charts"],
-    //             duration: "3.5 months",
-    //             status: "Beta Testing",
-    //             role: "Lead iOS Developer",
-    //             features: [
-    //                 "Blood glucose level logging and tracking",
-    //                 "Medication reminders and schedules",
-    //                 "Food diary with carb counting",
-    //                 "HealthKit integration for comprehensive data",
-    //                 "Trend analysis and glucose pattern insights",
-    //                 "Doctor report generation and sharing"
-    //             ],
-    //             demoUrl: "https://glycemic-demo.com",
-    //             githubUrl: "https://github.com/siddharthdave/glycemic"
-    //         },
-    //         {
-    //             id: "country-app",
-    //             name: "Country App",
-    //             category: "Education & Reference",
-    //             summary: "Comprehensive country information and geography learning app",
-    //             description: "Country App is an educational application providing detailed information about world countries. Built with Swift and UIKit, it features interactive maps, country statistics, cultural information, and geography learning tools.",
-    //             thumbnail: "/images/projects/country-app/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/country-app/screen1.jpg",
-    //                 "/images/projects/country-app/screen2.jpg",
-    //                 "/images/projects/country-app/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "MapKit", "Core Data"],
-    //             duration: "2 months",
-    //             status: "Completed",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Comprehensive country database with statistics",
-    //                 "Interactive world map with country selection",
-    //                 "Cultural information and historical facts",
-    //                 "Flag recognition quiz and learning games",
-    //                 "Favorites and bookmarking system",
-    //                 "Offline mode for limited connectivity"
-    //             ],
-    //             demoUrl: "https://country-app-demo.com",
-    //             githubUrl: "https://github.com/siddharthdave/country-app"
-    //         },
-    //         {
-    //             id: "caloric-tracking-app",
-    //             name: "Caloric Tracking App",
-    //             category: "Health & Fitness",
-    //             summary: "Comprehensive calorie counting and nutrition tracking app",
-    //             description: "A feature-rich nutrition tracking application that helps users monitor their daily caloric intake and nutritional goals. Built with Swift and HealthKit, it provides barcode scanning, meal planning, and detailed nutritional analysis.",
-    //             thumbnail: "/images/projects/caloric-app/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/caloric-app/screen1.jpg",
-    //                 "/images/projects/caloric-app/screen2.jpg",
-    //                 "/images/projects/caloric-app/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "HealthKit", "Vision", "Core Data"],
-    //             duration: "4 months",
-    //             status: "In Development",
-    //             role: "Lead iOS Developer",
-    //             features: [
-    //                 "Barcode scanning for quick food logging",
-    //                 "Extensive food database with nutritional info",
-    //                 "Daily calorie and macro tracking",
-    //                 "Meal planning and recipe suggestions",
-    //                 "HealthKit integration for fitness data",
-    //                 "Progress tracking with visual charts and insights"
-    //             ],
-    //             demoUrl: null,
-    //             githubUrl: "https://github.com/siddharthdave/caloric-tracking"
-    //         },
-    //         {
-    //             id: "calculator",
-    //             name: "Calculator",
-    //             category: "Utility & Productivity",
-    //             summary: "Advanced scientific calculator with history and themes",
-    //             description: "A sophisticated calculator app featuring both basic and scientific operations. Built with Swift and UIKit, it includes calculation history, multiple themes, and advanced mathematical functions for students and professionals.",
-    //             thumbnail: "/images/projects/calculator/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/calculator/screen1.jpg",
-    //                 "/images/projects/calculator/screen2.jpg",
-    //                 "/images/projects/calculator/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Core Data"],
-    //             duration: "1 month",
-    //             status: "Completed",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Basic and scientific calculation modes",
-    //                 "Calculation history with search functionality",
-    //                 "Multiple themes and customization options",
-    //                 "Memory functions and variable storage",
-    //                 "Unit conversion tools",
-    //                 "Export calculations and share results"
-    //             ],
-    //             demoUrl: "https://calculator-demo.com",
-    //             githubUrl: "https://github.com/siddharthdave/calculator"
-    //         },
-    //         {
-    //             id: "airbnb-clone",
-    //             name: "Airbnb Clone",
-    //             category: "Travel & Lifestyle",
-    //             summary: "Property rental app inspired by Airbnb with booking features",
-    //             description: "A complete property rental application replicating core Airbnb functionality. Built with Swift and UIKit, it features property listings, booking management, user profiles, and integrated payment processing for a seamless rental experience.",
-    //             thumbnail: "/images/projects/airbnb-clone/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/airbnb-clone/screen1.jpg",
-    //                 "/images/projects/airbnb-clone/screen2.jpg",
-    //                 "/images/projects/airbnb-clone/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "MapKit", "CloudKit", "In-App Purchase"],
-    //             duration: "6 months",
-    //             status: "Beta Testing",
-    //             role: "Lead Developer",
-    //             features: [
-    //                 "Property search with filters and map integration",
-    //                 "User authentication and profile management",
-    //                 "Booking system with calendar availability",
-    //                 "In-app messaging between hosts and guests",
-    //                 "Payment processing and booking confirmation",
-    //                 "Review and rating system for properties"
-    //             ],
-    //             demoUrl: "https://airbnb-clone-demo.com",
-    //             githubUrl: "https://github.com/siddharthdave/airbnb-clone"
-    //         },
-    //         {
-    //             id: "otp-based-app",
-    //             name: "OTP Based App",
-    //             category: "Security & Authentication",
-    //             summary: "Secure authentication app with OTP generation and verification",
-    //             description: "A security-focused application demonstrating OTP (One-Time Password) implementation for secure user authentication. Built with Swift and UIKit, it features multi-factor authentication, secure token generation, and biometric verification.",
-    //             thumbnail: "/images/projects/otp-app/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/otp-app/screen1.jpg",
-    //                 "/images/projects/otp-app/screen2.jpg",
-    //                 "/images/projects/otp-app/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Security", "LocalAuthentication", "CryptoKit"],
-    //             duration: "2 months",
-    //             status: "Completed",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Time-based OTP generation (TOTP)",
-    //                 "SMS and email OTP verification",
-    //                 "Biometric authentication (Face ID/Touch ID)",
-    //                 "Secure token storage with Keychain",
-    //                 "Multi-account OTP management",
-    //                 "Backup and recovery options for accounts"
-    //             ],
-    //             demoUrl: null,
-    //             githubUrl: "https://github.com/siddharthdave/otp-based-app"
-    //         },
-    //         {
-    //             id: "stopwatch",
-    //             name: "Stop Watch",
-    //             category: "Utility & Sports",
-    //             summary: "Professional stopwatch with lap timing and precision controls",
-    //             description: "A high-precision stopwatch application designed for sports and professional timing needs. Built with Swift and UIKit, it provides accurate timing, lap recording, and detailed time analysis with export capabilities.",
-    //             thumbnail: "/images/projects/stopwatch/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/stopwatch/screen1.jpg",
-    //                 "/images/projects/stopwatch/screen2.jpg",
-    //                 "/images/projects/stopwatch/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "Core Data", "AVFoundation"],
-    //             duration: "1 month",
-    //             status: "Completed",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "High-precision timing with millisecond accuracy",
-    //                 "Lap time recording and analysis",
-    //                 "Multiple simultaneous timers",
-    //                 "Audio alerts and vibration feedback",
-    //                 "Time history with statistics",
-    //                 "Export timing data to CSV format"
-    //             ],
-    //             demoUrl: "https://stopwatch-demo.com",
-    //             githubUrl: "https://github.com/siddharthdave/stopwatch"
-    //         },
-    //         {
-    //             id: "pdf-combiner",
-    //             name: "PDF Combiner",
-    //             category: "Productivity & Documents",
-    //             summary: "Document management app for merging and organizing PDFs",
-    //             description: "PDF Combiner is a comprehensive document management tool for merging, splitting, and organizing PDF files. Built with Swift and PDFKit, it provides intuitive document manipulation with cloud storage integration and batch processing.",
-    //             thumbnail: "/images/projects/pdf-combiner/thumbnail.jpg",
-    //             images: [
-    //                 "/images/projects/pdf-combiner/screen1.jpg",
-    //                 "/images/projects/pdf-combiner/screen2.jpg",
-    //                 "/images/projects/pdf-combiner/screen3.jpg"
-    //             ],
-    //             technologies: ["Swift", "UIKit", "PDFKit", "CloudKit", "Document Provider"],
-    //             duration: "3 months",
-    //             status: "App Store Review",
-    //             role: "iOS Developer",
-    //             features: [
-    //                 "Merge multiple PDFs into single document",
-    //                 "Split PDFs into separate pages or sections",
-    //                 "Reorder and organize PDF pages",
-    //                 "Cloud storage integration (iCloud, Dropbox)",
-    //                 "Batch processing for multiple documents",
-    //                 "Password protection and security features"
-    //             ],
-    //             demoUrl: null,
-    //             githubUrl: "https://github.com/siddharthdave/pdf-combiner"
-    //         }
-    //     ]
-
-    // },
     projects: {
         title: "My Projects",
-        subtitle: "A categorized showcase of my work",
-        // Each category includes subcategories, each of which receives relevant projects
-        categories: [
+        subtitle: "A showcase of my recent work and creative solutions",
+        items: [
+
+            // SQL Projects
+
             {
-                id: "swift",
-                name: "Swift",
-                subCategories: [
-                    {
-                        id: "ios-apps",
-                        name: "iOS Apps",
-                        projects: [
-                            {
-                                id: "music-nest",
-                                name: "Music Nest",
-                                subCategory: "iOS Apps",
-                                category: "Swift",
-                                summary: "A comprehensive music streaming app built with Swift and Core Data",
-                                description: "Music Nest is a feature-rich music streaming application...",
-                                thumbnail: "/images/projects/music-nest/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/MusicNest/Screen1.jpg",
-                                    // ...more
-                                ],
-                                technologies: ["Swift", "UIKit", "Core Data", "AVFoundation"],
-                                duration: "4 months",
-                                status: "Completed",
-                                role: "Lead iOS Developer",
-                                features: [
-                                    "Music streaming and offline downloads",
-                                    "Custom playlist creation and management",
-                                    // ...
-                                ],
-                                demoUrl: "https://apps.apple.com/music-nest",
-                                githubUrl: "https://github.com/siddharthdave/music-nest"
-                            },
-                            {
-                                id: "music-nest",
-                                name: "Music Nest",
-                                category: "Music & Entertainment",
-                                summary: "A comprehensive music streaming app built with Swift and Core Data",
-                                description: "Music Nest is a feature-rich music streaming application that provides users with an intuitive interface to discover, organize, and play their favorite tracks. Built using Swift and UIKit, it offers seamless playlist management, offline downloads, and social sharing features.",
-                                thumbnail: "/images/projects/music-nest/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/MusicNest/Screen1.jpg",
-                                    "/images/projects/MusicNest/Screen2.jpg",
-                                    "/images/projects/MusicNest/Screen3.jpg",
-                                    "/images/projects/MusicNest/Screen4.jpg",
-                                    "/images/projects/MusicNest/Screen5.jpg",
-                                    "/images/projects/MusicNest/Screen6.jpg",
-                                    "/images/projects/MusicNest/Screen7.jpg",
-                                    "/images/projects/MusicNest/Screen8.jpg",
-                                    "/images/projects/MusicNest/Screen9.jpg",
-                                    "/images/projects/MusicNest/Screen10.jpg",
-                                    "/images/projects/MusicNest/Screen11.jpg",
-                                    "/images/projects/MusicNest/Screen12.jpg",
-                                    "/images/projects/MusicNest/Screen13.jpg",
-                                    "/images/projects/MusicNest/Screen14.jpg",
-                                    "/images/projects/MusicNest/Screen15.jpg",
-                                    "/images/projects/MusicNest/Screen16.jpg",
-                                    "/images/projects/MusicNest/Screen17.jpg",
-                                    "/images/projects/MusicNest/Screen18.jpg",
-                                    "/images/projects/MusicNest/Screen19.jpg",
-                                    "/images/projects/MusicNest/Screen20.jpg",
-                                    "/images/projects/MusicNest/Screen21.jpg",
-                                    "/images/projects/MusicNest/Screen22.jpg",
-                                    "/images/projects/MusicNest/Screen23.jpg",
-                                    "/images/projects/MusicNest/Screen24.jpg",
-                                    "/images/projects/MusicNest/Screen25.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Core Data", "AVFoundation"],
-                                duration: "4 months",
-                                status: "Completed",
-                                role: "Lead iOS Developer",
-                                features: [
-                                    "Music streaming and offline downloads",
-                                    "Custom playlist creation and management",
-                                    "Social sharing and friend recommendations",
-                                    "Dark mode and customizable themes",
-                                    "Audio equalizer and sound effects",
-                                    "Background playback and lock screen controls"
-                                ],
-                                demoUrl: "https://apps.apple.com/music-nest",
-                                githubUrl: "https://github.com/siddharthdave/music-nest"
-                            },
-                            {
-                                id: "chatter-box",
-                                name: "Chatter Box",
-                                category: "Social & Communication",
-                                summary: "Real-time messaging app with advanced chat features",
-                                description: "Chatter Box is a modern messaging application built with Swift and UIKit. It provides real-time communication with features like group chats, media sharing, message encryption, and custom chat themes for an engaging user experience.",
-                                thumbnail: "/images/projects/chatter-box/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/chatter-box/screen1.jpg",
-                                    "/images/projects/chatter-box/screen2.jpg",
-                                    "/images/projects/chatter-box/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Firebase", "Push Notifications"],
-                                duration: "3 months",
-                                status: "In Development",
-                                role: "iOS Developer",
-                                features: [
-                                    "Real-time messaging with Socket.IO",
-                                    "Group chats and broadcast messages",
-                                    "Media sharing (photos, videos, documents)",
-                                    "End-to-end message encryption",
-                                    "Custom chat themes and wallpapers",
-                                    "Voice messages and video calls"
-                                ],
-                                demoUrl: "https://chatterbox-demo.netlify.app",
-                                githubUrl: "https://github.com/siddharthdave/chatter-box"
-                            },
-                            {
-                                id: "photo-heaven",
-                                name: "Photo Heaven",
-                                category: "Photography & Social",
-                                summary: "Social photo sharing platform with advanced editing tools",
-                                description: "Photo Heaven is a comprehensive photo sharing platform that combines social networking with powerful editing capabilities. Built with Swift and UIKit, it offers professional-grade filters, community features, and seamless sharing across platforms.",
-                                thumbnail: "/images/projects/photo-heaven/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/photo-heaven/screen1.jpg",
-                                    "/images/projects/photo-heaven/screen2.jpg",
-                                    "/images/projects/photo-heaven/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Core Image", "CloudKit"],
-                                duration: "5 months",
-                                status: "Beta Testing",
-                                role: "Lead Developer",
-                                features: [
-                                    "Advanced photo editing with filters and effects",
-                                    "Social feed with likes, comments, and shares",
-                                    "Professional camera controls and RAW support",
-                                    "Community challenges and photography contests",
-                                    "Portfolio creation and showcase galleries",
-                                    "Cross-platform sharing and export options"
-                                ],
-                                demoUrl: "https://photo-heaven-demo.com",
-                                githubUrl: "https://github.com/siddharthdave/photo-heaven"
-                            },
-                            {
-                                id: "tier-list",
-                                name: "Tier List",
-                                category: "Productivity & Tools",
-                                summary: "Interactive ranking and tier list creation app",
-                                description: "Tier List is an intuitive app for creating custom ranking systems and tier lists for any topic. Built with Swift and UIKit, it provides drag-and-drop functionality, customizable tiers, and sharing capabilities for personal or collaborative ranking projects.",
-                                thumbnail: "/images/projects/tier-list/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/tier-list/screen1.jpg",
-                                    "/images/projects/tier-list/screen2.jpg",
-                                    "/images/projects/tier-list/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Core Data", "CloudKit"],
-                                duration: "2 months",
-                                status: "Completed",
-                                role: "iOS Developer",
-                                features: [
-                                    "Drag-and-drop tier list creation",
-                                    "Customizable tier colors and labels",
-                                    "Import images from gallery or camera",
-                                    "Save and share tier lists with friends",
-                                    "Template library for popular categories",
-                                    "Export as image or PDF formats"
-                                ],
-                                demoUrl: null,
-                                githubUrl: "https://github.com/siddharthdave/tier-list"
-                            },
-                            {
-                                id: "gesture-masters",
-                                name: "GestureMasters",
-                                category: "Accessibility & Innovation",
-                                summary: "Hand gesture recognition app using machine learning",
-                                description: "GestureMasters leverages Core ML and Vision frameworks to recognize and interpret hand gestures in real-time. Built with Swift and advanced ML models, it provides accessible interaction methods and gesture-based controls for various applications.",
-                                thumbnail: "/images/projects/gesture-masters/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/gesture-masters/screen1.jpg",
-                                    "/images/projects/gesture-masters/screen2.jpg",
-                                    "/images/projects/gesture-masters/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Core ML", "Vision", "AVFoundation"],
-                                duration: "4 months",
-                                status: "Completed",
-                                role: "iOS Developer",
-                                features: [
-                                    "Real-time hand gesture recognition",
-                                    "Custom gesture training and learning",
-                                    "Accessibility features for motor impairments",
-                                    "Integration with system controls",
-                                    "Gesture library and preset commands",
-                                    "Performance analytics and accuracy tracking"
-                                ],
-                                demoUrl: "https://gesture-masters-demo.com",
-                                githubUrl: "https://github.com/siddharthdave/gesture-masters"
-                            },
-                            {
-                                id: "weather-app-swiftui",
-                                name: "Weather App SwiftUI",
-                                category: "Utility & Lifestyle",
-                                summary: "Modern weather app built entirely with SwiftUI",
-                                description: "A beautifully designed weather application showcasing SwiftUI's capabilities. Features real-time weather data, interactive animations, and location-based forecasts with a clean, modern interface that adapts to different weather conditions.",
-                                thumbnail: "/images/projects/weather-app/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/weather-app/screen1.jpg",
-                                    "/images/projects/weather-app/screen2.jpg",
-                                    "/images/projects/weather-app/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "SwiftUI", "Core Location", "WeatherKit"],
-                                duration: "1.5 months",
-                                status: "Completed",
-                                role: "iOS Developer",
-                                features: [
-                                    "Real-time weather data and forecasts",
-                                    "Location-based weather detection",
-                                    "Interactive weather animations",
-                                    "7-day weather forecast with hourly details",
-                                    "Weather alerts and notifications",
-                                    "Multiple location management"
-                                ],
-                                demoUrl: "https://weather-swiftui-demo.com",
-                                githubUrl: "https://github.com/siddharthdave/weather-app-swiftui"
-                            },
-                            {
-                                id: "streak-app",
-                                name: "Streak App",
-                                category: "Productivity & Habits",
-                                summary: "Habit tracking app with streak counting and motivation",
-                                description: "Streak App helps users build and maintain positive habits through visual tracking, streak counting, and motivational features. Built with Swift and UIKit, it provides customizable habits, progress analytics, and reminder systems.",
-                                thumbnail: "/images/projects/streak-app/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/streak-app/screen1.jpg",
-                                    "/images/projects/streak-app/screen2.jpg",
-                                    "/images/projects/streak-app/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Core Data", "UserNotifications"],
-                                duration: "2.5 months",
-                                status: "App Store Review",
-                                role: "iOS Developer",
-                                features: [
-                                    "Custom habit creation and tracking",
-                                    "Visual streak counters and progress bars",
-                                    "Daily reminders and notifications",
-                                    "Progress analytics and insights",
-                                    "Achievement badges and milestones",
-                                    "Data export and backup functionality"
-                                ],
-                                demoUrl: null,
-                                githubUrl: "https://github.com/siddharthdave/streak-app"
-                            },
-                            {
-                                id: "glycemic",
-                                name: "Glycemic",
-                                category: "Health & Fitness",
-                                summary: "Blood glucose tracking app for diabetes management",
-                                description: "Glycemic is a comprehensive diabetes management app built with Swift and HealthKit integration. It helps users track blood glucose levels, manage medication schedules, and monitor dietary habits with detailed analytics and health insights.",
-                                thumbnail: "/images/projects/glycemic/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/glycemic/screen1.jpg",
-                                    "/images/projects/glycemic/screen2.jpg",
-                                    "/images/projects/glycemic/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "HealthKit", "Core Data", "Charts"],
-                                duration: "3.5 months",
-                                status: "Beta Testing",
-                                role: "Lead iOS Developer",
-                                features: [
-                                    "Blood glucose level logging and tracking",
-                                    "Medication reminders and schedules",
-                                    "Food diary with carb counting",
-                                    "HealthKit integration for comprehensive data",
-                                    "Trend analysis and glucose pattern insights",
-                                    "Doctor report generation and sharing"
-                                ],
-                                demoUrl: "https://glycemic-demo.com",
-                                githubUrl: "https://github.com/siddharthdave/glycemic"
-                            },
-                            {
-                                id: "country-app",
-                                name: "Country App",
-                                category: "Education & Reference",
-                                summary: "Comprehensive country information and geography learning app",
-                                description: "Country App is an educational application providing detailed information about world countries. Built with Swift and UIKit, it features interactive maps, country statistics, cultural information, and geography learning tools.",
-                                thumbnail: "/images/projects/country-app/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/country-app/screen1.jpg",
-                                    "/images/projects/country-app/screen2.jpg",
-                                    "/images/projects/country-app/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "MapKit", "Core Data"],
-                                duration: "2 months",
-                                status: "Completed",
-                                role: "iOS Developer",
-                                features: [
-                                    "Comprehensive country database with statistics",
-                                    "Interactive world map with country selection",
-                                    "Cultural information and historical facts",
-                                    "Flag recognition quiz and learning games",
-                                    "Favorites and bookmarking system",
-                                    "Offline mode for limited connectivity"
-                                ],
-                                demoUrl: "https://country-app-demo.com",
-                                githubUrl: "https://github.com/siddharthdave/country-app"
-                            },
-                            {
-                                id: "caloric-tracking-app",
-                                name: "Caloric Tracking App",
-                                category: "Health & Fitness",
-                                summary: "Comprehensive calorie counting and nutrition tracking app",
-                                description: "A feature-rich nutrition tracking application that helps users monitor their daily caloric intake and nutritional goals. Built with Swift and HealthKit, it provides barcode scanning, meal planning, and detailed nutritional analysis.",
-                                thumbnail: "/images/projects/caloric-app/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/caloric-app/screen1.jpg",
-                                    "/images/projects/caloric-app/screen2.jpg",
-                                    "/images/projects/caloric-app/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "HealthKit", "Vision", "Core Data"],
-                                duration: "4 months",
-                                status: "In Development",
-                                role: "Lead iOS Developer",
-                                features: [
-                                    "Barcode scanning for quick food logging",
-                                    "Extensive food database with nutritional info",
-                                    "Daily calorie and macro tracking",
-                                    "Meal planning and recipe suggestions",
-                                    "HealthKit integration for fitness data",
-                                    "Progress tracking with visual charts and insights"
-                                ],
-                                demoUrl: null,
-                                githubUrl: "https://github.com/siddharthdave/caloric-tracking"
-                            },
-                            {
-                                id: "calculator",
-                                name: "Calculator",
-                                category: "Utility & Productivity",
-                                summary: "Advanced scientific calculator with history and themes",
-                                description: "A sophisticated calculator app featuring both basic and scientific operations. Built with Swift and UIKit, it includes calculation history, multiple themes, and advanced mathematical functions for students and professionals.",
-                                thumbnail: "/images/projects/calculator/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/calculator/screen1.jpg",
-                                    "/images/projects/calculator/screen2.jpg",
-                                    "/images/projects/calculator/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Core Data"],
-                                duration: "1 month",
-                                status: "Completed",
-                                role: "iOS Developer",
-                                features: [
-                                    "Basic and scientific calculation modes",
-                                    "Calculation history with search functionality",
-                                    "Multiple themes and customization options",
-                                    "Memory functions and variable storage",
-                                    "Unit conversion tools",
-                                    "Export calculations and share results"
-                                ],
-                                demoUrl: "https://calculator-demo.com",
-                                githubUrl: "https://github.com/siddharthdave/calculator"
-                            },
-                            {
-                                id: "airbnb-clone",
-                                name: "Airbnb Clone",
-                                category: "Travel & Lifestyle",
-                                summary: "Property rental app inspired by Airbnb with booking features",
-                                description: "A complete property rental application replicating core Airbnb functionality. Built with Swift and UIKit, it features property listings, booking management, user profiles, and integrated payment processing for a seamless rental experience.",
-                                thumbnail: "/images/projects/airbnb-clone/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/airbnb-clone/screen1.jpg",
-                                    "/images/projects/airbnb-clone/screen2.jpg",
-                                    "/images/projects/airbnb-clone/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "MapKit", "CloudKit", "In-App Purchase"],
-                                duration: "6 months",
-                                status: "Beta Testing",
-                                role: "Lead Developer",
-                                features: [
-                                    "Property search with filters and map integration",
-                                    "User authentication and profile management",
-                                    "Booking system with calendar availability",
-                                    "In-app messaging between hosts and guests",
-                                    "Payment processing and booking confirmation",
-                                    "Review and rating system for properties"
-                                ],
-                                demoUrl: "https://airbnb-clone-demo.com",
-                                githubUrl: "https://github.com/siddharthdave/airbnb-clone"
-                            },
-                            {
-                                id: "otp-based-app",
-                                name: "OTP Based App",
-                                category: "Security & Authentication",
-                                summary: "Secure authentication app with OTP generation and verification",
-                                description: "A security-focused application demonstrating OTP (One-Time Password) implementation for secure user authentication. Built with Swift and UIKit, it features multi-factor authentication, secure token generation, and biometric verification.",
-                                thumbnail: "/images/projects/otp-app/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/otp-app/screen1.jpg",
-                                    "/images/projects/otp-app/screen2.jpg",
-                                    "/images/projects/otp-app/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Security", "LocalAuthentication", "CryptoKit"],
-                                duration: "2 months",
-                                status: "Completed",
-                                role: "iOS Developer",
-                                features: [
-                                    "Time-based OTP generation (TOTP)",
-                                    "SMS and email OTP verification",
-                                    "Biometric authentication (Face ID/Touch ID)",
-                                    "Secure token storage with Keychain",
-                                    "Multi-account OTP management",
-                                    "Backup and recovery options for accounts"
-                                ],
-                                demoUrl: null,
-                                githubUrl: "https://github.com/siddharthdave/otp-based-app"
-                            },
-                            {
-                                id: "stopwatch",
-                                name: "Stop Watch",
-                                category: "Utility & Sports",
-                                summary: "Professional stopwatch with lap timing and precision controls",
-                                description: "A high-precision stopwatch application designed for sports and professional timing needs. Built with Swift and UIKit, it provides accurate timing, lap recording, and detailed time analysis with export capabilities.",
-                                thumbnail: "/images/projects/stopwatch/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/stopwatch/screen1.jpg",
-                                    "/images/projects/stopwatch/screen2.jpg",
-                                    "/images/projects/stopwatch/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "Core Data", "AVFoundation"],
-                                duration: "1 month",
-                                status: "Completed",
-                                role: "iOS Developer",
-                                features: [
-                                    "High-precision timing with millisecond accuracy",
-                                    "Lap time recording and analysis",
-                                    "Multiple simultaneous timers",
-                                    "Audio alerts and vibration feedback",
-                                    "Time history with statistics",
-                                    "Export timing data to CSV format"
-                                ],
-                                demoUrl: "https://stopwatch-demo.com",
-                                githubUrl: "https://github.com/siddharthdave/stopwatch"
-                            },
-                            {
-                                id: "pdf-combiner",
-                                name: "PDF Combiner",
-                                category: "Productivity & Documents",
-                                summary: "Document management app for merging and organizing PDFs",
-                                description: "PDF Combiner is a comprehensive document management tool for merging, splitting, and organizing PDF files. Built with Swift and PDFKit, it provides intuitive document manipulation with cloud storage integration and batch processing.",
-                                thumbnail: "/images/projects/pdf-combiner/thumbnail.jpg",
-                                images: [
-                                    "/images/projects/pdf-combiner/screen1.jpg",
-                                    "/images/projects/pdf-combiner/screen2.jpg",
-                                    "/images/projects/pdf-combiner/screen3.jpg"
-                                ],
-                                technologies: ["Swift", "UIKit", "PDFKit", "CloudKit", "Document Provider"],
-                                duration: "3 months",
-                                status: "App Store Review",
-                                role: "iOS Developer",
-                                features: [
-                                    "Merge multiple PDFs into single document",
-                                    "Split PDFs into separate pages or sections",
-                                    "Reorder and organize PDF pages",
-                                    "Cloud storage integration (iCloud, Dropbox)",
-                                    "Batch processing for multiple documents",
-                                    "Password protection and security features"
-                                ],
-                                demoUrl: null,
-                                githubUrl: "https://github.com/siddharthdave/pdf-combiner"
-                            }
-                        ]
-                    }
-                    // ...other Swift sub-categories (e.g., "Frameworks")
-                ]
+                "id": "spotify-project-sql",
+                "name": "Spotify Global Music Data Analysis (2009–2025)",
+                "category": "SQL",
+                "summary": "A comprehensive SQL-based analysis of Spotify streaming data, solving complex business questions ranging from basic retrieval to advanced analytics.",
+                "description": "This project explores a large-scale dataset of global music trends using DBeaver as the primary database management tool. It covers a wide spectrum of SQL challenges, starting from simple data extraction to advanced analytical problems involving multi-level joins, recursive queries, and statistical aggregations. By querying millions of rows from the 2009–2025 era, the project provides deep insights into track popularity, artist growth cycles, and genre dominance, demonstrating proficiency in writing high-performance, production-ready SQL code.",
+                "thumbnail": "/images/projects/Thumbnail/thumbnail.jpg",
+                "images": [],
+                "technologies": [
+                    "SQL (PostgreSQL/MySQL)",
+                    "DBeaver (Database Tooling)",
+                    "Database Schema Design",
+                    "Joins & Subqueries",
+                    "Window Functions",
+                    "CTEs (Common Table Expressions)"
+                ],
+                "duration": "3 days",
+                "status": "Completed",
+                "role": "Lead Data Analyst (Personal Project)",
+                "features": [
+                    "Comprehensive Problem Solving: Solved 50+ business questions categorized from beginner to advanced difficulty levels",
+                    "DBeaver Integration: Managed database connections, ER diagrams, and query execution plans within the DBeaver environment",
+                    "Advanced Aggregations: Calculated complex metrics like rolling averages and year-over-year growth for streaming numbers",
+                    "Multi-Table Joins: Successfully mapped and joined high-volume tables including tracks, artists, and global charts",
+                    "Data Ranking Logic: Utilized RANK() and DENSE_RANK() window functions to identify top-performing artists across different decades",
+                    "Query Optimization: Wrote and refined complex queries to ensure efficient performance on a dataset spanning 16 years of music data"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/siddharthdave/spotify-sql-analysis"
+            },
+
+            //Tableau Projects
+
+            {
+                "id": "epic-games-analyzing",
+                "name": "Epic Games Store: Market Performance Analysis",
+                "category": "Tableau",
+                "summary": "An interactive data visualization project featuring comprehensive dashboards and storyboards to analyze Epic Games' market trends.",
+                "description": "This project transforms complex gaming industry data into actionable insights through a series of interconnected Tableau dashboards. By analyzing player demographics, revenue streams, and game popularity on the Epic Games Store, I developed a multi-layered 'Data Story' that guides stakeholders through year-over-year growth and user engagement metrics. The project showcases advanced data storytelling techniques, utilizing sophisticated filtering, interactive parameters, and a variety of specialized charts to provide a 360-degree view of the gaming ecosystem.",
+                "thumbnail": "/images/projects/Thumbnail/thumbnail.jpg",
+                "images": [],
+                "technologies": [
+                    "Tableau Desktop",
+                    "Data Visualization",
+                    "Dashboard Design",
+                    "Data Storytelling",
+                    "Advanced Filtering"
+                ],
+                "duration": "1 month",
+                "status": "Completed",
+                "role": "Data Visualization Specialist (Personal Project)",
+                "features": [
+                    "Interactive Dashboards: Built dynamic views allowing users to drill down into specific genres, publishers, and time periods",
+                    "Comprehensive Storytelling: Authored a Tableau 'Story' that sequences key insights into a narrative regarding market expansion",
+                    "Advanced Chart Variety: Implemented diverse visualizations including Heat Maps, Dual-Axis Charts, Treemaps, and Trend Lines",
+                    "Global Filtering System: Integrated cross-dashboard filters and parameters for real-time data manipulation and custom views",
+                    "Performance Metrics Tracking: Analyzed Key Performance Indicators (KPIs) such as Active Users and Revenue per Genre",
+                    "Visual Best Practices: Applied professional color theory and layout principles to ensure high data readability and user engagement"
+                ],
+                "demoUrl": "https://public.tableau.com/app/profile/siddharth.dave",
+                "githubUrl": null
+            },
+
+
+            // Python Projects(Data Clening)
+
+            {
+                "id": "spotify-project-python",
+                "name": "Spotify Data Engineering: Cleaning & Preprocessing",
+                "category": "Python (Data Science)",
+                "summary": "A rigorous data cleaning pipeline developed in Jupyter Notebook to sanitize and structure 16 years of Spotify global music data.",
+                "description": "This project focuses on the foundational stage of data science: transforming raw, messy data into a reliable dataset. Working within a Jupyter Notebook environment, I utilized the Pandas library to perform deep cleaning on a Spotify dataset spanning 2009–2025. The workflow involves identifying and resolving structural issues, handling complex null values, and removing duplicate records. This project demonstrates strong proficiency in data manipulation, library-based problem solving, and the ability to prepare large-scale datasets for downstream analytical or machine learning tasks.",
+                "thumbnail": "/images/projects/Thumbnail/thumbnail.jpg",
+                "images": [],
+                "technologies": [
+                    "Python",
+                    "Pandas (Data Manipulation)",
+                    "NumPy",
+                    "Jupyter Notebook",
+                    "Data Engineering",
+                    "Data Cleaning"
+                ],
+                "duration": "1 month",
+                "status": "Completed",
+                "role": "Data Engineer (Personal Project)",
+                "features": [
+                    "Duplicate Removal: Efficiently identified and purged redundant records to ensure unique data entries across millions of rows",
+                    "Null Value Management: Implemented systematic handling of missing data through dropping or filling based on column-specific logic",
+                    "Data Normalization: Standardized string formats (lowercase/strip) for artist names and track titles to prevent grouping errors",
+                    "Schema Alignment: Corrected and converted data types across columns to ensure numerical and temporal consistency for the 2009–2025 timeline",
+                    "Column Optimization: Dropped irrelevant or highly-correlated columns to streamline the dataset and reduce memory footprint",
+                    "Jupyter Documentation: Provided a clear, step-by-step cleaning narrative within a notebook to ensure process reproducibility"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/siddharthdave/spotify-data-cleaning"
+            },
+
+            //Python Projects
+
+
+
+            // Swift Projects
+
+            {
+                "id": "music-nest",
+                "name": "Music Nest",
+                "category": "Swift",
+                "summary": "A high-performance iOS music streaming application featuring offline playback, persistent data management, and a custom audio engine.",
+                "description": "Music Nest is a professional-grade music player developed to bridge the gap between streaming and local library management. The app features a robust playback engine built on AVFoundation, supporting background audio and system-level integration. It employs a sophisticated Core Data architecture to handle large music libraries and user-generated playlists with high efficiency, while offering a modern, programmatic UIKit interface that supports dynamic themes and dark mode.",
+                "thumbnail": "/images/projects/MusicNest/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/MusicNest/Screen1.jpg",
+                    "/images/projects/MusicNest/Screen2.jpg",
+                    "/images/projects/MusicNest/Screen3.jpg",
+                    "/images/projects/MusicNest/Screen4.jpg",
+                    "/images/projects/MusicNest/Screen5.jpg",
+                    "/images/projects/MusicNest/Screen6.jpg",
+                    "/images/projects/MusicNest/Screen7.jpg",
+                    "/images/projects/MusicNest/Screen8.jpg",
+                    "/images/projects/MusicNest/Screen9.jpg",
+                    "/images/projects/MusicNest/Screen10.jpg",
+                    "/images/projects/MusicNest/Screen11.jpg",
+                    "/images/projects/MusicNest/Screen12.jpg",
+                    "/images/projects/MusicNest/Screen13.jpg",
+                    "/images/projects/MusicNest/Screen14.jpg",
+                    "/images/projects/MusicNest/Screen15.jpg",
+                    "/images/projects/MusicNest/Screen16.jpg",
+                    "/images/projects/MusicNest/Screen17.jpg",
+                    "/images/projects/MusicNest/Screen18.jpg",
+                    "/images/projects/MusicNest/Screen19.jpg",
+                    "/images/projects/MusicNest/Screen20.jpg",
+                    "/images/projects/MusicNest/Screen21.jpg",
+                    "/images/projects/MusicNest/Screen22.jpg",
+                    "/images/projects/MusicNest/Screen23.jpg",
+                    "/images/projects/MusicNest/Screen24.jpg",
+                    "/images/projects/MusicNest/Screen25.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit (Programmatic)",
+                    "Swift Data",
+                    "AVFoundation",
+                    "MediaPlayer Framework",
+                    "URLSession"
+                ],
+                "duration": "4 months",
+                "status": "Completed",
+                "role": "iOS Developer (Personal Project)",
+                "features": [
+                    "Native streaming engine with background playback support",
+                    "Offline download manager for local media persistence",
+                    "Complex data modeling for playlists and favorites via Core Data",
+                    "System-level integration with Lock Screen and Control Center",
+                    "Responsive UI with Dark Mode and custom theme transitions",
+                    "Audio customization including an integrated equalizer"
+                ],
+                "demoUrl": "https://apps.apple.com/music-nest",
+                "githubUrl": "https://github.com/siddharthdave/music-nest"
             },
             {
-                id: "tableau",
-                name: "Tableau",
-                subCategories: [
-                    {
-                        id: "dashboards",
-                        name: "Dashboards",
-                        projects: [
-                            {
-                                id: "sales-dashboard",
-                                name: "Sales Insights Dashboard",
-                                subCategory: "Dashboards",
-                                category: "Tableau",
-                                summary: "Interactive sales analytics dashboard",
-                                description: "This dashboard visualizes multi-year sales data...",
-                                thumbnail: "/images/projects/tableau/sales-thumb.jpg",
-                                images: ["/images/projects/tableau/sales-1.jpg"],
-                                technologies: ["Tableau", "SQL"],
-                                duration: "2 months",
-                                status: "Completed",
-                                role: "Data Viz Developer",
-                                features: [
-                                    "Drill-down charts",
-                                    "Dynamic filters"
-                                ],
-                                demoUrl: "https://public.tableau.com/views/sales-insights",
-                                githubUrl: ""
-                            }
-                            // ...other Tableau projects
-                        ]
-                    },
-                    // ...other Tableau sub-categories
-                ]
+                "id": "chatter-box",
+                "name": "Chatter Box",
+                "category": "Swift",
+                "summary": "A highly customizable real-time messaging application with Google authentication and dynamic UI states driven by Firebase.",
+                "description": "Chatter Box is a versatile communication platform built with Swift and UIKit that prioritizes user personalization and seamless cloud synchronization. The app leverages Firebase as a comprehensive backend solution, utilizing Firestore for real-time message delivery and Firebase Storage for media assets. A key highlight of the project is the custom UI engine, which programmatically updates message bubble attributes—including border widths, colors, and backgrounds—based on real-time 'seen' and 'unseen' status updates, providing a highly interactive and visual user experience.",
+                "thumbnail": "/images/projects/ChatterBox/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/ChatterBox/screen1.jpg",
+                    "/images/projects/ChatterBox/screen2.jpg",
+                    "/images/projects/ChatterBox/screen3.jpg",
+                    "/images/projects/ChatterBox/screen4.jpg",
+                    "/images/projects/ChatterBox/screen5.jpg",
+                    "/images/projects/ChatterBox/screen6.jpg",
+                    "/images/projects/ChatterBox/screen7.jpg",
+                    "/images/projects/ChatterBox/screen8.jpg",
+                    "/images/projects/ChatterBox/screen9.jpg",
+                    "/images/projects/ChatterBox/screen10.jpg",
+                    "/images/projects/ChatterBox/screen11.jpg",
+                    "/images/projects/ChatterBox/screen12.jpg",
+                    "/images/projects/ChatterBox/screen13.jpg",
+                    "/images/projects/ChatterBox/screen14.jpg",
+                    "/images/projects/ChatterBox/screen15.jpg",
+                    "/images/projects/ChatterBox/screen16.jpg",
+                    "/images/projects/ChatterBox/screen17.jpg",
+                    "/images/projects/ChatterBox/screen18.jpg",
+                    "/images/projects/ChatterBox/screen19.jpg",
+                    "/images/projects/ChatterBox/screen20.jpg",
+                    "/images/projects/ChatterBox/screen21.jpg",
+                    "/images/projects/ChatterBox/screen22.jpg",
+                    "/images/projects/ChatterBox/screen23.jpg",
+                    "/images/projects/ChatterBox/screen24.jpg",
+                    "/images/projects/ChatterBox/screen25.jpg",
+                    "/images/projects/ChatterBox/screen26.jpg",
+                    "/images/projects/ChatterBox/screen27.jpg",
+                    "/images/projects/ChatterBox/screen28.jpg",
+                    "/images/projects/ChatterBox/screen29.jpg",
+                    "/images/projects/ChatterBox/screen30.jpg",
+                    "/images/projects/ChatterBox/screen31.jpg",
+                    "/images/projects/ChatterBox/screen32.jpg",
+                    "/images/projects/ChatterBox/screen33.jpg",
+                    "/images/projects/ChatterBox/screen34.jpg",
+                    "/images/projects/ChatterBox/screen35.jpg",
+                    "/images/projects/ChatterBox/screen36.jpg",
+                    "/images/projects/ChatterBox/screen37.jpg",
+                    "/images/projects/ChatterBox/screen38.jpg",
+                    "/images/projects/ChatterBox/screen39.jpg",
+                    "/images/projects/ChatterBox/screen40.jpg",
+                    "/images/projects/ChatterBox/screen41.jpg",
+                    "/images/projects/ChatterBox/screen42.jpg",
+                    "/images/projects/ChatterBox/screen43.jpg",
+                    "/images/projects/ChatterBox/screen44.jpg",
+                    "/images/projects/ChatterBox/screen45.jpg",
+                    "/images/projects/ChatterBox/screen46.jpg",
+                    "/images/projects/ChatterBox/screen47.jpg",
+                    "/images/projects/ChatterBox/screen48.jpg",
+                    "/images/projects/ChatterBox/screen49.jpg",
+                    "/images/projects/ChatterBox/screen50.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit",
+                    "Firebase Firestore (Real-time DB)",
+                    "Firebase Auth",
+                    "Google Sign-In SDK",
+                    "Cloudinary"
+                ],
+                "duration": "3 months",
+                "status": "In Development",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "One-tap Google Login integration for secure and quick user authentication",
+                    "Real-time data synchronization using Firebase Firestore listeners for instant messaging",
+                    "Customizable chat interface allowing users to set personalized conversation backgrounds",
+                    "Dynamic UI states for seen and unseen messages, including custom border widths and colors",
+                    "Visual feedback system that changes message bubble backgrounds based on read receipts",
+                    "Full media support for sharing high-quality photos, videos, and documents via Firebase Storage",
+                    "Programmatic UIKit components for a responsive and fluid user experience"
+                ],
+                "demoUrl": "https://chatterbox-demo.netlify.app",
+                "githubUrl": "https://github.com/siddharthdave/chatter-box"
             },
-            // ...other categories (e.g., "React", "Node.js")
+            {
+                "id": "photo-heaven",
+                "name": "Photo Heaven",
+                "category": "Swift",
+                "summary": "A dynamic image discovery and curation platform featuring real-time API integration and deep UI personalization.",
+                "description": "Photo Heaven is a high-performance iOS application built with Swift and UIKit that allows users to discover, download, and manage high-quality photography. The app integrates with external image APIs to provide a vast, searchable database of visual content. It features a highly flexible user interface where users can toggle between different grid layouts and customize visual elements like border colors. Leveraging Firebase for state management, the app provides a seamless experience for liking images and managing personal collections while ensuring efficient memory handling during high-resolution image downloads.",
+                "thumbnail": "/images/projects/PhotoHeaven/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/PhotoHeaven/screen1.jpg",
+                    "/images/projects/PhotoHeaven/screen2.jpg",
+                    "/images/projects/PhotoHeaven/screen3.jpg",
+                    "/images/projects/PhotoHeaven/screen4.jpg",
+                    "/images/projects/PhotoHeaven/screen5.jpg",
+                    "/images/projects/PhotoHeaven/screen6.jpg",
+                    "/images/projects/PhotoHeaven/screen7.jpg",
+                    "/images/projects/PhotoHeaven/screen8.jpg",
+                    "/images/projects/PhotoHeaven/screen9.jpg",
+                    "/images/projects/PhotoHeaven/screen10.jpg",
+                    "/images/projects/PhotoHeaven/screen11.jpg",
+                    "/images/projects/PhotoHeaven/screen12.jpg",
+                    "/images/projects/PhotoHeaven/screen13.jpg",
+                    "/images/projects/PhotoHeaven/screen14.jpg",
+                    "/images/projects/PhotoHeaven/screen15.jpg",
+                    "/images/projects/PhotoHeaven/screen16.jpg",
+                    "/images/projects/PhotoHeaven/screen17.jpg",
+                    "/images/projects/PhotoHeaven/screen18.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit (Programmatic)",
+                    "REST API Integration",
+                    "Realm Database",
+                    "URLSession",
+                    "JSON Parsing",
+                    "Photos Framework"
+                ],
+                "duration": "5 months",
+                "status": "Beta Testing",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "Advanced Discovery Engine: Real-time image fetching and searching via external API integration",
+                    "Adaptive Gallery UI: Toggleable multi-image view layouts allowing users to switch between different grid styles",
+                    "UI Personalization: Customizable border colors and backgrounds for a tailored aesthetic experience",
+                    "Asynchronous Downloads: Efficient image downloading and saving directly to the user's local Photos library",
+                    "Interactive Social Actions: Real-time 'Like' functionality with persistent state storage via Realm",
+                    "Optimized Search: High-speed image search with debounced API calls for improved performance",
+                    "Asset Caching: Robust image caching system to minimize data usage and improve scrolling fluidity"
+                ],
+                "demoUrl": "https://photo-heaven-demo.com",
+                "githubUrl": "https://github.com/siddharthdave/photo-heaven"
+            },
+            {
+                "id": "gesture-masters",
+                "name": "GestureMasters",
+                "category": "Swift",
+                "summary": "An innovative AI-powered application that enables touchless control of media and gaming through a custom-trained machine learning model.",
+                "description": "GestureMasters is a cutting-edge iOS utility that transforms the user's hand into a remote controller using computer vision. Built with Swift and the Vision framework, the app utilizes a custom-trained Core ML model to interpret complex hand signs and translate them into digital commands. Users can navigate between different modules—Gaming, Music, and Video—entirely through gestures. Whether playing a contactless game of Rock Paper Scissors or managing a media playlist, the app demonstrates advanced integration of machine learning for gesture classification and AVFoundation for seamless media playback control.",
+                "thumbnail": "/images/projects/GestureMasters/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/GestureMasters/screen1.jpg",
+                    "/images/projects/GestureMasters/screen2.jpg",
+                    "/images/projects/GestureMasters/screen3.jpg",
+                    "/images/projects/GestureMasters/screen4.jpg",
+                    "/images/projects/GestureMasters/screen5.jpg",
+                    "/images/projects/GestureMasters/screen6.jpg",
+                    "/images/projects/GestureMasters/screen7.jpg",
+                    "/images/projects/GestureMasters/screen8.jpg",
+                    "/images/projects/GestureMasters/screen9.jpg",
+                    "/images/projects/GestureMasters/screen10.jpg",
+                    "/images/projects/GestureMasters/screen11.jpg",
+                    "/images/projects/GestureMasters/screen12.jpg",
+                    "/images/projects/GestureMasters/screen13.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit",
+                    "Custom Core ML Model",
+                    "Create ML",
+                    "Vision Framework",
+                    "AVFoundation",
+                    "AVKit"
+                ],
+                "duration": "4 months",
+                "status": "Completed",
+                "role": "Lead iOS Developer & ML Engineer (Personal Project)",
+                "features": [
+                    "Custom ML Engine: Integrated a proprietary machine learning model trained using Create ML to recognize specific user-defined hand signs",
+                    "Touchless Navigation: Hands-free category selection using custom gestures to switch between Game, Music, and Video sections",
+                    "Gesture-Driven Gaming: Fully playable 'Rock Paper Scissors' engine powered by real-time hand-pose classification",
+                    "Dynamic Media Control: Gesture-based commands to play, pause, and skip tracks or videos via the front-facing camera",
+                    "Real-time Vision Pipeline: High-performance implementation of Apple's Vision framework for low-latency gesture detection and classification",
+                    "Interactive Feedback: Real-time visual overlays that confirm recognized gestures and active system states",
+                    "Media Integration: Custom playback controllers built with AVFoundation that respond instantly to gesture-triggered events"
+                ],
+                "demoUrl": "https://gesture-masters-demo.com",
+                "githubUrl": "https://github.com/siddharthdave/gesture-masters"
+            },
+            {
+                "id": "streak-app",
+                "name": "Streak App",
+                "category": "Swift",
+                "summary": "A high-fidelity UI concept focused on dynamic habit visualization and evolving aesthetic states.",
+                "description": "Streak App is a specialized user interface exploration designed to gamify habit consistency through visual evolution. Developed entirely with programmatic UIKit, the application centers on a 'Living UI' concept where the primary imagery transforms every 24 hours to represent a growing streak. The project prioritizes clean typography, smooth transitions, and a minimalist 'What To Do' dashboard. As a pure UI-based project, it serves as a showcase of advanced layout logic, state-driven design, and native social sharing integration, allowing users to visually document and share their daily progress.",
+                "thumbnail": "/images/projects/StreakApp/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/StreakApp/screen1.jpg",
+                    "/images/projects/StreakApp/screen2.jpg",
+                    "/images/projects/StreakApp/screen3.jpg",
+                    "/images/projects/StreakApp/screen4.jpg",
+                    "/images/projects/StreakApp/screen5.jpg",
+                    "/images/projects/StreakApp/screen6.jpg",
+                    "/images/projects/StreakApp/screen7.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit (Programmatic)",
+                    "Auto Layout",
+                    "Social Framework",
+                    "Dynamic Asset Management"
+                ],
+                "duration": "2.5 months",
+                "status": "Completed",
+                "role": "Lead iOS UI Developer (Personal Project)",
+                "features": [
+                    "Dynamic Daily Imagery: A unique UI engine that rotates and updates application imagery every 24 hours to visually reward habit streaks",
+                    "Focused Task Visualization: A minimalist 'What To Do' interface designed for maximum clarity and aesthetic appeal",
+                    "Native Share Integration: One-tap social sharing module to export current progress and streak visuals",
+                    "Programmatic UI Architecture: Entirely code-based layout system ensuring pixel-perfect responsiveness across all iOS devices",
+                    "State-Based Layout Transitions: Seamless visual updates that change based on the active streak day",
+                    "Curated Aesthetic Experience: A distraction-free environment solely focused on habit display and progress sharing"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/siddharthdave/streak-app"
+            },
+            {
+                "id": "glycemic",
+                "name": "Glycemic",
+                "category": "Swift",
+                "summary": "A specialized nutritional data application focused on glycemic index tracking and detailed macronutrient analysis.",
+                "description": "Glycemic is a technical exploration into high-performance data fetching and nutritional analysis. Built with Swift and UIKit, the application bridges the gap between raw data and user-centric health insights by integrating with external nutritional APIs. The app features a streamlined table view architecture for browsing food items, utilizing custom cell configurations to display complex nutritional data. By focusing on the relationship between Glycemic Load (GL) and Glycemic Index (GI), the app provides a sophisticated platform for users to analyze the physiological impact of various food ingredients.",
+                "thumbnail": "/images/projects/Glycemic/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/Glycemic/screen1.jpg",
+                    "/images/projects/Glycemic/screen2.jpg",
+                    "/images/projects/Glycemic/screen3.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit",
+                    "REST API Integration",
+                    "URLSession",
+                    "JSON Parsing",
+                    "Codable",
+                    "Auto Layout"
+                ],
+                "duration": "3.5 months",
+                "status": "Beta Testing",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "Real-time API Integration: Asynchronous fetching of global nutritional data via RESTful services",
+                    "Optimized Table View: High-performance list rendering for browsing food items with smooth scrolling and lazy-loading",
+                    "Detailed Nutrient Analysis: On-click deep dive providing critical health metrics including Glycemic Load (GL) and Glycemic Index (GI)",
+                    "Macronutrient Tracking: Detailed breakdown of Carbohydrates and Proteins for every food item",
+                    "Ingredient Transparency: Complete visibility into item naming and raw ingredient lists fetched from cloud databases",
+                    "Dynamic Detail Navigation: Interactive UI transitions from summary lists to comprehensive nutritional profiles",
+                    "Programmatic UI: A clean, code-based UIKit interface designed for data clarity and accessibility"
+                ],
+                "demoUrl": "https://glycemic-demo.com",
+                "githubUrl": "https://github.com/siddharthdave/glycemic"
+            },
+            {
+                "id": "country-app",
+                "name": "Country App",
+                "category": "Swift",
+                "summary": "A clean, API-driven directory for exploring global identities through flags and nomenclature.",
+                "description": "Country App is a focused networking project designed to demonstrate efficient data fetching and image handling in iOS. Built using Swift and UIKit, the application connects to a RESTful API to retrieve a comprehensive list of world countries. The core technical challenge focused on the asynchronous downloading and caching of SVG or PNG flag assets to ensure a fluid scrolling experience. By utilizing a programmatic TableView architecture, the app provides a minimalist and responsive interface for browsing global data in real-time.",
+                "thumbnail": "/images/projects/CountryApp/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/CountryApp/screen1.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit",
+                    "REST API Integration",
+                    "URLSession",
+                    "JSON Parsing",
+                    "Codable",
+                    "Asynchronous Image Loading"
+                ],
+                "duration": "2 months",
+                "status": "Completed",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "Real-time API Integration: Fetches the latest global country data from external REST services",
+                    "Dynamic Flag Gallery: High-resolution flag rendering for every country using asynchronous image downloading",
+                    "Efficient List Rendering: Optimized TableView implementation for smooth performance across large datasets",
+                    "Automated JSON Mapping: Utilizes Swift’s Codable protocol for robust and error-free data parsing",
+                    "Responsive UI: A programmatic layout that ensures consistent presentation of country names and icons",
+                    "Network Error Handling: Integrated logic to manage API timeouts and connectivity issues gracefully"
+                ],
+                "demoUrl": "https://country-app-demo.com",
+                "githubUrl": "https://github.com/siddharthdave/country-app"
+            },
+            {
+                "id": "calculator",
+                "name": "Calculator",
+                "category": "Swift",
+                "summary": "A minimalist and high-performance basic calculator focused on precise arithmetic logic and clean UI.",
+                "description": "Calculator is a clean, functional utility project designed to demonstrate core programming principles in iOS development. Built with Swift and UIKit, the application focuses on the fundamental 'Model-View-Controller' (MVC) architecture to process basic arithmetic operations (+, -, *, /) with high accuracy. This project highlights my ability to manage application state, handle user input through a custom-built keypad, and implement real-time display updates without the need for complex persistence or external libraries.",
+                "thumbnail": "/images/projects/Calculator/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/Calculator/screen1.jpg",
+                    "/images/projects/Calculator/screen2.jpg",
+                    "/images/projects/Calculator/screen3.jpg",
+                    "/images/projects/Calculator/screen4.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit",
+                    "Auto Layout",
+                    "MVC Architecture",
+                    "Arithmetic Logic Processing"
+                ],
+                "duration": "1 month",
+                "status": "Completed",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "Real-Time Arithmetic Engine: Instant processing of basic mathematical operations with decimal precision",
+                    "Programmatic UI Components: A responsive, grid-based layout for the numeric keypad and display",
+                    "State Management Logic: Robust handling of operator precedence and multi-step calculations",
+                    "Clean Input Handling: Specialized logic to manage clear (AC), percentage, and positive/negative toggles",
+                    "Dynamic Display: Adaptive text sizing to ensure calculations remain legible as numbers increase in length",
+                    "Minimalist Design: A distraction-free user experience focused on speed and immediate utility"
+                ],
+                "demoUrl": "https://calculator-demo.com",
+                "githubUrl": "https://github.com/siddharthdave/calculator"
+            },
+            {
+                "id": "stopwatch",
+                "name": "Stopwatch",
+                "category": "Swift",
+                "summary": "A clean, high-precision timing utility focused on accurate millisecond tracking and real-time UI updates.",
+                "description": "Stopwatch is a focused iOS utility designed to demonstrate proficiency in high-frequency UI updates and precise time interval management. Built using Swift and UIKit, the application utilizes a recursive Timer logic to ensure millisecond accuracy. The project emphasizes the 'Single Responsibility Principle,' providing a distraction-free interface for starting, stopping, and resetting time. It serves as a technical showcase for managing application states (Running, Paused, Reset) and ensuring a fluid, low-latency user experience through programmatic UI components.",
+                "thumbnail": "/images/projects/StopWatch/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/StopWatch/screen1.jpg",
+                    "/images/projects/StopWatch/screen2.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit",
+                    "Foundation (Timer)",
+                    "Auto Layout",
+                    "State Management"
+                ],
+                "duration": "1 month",
+                "status": "Completed",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "Precision Timing: Real-time calculation of time intervals with accuracy down to the millisecond",
+                    "State-Driven Controls: Intuitive Start, Stop, and Reset functionality that updates the UI dynamically",
+                    "Optimized Performance: High-frequency display updates handled efficiently to ensure smooth digit transitions",
+                    "Programmatic Interface: A clean, code-based layout designed for high visibility and immediate utility",
+                    "Adaptive Design: Fully responsive UI that maintains alignment and legibility across various iOS screen sizes",
+                    "Zero-Latency Logic: Lightweight architecture focused on immediate response to user touch events"
+                ],
+                "demoUrl": "https://stopwatch-demo.com",
+                "githubUrl": "https://github.com/siddharthdave/stopwatch"
+            },
+            {
+                "id": "ai-chat-bot",
+                "name": "AI Chat Bot",
+                "category": "Swift",
+                "summary": "A dynamic AI assistant powered by ChatGPT with custom UI personalization and screen-capture capabilities.",
+                "description": "AI Chat Bot is a highly interactive communication tool that integrates OpenAI's GPT models into a native iOS environment. Built with Swift and UIKit, the app focuses on providing a personalized AI experience where users can modify the interface in real-time. Key technical implementations include asynchronous API networking for chat responses, a custom UI engine for changing backgrounds and profile icons, and a dedicated screen-capture utility. The app also supports system-wide appearance settings to ensure a seamless visual transition between light and dark modes.",
+                "thumbnail": "/images/projects/AIChatBot/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/AIChatBot/screen1.jpg",
+                    "/images/projects/AIChatBot/screen2.jpg",
+                    "/images/projects/AIChatBot/screen3.jpg",
+                    "/images/projects/AIChatBot/screen4.jpg",
+                    "/images/projects/AIChatBot/screen5.jpg",
+                    "/images/projects/AIChatBot/screen6.jpg",
+                    "/images/projects/AIChatBot/screen7.jpg",
+                    "/images/projects/AIChatBot/screen8.jpg",
+                    "/images/projects/AIChatBot/screen9.jpg",
+                    "/images/projects/AIChatBot/screen10.jpg",
+                    "/images/projects/AIChatBot/screen11.jpg",
+                    "/images/projects/AIChatBot/screen12.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit (Programmatic)",
+                    "OpenAI API (ChatGPT)",
+                    "URLSession",
+                    "JSON Parsing",
+                    "PhotoKit (for SS and custom images)"
+                ],
+                "duration": "1 month",
+                "status": "Completed",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "ChatGPT Integration: Seamless real-time conversation powered by OpenAI’s natural language models",
+                    "Screen Capture Utility: Integrated functionality to capture and save screenshots of conversations directly within the app",
+                    "Custom Interface Engine: Users can personalize the chat experience by changing background colors and chat wallpaper images",
+                    "Identity Customization: Ability to change the AI chatbot profile icon to suit user preference",
+                    "System Appearance Support: Fully supports Light/Dark mode and follows global iOS appearance settings",
+                    "Session Management: Feature to create and manage multiple new chat instances for different topics",
+                    "Programmatic Chat UI: A fluid, auto-sizing message bubble interface built entirely in code"
+                ],
+                "demoUrl": "https://ai-chatbot-demo.com",
+                "githubUrl": "https://github.com/siddharthdave/ai-chat-bot"
+            },
+            {
+                "id": "authentication-form",
+                "name": "Authentication Form",
+                "category": "Swift",
+                "summary": "A secure local authentication system featuring persistent user management and data CRUD operations using Realm.",
+                "description": "Authentication Form is a technical project focused on local data persistence and secure user workflows. Built with Swift and UIKit, the application implements a complete Sign-Up and Sign-In flow, storing user credentials and profiles in a Realm database. The project demonstrates a secure 'Logged In' state where an administrative view allows for the management of the local user directory, including the ability to view all registered accounts and perform deletions. This project highlights proficiency in local database architecture, form validation, and session state management.",
+                "thumbnail": "/images/projects/AthenticationFormRealm/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/AthenticationFormRealm/screen1.jpg",
+                    "/images/projects/AthenticationFormRealm/screen2.jpg",
+                    "/images/projects/AthenticationFormRealm/screen3.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit",
+                    "Realm Database",
+                    "Model-View-Controller (MVC)",
+                    "Data Persistence"
+                ],
+                "duration": "1 month",
+                "status": "Completed",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "Local Authentication System: Secure Sign-Up and Sign-In functionality using Realm for local credential storage",
+                    "User Directory Management: A post-login dashboard that displays a list of all registered names and emails",
+                    "Database CRUD Operations: Integrated functionality to delete user records directly from the persistent Realm storage",
+                    "Session Management: Robust Logout logic that handles state transitions and secures the user's data",
+                    "Form Validation: Real-time logic to ensure accurate data entry during the registration process",
+                    "Programmatic Navigation: Seamless transitions between authentication screens and the user management dashboard"
+                ],
+                "demoUrl": "https://github.com/siddharthdave/authentication-form-realm",
+                "githubUrl": "https://github.com/siddharthdave/authentication-form-realm"
+            },
+            {
+                "id": "passport-size-photo",
+                "name": "Passport Size Photo",
+                "category": "Swift",
+                "summary": "A complex UI architecture project featuring nested collection views for global passport specification browsing.",
+                "description": "Passport Size Photo is a high-fidelity user interface exploration focused on advanced layout compositions in UIKit. The project demonstrates a 'Nested Scroll' architecture, where horizontal CollectionViews are embedded within a vertical TableView to categorize and display international passport dimensions. This project serves as a technical showcase for programmatic UI development, focusing on cell reuse optimization and the structural organization of multi-layered data sets across different countries and their specific document standards.",
+                "thumbnail": "/images/projects/PassportSizePhoto/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/PassportSizePhoto/screen1.jpg",
+                    "/images/projects/PassportSizePhoto/screen2.jpg",
+                    "/images/projects/PassportSizePhoto/screen3.jpg",
+                    "/images/projects/PassportSizePhoto/screen4.jpg",
+                    "/images/projects/PassportSizePhoto/screen5.jpg",
+                    "/images/projects/PassportSizePhoto/screen6.jpg",
+                    "/images/projects/PassportSizePhoto/screen7.jpg",
+                    "/images/projects/PassportSizePhoto/screen8.jpg",
+                    "/images/projects/PassportSizePhoto/screen9.jpg",
+                    "/images/projects/PassportSizePhoto/screen10.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit (Programmatic)",
+                    "UITableView",
+                    "UICollectionView (Nested)",
+                    "Auto Layout",
+                    "View Hierarchies"
+                ],
+                "duration": "1 month",
+                "status": "Completed",
+                "role": "Lead iOS UI Developer (Personal Project)",
+                "features": [
+                    "Nested UI Architecture: Complex integration of horizontal UICollectionViews inside a vertical UITableView for a modern browsing experience",
+                    "Global Standards Directory: A curated UI showcasing various country names alongside their specific passport size requirements",
+                    "Multi-Directional Scrolling: Fluid navigation logic allowing both vertical category scrolling and horizontal item exploration",
+                    "Advanced Cell Reuse: Optimized logic to ensure high performance and smooth frame rates while managing nested reusable components",
+                    "Programmatic Layout Design: Entirely code-based view construction ensuring precision and adaptability across all iOS device sizes",
+                    "Visual Differentiation: Custom UI styling to distinctively present geographical regions and their associated photo specifications"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/siddharthdave/passport-size-photo"
+            },
+            {
+                "id": "speak-ai",
+                "name": "SpeakAI",
+                "category": "Swift",
+                "summary": "A sophisticated multi-platform AI interface concept featuring dubbing, voice, and social media integration designs.",
+                "description": "SpeakAI is a high-fidelity UI exploration project that envisions a centralized hub for AI-driven content creation. Built with Swift and UIKit, the app focuses on complex layout structures for diverse social media platforms including Instagram, TikTok, YouTube, and Twitter. This project serves as a showcase of advanced programmatic UI design, demonstrating how to organize multi-channel 'Dubbing' and 'Voice' interfaces into a cohesive, user-centric experience. It highlights a deep understanding of platform-specific design languages and seamless content-upload workflows.",
+                "thumbnail": "/images/projects/SpeakAI/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/SpeakAI/screen1.jpg",
+                    "/images/projects/SpeakAI/screen2.jpg",
+                    "/images/projects/SpeakAI/screen3.jpg",
+                    "/images/projects/SpeakAI/screen4.jpg",
+                    "/images/projects/SpeakAI/screen5.jpg",
+                    "/images/projects/SpeakAI/screen6.jpg",
+                    "/images/projects/SpeakAI/screen7.jpg",
+                    "/images/projects/SpeakAI/screen8.jpg"
+                ],
+                "technologies": [
+                    "Swift",
+                    "UIKit (Programmatic)",
+                    "Auto Layout",
+                    "View Controller Composition",
+                    "Custom UI Components"
+                ],
+                "duration": "1 month",
+                "status": "Completed",
+                "role": "Lead iOS UI Developer (Personal Project)",
+                "features": [
+                    "Multi-Platform Dubbing Hub: Comprehensive UI designs for dubbing content across Instagram, TikTok, YouTube, and Twitter",
+                    "AI Voice Interface: A specialized user experience for interacting with AI-generated voice models and audio settings",
+                    "Integrated Social Upload Flow: Conceptual UI for high-efficiency content distribution and channel management",
+                    "Conversational AI Chat UI: A clean, modern chat interface designed for natural language interaction simulations",
+                    "Unified Navigation System: An intuitive dashboard allowing users to switch between voice, dubbing, and chat modules",
+                    "Programmatic Asset Layout: Meticulously coded views that adapt across different iPhone screen ratios and orientations"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/siddharthdave/speak-ai"
+            },
+
+            //SwiftUI Projects
+
+            {
+                "id": "caloric-tracking-app",
+                "name": "Caloric Tracking App",
+                "category": "SwiftUI",
+                "summary": "A data-centric nutritional calculator built with SwiftUI, focused on precise macronutrient tracking and daily meal categorization.",
+                "description": "Caloric Tracking App is a specialized utility designed for high-accuracy nutritional logging. Built entirely with SwiftUI, the application leverages declarative syntax and state-driven architecture to allow users to manually input specific macronutrient values—Fat, Protein, and Carbohydrates—to calculate total caloric impact with precision. The project features a structured logging system where users can categorize entries into specific meal periods: Breakfast, Lunch, Dinner, or Snacks. This project serves as a technical demonstration of modern iOS development using @State, @Binding, and @Published patterns to handle complex mathematical logic and data flow.",
+                "thumbnail": "/images/projects/CaloricTrackingApp/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/CaloricTrackingApp/screen1.jpg",
+                    "/images/projects/CaloricTrackingApp/screen2.jpg",
+                    "/images/projects/CaloricTrackingApp/screen3.jpg",
+                    "/images/projects/CaloricTrackingApp/screen4.jpg",
+                    "/images/projects/CaloricTrackingApp/screen5.jpg",
+                    "/images/projects/CaloricTrackingApp/screen6.jpg",
+                    "/images/projects/CaloricTrackingApp/screen7.jpg",
+                    "/images/projects/CaloricTrackingApp/screen8.jpg"
+                ],
+                "technologies": [
+                    "SwiftUI",
+                    "Swift",
+                    "State Management (@State, @Published)",
+                    "Combine (for logic updates)",
+                    "Foundation (Mathematical Logic)"
+                ],
+                "duration": "4 months",
+                "status": "In Development",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "Declarative Nutrient Logging: A reactive SwiftUI input system for tracking Fat, Protein, and Carbohydrates",
+                    "Dynamic Meal Selection: Specialized Picker-based modules for organizing data into Breakfast, Lunch, Dinner, and Snacks",
+                    "Real-time Caloric Calculation: State-driven logic that instantly updates total daily intake based on macro ratios",
+                    "Modern Data Flow: Utilizes SwiftUI's observation patterns to ensure UI and data logic remain synchronized",
+                    "User-Centric Input: Clean, focused data entry forms designed for high-accuracy nutritional logging",
+                    "Macronutrient Distribution: Mathematical engine that validates and sums daily nutritional data"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/siddharthdave/caloric-tracking"
+            },
+            {
+                "id": "weather-app",
+                "name": "Weather App",
+                "category": "SwiftUI",
+                "summary": "A dynamic weather forecasting application featuring 3-hour interval tracking and advanced motion-driven UI.",
+                "description": "Weather App is a high-fidelity demonstration of SwiftUI's reactive capabilities, integrating real-time data from OpenWeather API with a fluid, animation-heavy interface. The application features a 24-hour horizontal forecast broken into 3-hour increments, alongside current day high (H) and low (L) temperature tracking. Built using a modern MVVM architecture, it leverages Combine for seamless data binding and Core Location for automated local weather detection, while also offering a robust search system for exploring weather conditions in global locations.",
+                "thumbnail": "/images/projects/WeatherApp/Thumbnail/thumbnail.jpg",
+                "images": [
+                    "/images/projects/WeatherApp/screen1.jpg",
+                    "/images/projects/WeatherApp/screen2.jpg",
+                    "/images/projects/WeatherApp/screen3.jpg",
+                    "/images/projects/WeatherApp/screen4.jpg",
+                    "/images/projects/WeatherApp/screen5.jpg",
+                    "/images/projects/WeatherApp/screen6.jpg"
+                ],
+                "technologies": [
+                    "SwiftUI",
+                    "Swift",
+                    "OpenWeather API",
+                    "Core Location",
+                    "Combine",
+                    "JSON/Codable"
+                ],
+                "duration": "1.5 months",
+                "status": "Completed",
+                "role": "Lead iOS Developer (Personal Project)",
+                "features": [
+                    "Time-Segmented Forecast: Horizontal scroll view displaying weather changes at 3-hour intervals for precise daily planning",
+                    "Current Day Analytics: Prominent display of current temperature alongside high (H) and low (L) daily peaks",
+                    "Advanced UI Animations: Smooth, state-driven transitions for weather condition shifts (e.g., rain, clouds, sun)",
+                    "Global & Local Search: Dual-mode location handling allowing for both automatic GPS detection and manual city searches",
+                    "Reactive Backgrounds: Dynamic interface gradients and visuals that adapt in real-time to current atmospheric conditions",
+                    "Asynchronous Data Pipeline: Robust networking layer using async/await and URLSession for lag-free data fetching"
+                ],
+                "demoUrl": "https://weather-swiftui-demo.com",
+                "githubUrl": "https://github.com/siddharthdave/weather-app-swiftui"
+            }
         ]
+
     },
+
     contact: {
         title: "Get In Touch",
         subtitle: "Have a project in mind or want to discuss opportunities? Let's connect!",
@@ -1394,6 +1618,16 @@ export const portfolioContent = {
                 icon: "/images/tableau-icon.png",
                 url: "https://public.tableau.com/app/profile/siddharth.dave2404/vizzes"
             }
+        ],
+
+
+        services: [
+            "Data Analytics & Tableau BI",
+            "SQL Database Optimization",
+            "Python Data Engineering",
+            "iOS App Development",
+            "SwiftUI & Modern UI Design",
+            "Interactive Data Visuals"
         ]
     }
 };
