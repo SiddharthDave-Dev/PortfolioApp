@@ -859,7 +859,7 @@ export const portfolioContent = {
                     "Query Optimization: Wrote and refined complex queries to ensure efficient performance on a dataset spanning 16 years of music data"
                 ],
                 "demoUrl": null,
-                "githubUrl": "https://github.com/siddharthdave/spotify-sql-analysis"
+                "githubUrl": "https://github.com/SiddharthDave-Dev/SpotifyProject"
             },
 
             //Tableau Projects
@@ -890,8 +890,8 @@ export const portfolioContent = {
                     "Performance Metrics Tracking: Analyzed Key Performance Indicators (KPIs) such as Active Users and Revenue per Genre",
                     "Visual Best Practices: Applied professional color theory and layout principles to ensure high data readability and user engagement"
                 ],
-                "demoUrl": "https://public.tableau.com/app/profile/siddharth.dave",
-                "githubUrl": null
+                "demoUrl": "https://public.tableau.com/app/profile/siddharth.dave2404/viz/EpicGamesAnalyzingProject_17629499308960/EpicGamesStory",
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Tableau-Projects"
             },
 
 
@@ -925,7 +925,7 @@ export const portfolioContent = {
                     "Jupyter Documentation: Provided a clear, step-by-step cleaning narrative within a notebook to ensure process reproducibility"
                 ],
                 "demoUrl": null,
-                "githubUrl": "https://github.com/siddharthdave/spotify-data-cleaning"
+                "githubUrl": "https://github.com/SiddharthDave-Dev/SpotifyProject/tree/main/Spotify_Data_Cleaning"
             },
 
             //Python Projects
@@ -976,7 +976,7 @@ export const portfolioContent = {
                     "MediaPlayer Framework",
                     "URLSession"
                 ],
-                "duration": "4 months",
+                "duration": "6 months",
                 "status": "Completed",
                 "role": "iOS Developer (Personal Project)",
                 "features": [
@@ -987,8 +987,8 @@ export const portfolioContent = {
                     "Responsive UI with Dark Mode and custom theme transitions",
                     "Audio customization including an integrated equalizer"
                 ],
-                "demoUrl": "https://apps.apple.com/music-nest",
-                "githubUrl": "https://github.com/siddharthdave/music-nest"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/MusicNest"
             },
             {
                 "id": "chatter-box",
@@ -1057,8 +1057,8 @@ export const portfolioContent = {
                     "Google Sign-In SDK",
                     "Cloudinary"
                 ],
-                "duration": "3 months",
-                "status": "In Development",
+                "duration": "5 months",
+                "status": "Completed",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
                     "One-tap Google Login integration for secure and quick user authentication",
@@ -1069,8 +1069,8 @@ export const portfolioContent = {
                     "Full media support for sharing high-quality photos, videos, and documents via Firebase Storage",
                     "Programmatic UIKit components for a responsive and fluid user experience"
                 ],
-                "demoUrl": "https://chatterbox-demo.netlify.app",
-                "githubUrl": "https://github.com/siddharthdave/chatter-box"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/ChatterBox"
             },
             {
                 "id": "photo-heaven",
@@ -1108,8 +1108,8 @@ export const portfolioContent = {
                     "JSON Parsing",
                     "Photos Framework"
                 ],
-                "duration": "5 months",
-                "status": "Beta Testing",
+                "duration": "2 months",
+                "status": "Completed",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
                     "Advanced Discovery Engine: Real-time image fetching and searching via external API integration",
@@ -1120,8 +1120,8 @@ export const portfolioContent = {
                     "Optimized Search: High-speed image search with debounced API calls for improved performance",
                     "Asset Caching: Robust image caching system to minimize data usage and improve scrolling fluidity"
                 ],
-                "demoUrl": "https://photo-heaven-demo.com",
-                "githubUrl": "https://github.com/siddharthdave/photo-heaven"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/PhotoHaven"
             },
             {
                 "id": "gesture-masters",
@@ -1166,8 +1166,8 @@ export const portfolioContent = {
                     "Interactive Feedback: Real-time visual overlays that confirm recognized gestures and active system states",
                     "Media Integration: Custom playback controllers built with AVFoundation that respond instantly to gesture-triggered events"
                 ],
-                "demoUrl": "https://gesture-masters-demo.com",
-                "githubUrl": "https://github.com/siddharthdave/gesture-masters"
+                "demoUrl": null,
+                "githubUrl": null
             },
             {
                 "id": "streak-app",
@@ -1192,7 +1192,7 @@ export const portfolioContent = {
                     "Social Framework",
                     "Dynamic Asset Management"
                 ],
-                "duration": "2.5 months",
+                "duration": "1 day",
                 "status": "Completed",
                 "role": "Lead iOS UI Developer (Personal Project)",
                 "features": [
@@ -1204,7 +1204,7 @@ export const portfolioContent = {
                     "Curated Aesthetic Experience: A distraction-free environment solely focused on habit display and progress sharing"
                 ],
                 "demoUrl": null,
-                "githubUrl": "https://github.com/siddharthdave/streak-app"
+                "githubUrl": "https://github.com/SiddharthDave-Dev/streakapp"
             },
             {
                 "id": "glycemic",
@@ -1227,8 +1227,8 @@ export const portfolioContent = {
                     "Codable",
                     "Auto Layout"
                 ],
-                "duration": "3.5 months",
-                "status": "Beta Testing",
+                "duration": "1 month",
+                "status": "Completed",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
                     "Real-time API Integration: Asynchronous fetching of global nutritional data via RESTful services",
@@ -1239,8 +1239,8 @@ export const portfolioContent = {
                     "Dynamic Detail Navigation: Interactive UI transitions from summary lists to comprehensive nutritional profiles",
                     "Programmatic UI: A clean, code-based UIKit interface designed for data clarity and accessibility"
                 ],
-                "demoUrl": "https://glycemic-demo.com",
-                "githubUrl": "https://github.com/siddharthdave/glycemic"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/glycemic"
             },
             {
                 "id": "country-app",
@@ -1261,7 +1261,7 @@ export const portfolioContent = {
                     "Codable",
                     "Asynchronous Image Loading"
                 ],
-                "duration": "2 months",
+                "duration": "1 day",
                 "status": "Completed",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
@@ -1272,8 +1272,8 @@ export const portfolioContent = {
                     "Responsive UI: A programmatic layout that ensures consistent presentation of country names and icons",
                     "Network Error Handling: Integrated logic to manage API timeouts and connectivity issues gracefully"
                 ],
-                "demoUrl": "https://country-app-demo.com",
-                "githubUrl": "https://github.com/siddharthdave/country-app"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/CountryApp"
             },
             {
                 "id": "calculator",
@@ -1295,7 +1295,7 @@ export const portfolioContent = {
                     "MVC Architecture",
                     "Arithmetic Logic Processing"
                 ],
-                "duration": "1 month",
+                "duration": "4 days",
                 "status": "Completed",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
@@ -1306,8 +1306,8 @@ export const portfolioContent = {
                     "Dynamic Display: Adaptive text sizing to ensure calculations remain legible as numbers increase in length",
                     "Minimalist Design: A distraction-free user experience focused on speed and immediate utility"
                 ],
-                "demoUrl": "https://calculator-demo.com",
-                "githubUrl": "https://github.com/siddharthdave/calculator"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Calculator"
             },
             {
                 "id": "stopwatch",
@@ -1327,7 +1327,7 @@ export const portfolioContent = {
                     "Auto Layout",
                     "State Management"
                 ],
-                "duration": "1 month",
+                "duration": "1 day",
                 "status": "Completed",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
@@ -1338,8 +1338,8 @@ export const portfolioContent = {
                     "Adaptive Design: Fully responsive UI that maintains alignment and legibility across various iOS screen sizes",
                     "Zero-Latency Logic: Lightweight architecture focused on immediate response to user touch events"
                 ],
-                "demoUrl": "https://stopwatch-demo.com",
-                "githubUrl": "https://github.com/siddharthdave/stopwatch"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/StopWatch"
             },
             {
                 "id": "ai-chat-bot",
@@ -1370,7 +1370,7 @@ export const portfolioContent = {
                     "JSON Parsing",
                     "PhotoKit (for SS and custom images)"
                 ],
-                "duration": "1 month",
+                "duration": "2 month",
                 "status": "Completed",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
@@ -1382,8 +1382,8 @@ export const portfolioContent = {
                     "Session Management: Feature to create and manage multiple new chat instances for different topics",
                     "Programmatic Chat UI: A fluid, auto-sizing message bubble interface built entirely in code"
                 ],
-                "demoUrl": "https://ai-chatbot-demo.com",
-                "githubUrl": "https://github.com/siddharthdave/ai-chat-bot"
+                "demoUrl": null,
+                "githubUrl": null
             },
             {
                 "id": "authentication-form",
@@ -1404,7 +1404,7 @@ export const portfolioContent = {
                     "Model-View-Controller (MVC)",
                     "Data Persistence"
                 ],
-                "duration": "1 month",
+                "duration": " 3 days",
                 "status": "Completed",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
@@ -1415,8 +1415,8 @@ export const portfolioContent = {
                     "Form Validation: Real-time logic to ensure accurate data entry during the registration process",
                     "Programmatic Navigation: Seamless transitions between authentication screens and the user management dashboard"
                 ],
-                "demoUrl": "https://github.com/siddharthdave/authentication-form-realm",
-                "githubUrl": "https://github.com/siddharthdave/authentication-form-realm"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/AthenticationFormRealm"
             },
             {
                 "id": "passport-size-photo",
@@ -1445,7 +1445,7 @@ export const portfolioContent = {
                     "Auto Layout",
                     "View Hierarchies"
                 ],
-                "duration": "1 month",
+                "duration": "1 week",
                 "status": "Completed",
                 "role": "Lead iOS UI Developer (Personal Project)",
                 "features": [
@@ -1457,7 +1457,7 @@ export const portfolioContent = {
                     "Visual Differentiation: Custom UI styling to distinctively present geographical regions and their associated photo specifications"
                 ],
                 "demoUrl": null,
-                "githubUrl": "https://github.com/siddharthdave/passport-size-photo"
+                "githubUrl": null
             },
             {
                 "id": "speak-ai",
@@ -1483,7 +1483,7 @@ export const portfolioContent = {
                     "View Controller Composition",
                     "Custom UI Components"
                 ],
-                "duration": "1 month",
+                "duration": "2 weeks",
                 "status": "Completed",
                 "role": "Lead iOS UI Developer (Personal Project)",
                 "features": [
@@ -1495,7 +1495,7 @@ export const portfolioContent = {
                     "Programmatic Asset Layout: Meticulously coded views that adapt across different iPhone screen ratios and orientations"
                 ],
                 "demoUrl": null,
-                "githubUrl": "https://github.com/siddharthdave/speak-ai"
+                "githubUrl": null
             },
 
             //SwiftUI Projects
@@ -1524,7 +1524,7 @@ export const portfolioContent = {
                     "Combine (for logic updates)",
                     "Foundation (Mathematical Logic)"
                 ],
-                "duration": "4 months",
+                "duration": "1 months",
                 "status": "In Development",
                 "role": "Lead iOS Developer (Personal Project)",
                 "features": [
@@ -1536,7 +1536,7 @@ export const portfolioContent = {
                     "Macronutrient Distribution: Mathematical engine that validates and sums daily nutritional data"
                 ],
                 "demoUrl": null,
-                "githubUrl": "https://github.com/siddharthdave/caloric-tracking"
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Caloric-Tracking-app"
             },
             {
                 "id": "weather-app",
@@ -1572,8 +1572,8 @@ export const portfolioContent = {
                     "Reactive Backgrounds: Dynamic interface gradients and visuals that adapt in real-time to current atmospheric conditions",
                     "Asynchronous Data Pipeline: Robust networking layer using async/await and URLSession for lag-free data fetching"
                 ],
-                "demoUrl": "https://weather-swiftui-demo.com",
-                "githubUrl": "https://github.com/siddharthdave/weather-app-swiftui"
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/WeatherAppSwiftUI"
             }
         ]
 
