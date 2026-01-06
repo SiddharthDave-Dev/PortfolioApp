@@ -1,951 +1,211 @@
-.profile {
+/* --- SECTION & BACKGROUND --- */
+.cyber-hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 8rem 0 4rem;
+  justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 100px 24px;
 }
 
-.bg-elements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
+.bg-particle { 
+  position: absolute; 
+  width: 2px; 
+  height: 2px; 
+  background: #667eea; 
+  border-radius: 50%; 
+  opacity: 0.2; 
 }
 
-.bg-particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 50%;
-  filter: blur(1px);
+.cyber-container { 
+  width: 100%; 
+  max-width: 1250px; 
+  z-index: 10; 
+  position: relative; 
 }
 
-.profile-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.cyber-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  position: relative;
-  z-index: 2;
+  gap: 80px;
 }
 
-.profile-content {
+/* --- LUXURY STACKED NAME TYPOGRAPHY --- */
+.cyber-name {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  line-height: 0.85;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
-.greeting-container {
-  overflow: hidden;
-}
-
-.greeting {
-  font-size: 1.8rem;
-  color: #667eea;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  display: inline-block;
-}
-
-.name {
-  font-size: 5rem;
+.name-main {
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
   font-weight: 900;
-  margin-bottom: 1rem;
-  line-height: 1.1;
-  color: #ffffff;
-  word-break: break-word;
+  color: #fff;
+  letter-spacing: -3px;
+  background: linear-gradient(to right, #ffffff, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.name .gradient-text {
-  background-size: 200% 200%;
+.name-sub {
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 200;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.5);
+  letter-spacing: 12px;
+  margin-top: 5px;
 }
 
-.role-container {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
+/* --- UI COMPONENTS --- */
+.cyber-badge {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  min-height: 3rem;
-  word-break: break-word;
-}
-
-.role-prefix {
-  color: #b8b8b8;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.typewriter {
-  font-weight: 700;
-  min-height: 3rem;
-  display: inline-block;
-  background-size: 200% 200%;
-  word-break: break-word;
-}
-
-.description {
-  font-size: 1.3rem;
-  color: #c8c8c8;
-  margin-bottom: 3rem;
-  line-height: 1.8;
-  max-width: 600px;
-  font-weight: 400;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 1.2rem 2.5rem;
-  border: none;
-  border-radius: 60px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
-  border: 2px solid #667eea;
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.btn-primary:hover::before {
-  left: 100%;
-}
-
-.btn-glow {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 60px;
-  z-index: -1;
-  filter: blur(15px);
-}
-
-.btn-secondary {
-  background: transparent;
+  gap: 10px;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 8px 16px;
+  border-radius: 4px;
   color: #667eea;
-  border: 2px solid #667eea;
-  backdrop-filter: blur(10px);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+  width: fit-content;
 }
 
-.social-links {
+.pulse-dot { width: 6px; height: 6px; background: #667eea; border-radius: 50%; animation: pulse 2s infinite; }
+
+.cyber-typewriter-box { 
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #a0a0a0;
+  margin-bottom: 25px;
+}
+
+.type-text { color: #fff; font-weight: 600; }
+
+.cyber-bio { max-width: 520px; color: #888; line-height: 1.8; font-size: 1.1rem; margin-bottom: 35px; }
+
+/* SOCIAL PILLS */
+.social-pill-wrapper { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+
+.premium-social-btn {
   display: flex;
-  gap: 2rem;
   align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.social-link {
-  color: #b8b8b8;
+  gap: 10px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  color: #fff;
   text-decoration: none;
+  font-size: 0.85rem;
   font-weight: 600;
-  padding: 1rem 1.5rem;
+  transition: 0.3s;
+}
+
+.premium-social-btn:hover { background: #667eea; color: #fff; transform: translateY(-3px); }
+
+/* ACTIONS */
+.cyber-actions { display: flex; gap: 20px; }
+
+.premium-btn-primary {
+  padding: 18px 45px;
+  background: #fff;
+  color: #000;
   border-radius: 50px;
-  border: 2px solid rgba(102, 126, 234, 0.2);
-  backdrop-filter: blur(10px);
-  background: rgba(26, 26, 46, 0.3);
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.social-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.social-link:hover::before {
-  left: 100%;
-}
-
-.social-icon {
-  font-size: 1.2rem;
-  display: inline-block;
-}
-
-.social-name {
-  font-size: 0.9rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-/* Fix z-index layering for large screens */
-.profile-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
+.premium-btn-primary:hover { background: #667eea; color: #fff; }
 
-.avatar-container {
-  position: relative;
-  width: 400px;
-  height: 400px;
+.premium-btn-secondary {
+  padding: 18px 45px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-weight: 600;
   cursor: pointer;
-  margin: 0 auto;
-  z-index: 5; /* Ensure avatar is behind floating elements */
 }
 
-.avatar-gradient {
+/* --- ADD THIS HOVER RULE --- */
+.premium-btn-secondary:hover {
+  border-color: #667eea;         /* Changes border to your theme purple/blue */
+  color: #667eea;                /* Changes text color */
+  background: rgba(102, 126, 234, 0.05); /* Optional: subtle glow effect */
+  transform: translateY(-2px);    /* Optional: slight lift effect */
+}
+
+/* --- VISUAL FRAME --- */
+.cyber-frame { position: relative; width: 100%; max-width: 380px; margin: 0 auto; }
+.glass-card { padding: 10px; background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; }
+.cyber-img { width: 100%; height: 480px; object-fit: cover; border-radius: 8px; }
+
+.geo-corner { position: absolute; width: 30px; height: 30px; border: 1px solid #667eea; z-index: 2; }
+.top-left { top: -10px; left: -10px; border-right: none; border-bottom: none; }
+.bottom-right { bottom: -10px; right: -10px; border-left: none; border-top: none; }
+
+/* --- THE CODE CARD --- */
+.floating-code-card {
   position: absolute;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 60%, #667eea 100%);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.avatar-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #1a1a2e;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  border: 5px solid #0a0a0a;
-  overflow: hidden;
-}
-
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 1); /* Optional: add background color in case image doesn't fill the circle */
-  padding: 5px; /* Optional: add small padding for better look */
-}
-
-.avatar-fallback {
-  font-size: 8rem;
-  display: none;
-}
-
-.avatar-ring {
-  position: absolute;
-  top: -25px;
-  left: -25px;
-  right: -25px;
-  bottom: -25px;
-  border: 2px solid rgba(102, 126, 234, 0.3);
-  border-top: 2px solid #667eea;
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.floating-elements {
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  top: -10%;
-  left: -10%;
-  z-index: 10; /* Higher z-index to appear above avatar */
-  pointer-events: none; /* Prevent interaction issues */
-}
-
-.floating-element {
-  position: absolute;
-  font-size: 2.5rem;
-  cursor: pointer;
-  user-select: none;
-  filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
-  z-index: 10; /* Ensure floating elements are visible */
-  pointer-events: auto; /* Allow hover interactions */
-}
-
-.code-animation {
-  position: absolute;
-  bottom: -100px;
-  left: -50px;
-  background: rgba(26, 26, 46, 0.9);
+  bottom: -30px;
+  right: -50px;
+  background: rgba(10, 10, 15, 0.95);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(102, 126, 234, 0.2);
-  border-radius: 15px;
-  padding: 1.5rem;
-  font-family: 'Monaco', 'Menlo', monospace;
-  font-size: 0.9rem;
-  color: #667eea;
-  min-width: 250px;
-  z-index: 8; /* Ensure code animation is visible */
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  z-index: 20;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  min-width: 270px;
 }
 
-.code-line {
-  margin: 0.3rem 0;
-  opacity: 0.8;
-}
+.code-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+.code-tag { margin-left: auto; font-size: 0.6rem; color: #555; letter-spacing: 1px; }
 
-.code-line:first-child {
-  color: #f093fb;
-}
+.keyword { color: #f093fb; font-weight: 700; }
+.func-name { color: #667eea; }
 
-.code-line:last-child {
-  color: #764ba2;
-}
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 1024px) {
+  .cyber-grid { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+  .cyber-badge, .social-pill-wrapper, .cyber-actions, .cyber-name { justify-content: center; align-items: center; }
+  
+  .cyber-visual-wrapper { 
+    order: -1; 
+    margin-bottom: 100px; 
+  }
 
-/* Large screen floating element positioning */
-@media (min-width: 1200px) {
-  .floating-elements {
-    width: 140%; /* Slightly larger for better distribution */
-    height: 140%;
-    top: -20%;
-    left: -20%;
-  }
-  
-  .floating-element {
-    font-size: 3rem; /* Larger on big screens */
-  }
-}
-
-/* Enhanced Responsive Design - Mobile First Approach */
-@media (max-width: 1400px) {
-  .profile-container {
-    max-width: 1200px;
-    gap: 4rem;
-  }
-  
-  .avatar-container {
-    width: 350px;
-    height: 350px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .profile-container {
-    gap: 3rem;
-    padding: 0 1.5rem;
-  }
-  
-  .name {
-    font-size: 4rem;
-  }
-  
-  .role-container {
-    font-size: 2rem;
-  }
-  
-  .avatar-container {
-    width: 320px;
-    height: 320px;
-  }
-}
-
-/* Fix small screen cut-off issues */
-@media (max-width: 968px) {
-  .profile {
-    padding: 6rem 0 3rem;
-  }
-  
-  .profile-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 3rem;
-    padding: 0 2rem;
-  }
-  
-  .profile-content {
-    order: 2;
-    padding: 0 1rem;
-  }
-  
-  .profile-visual {
-    order: 1;
-    margin-top: 1rem;
-    padding: 2rem 3rem; /* Increased padding to prevent cut-off */
-    transform: translateZ(0);
-    will-change: transform;
-    overflow: visible; /* Allow elements to show properly */
-  }
-  
-  .name {
-    font-size: 3rem;
-  }
-  
-  .role-container {
-    font-size: 1.6rem;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .description {
-    max-width: 100%;
-    margin: 0 auto 2rem;
-    text-align: center;
-  }
-  
-  .avatar-container {
-    width: 280px;
-    height: 280px;
-    margin: 1rem auto;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    z-index: 3; /* Lower than floating elements */
-  }
-  
-  /* Better contained floating elements */
-  .floating-elements {
+  /* Centered absolute positioning for mobile stability */
+  .floating-code-card {
     position: absolute;
-    width: 100%; /* Contained within visual area */
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: visible; /* Allow visibility but contained */
-    transform: translateZ(0);
-    z-index: 8; /* Above avatar */
-  }
-  
-  .floating-element {
-    font-size: 1.8rem;
-    opacity: 0.8;
-    will-change: transform;
-    z-index: 8;
-    transform: translateZ(0);
-  }
-  
-  .code-animation {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    margin-top: 2rem;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 6;
-  }
-  
-  .social-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .cta-buttons {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 640px) {
-  .profile {
-    padding: 4rem 0 2rem;
-  }
-  
-  .profile-container {
-    padding: 0 1.5rem;
-    gap: 2rem;
-  }
-  
-  .profile-content {
-    padding: 0 1rem;
-  }
-  
-  .profile-visual {
-    margin-top: 1rem;
-    padding: 2rem 2.5rem; /* Increased padding for cut-off prevention */
-    overflow: visible;
-    transform: translateZ(0);
-    will-change: transform;
-    position: relative;
-  }
-  
-  .name {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-  
-  .role-container {
-    font-size: 1.3rem;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.4;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-  
-  .role-prefix {
-    white-space: normal;
-  }
-  
-  .typewriter {
-    text-align: center;
-    word-break: break-word;
-    min-height: auto;
-  }
-  
-  .greeting {
-    font-size: 1.4rem;
-  }
-  
-  .description {
-    font-size: 1rem;
-    text-align: center;
-  }
-  
-  .avatar-container {
-    width: 220px;
-    height: 220px;
-    margin: 1rem auto;
-    position: relative;
-    z-index: 3;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-  }
-  
-  /* Properly positioned floating elements */
-  .floating-elements {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: visible;
-    pointer-events: none;
-    transform: translateZ(0);
-    z-index: 8;
-  }
-  
-  .floating-element {
-    font-size: 1.5rem;
-    opacity: 0.7;
-    will-change: transform;
-    transform: translateZ(0);
-    z-index: 8;
-    pointer-events: auto;
-  }
-  
-  /* Improved positioning to prevent cut-off */
-  .floating-element:nth-child(1) { /* 📱 */
-    top: 10% !important;
-    right: 10% !important;
-    left: auto !important;
-  }
-  
-  .floating-element:nth-child(2) { /* 💻 */
-    bottom: 30% !important;
-    left: 10% !important;
-    top: auto !important;
-  }
-  
-  .floating-element:nth-child(3) { /* 📊 */
-    top: 30% !important;
-    left: 15% !important;
-  }
-  
-  .floating-element:nth-child(4) { /* ⚡ */
-    bottom: 15% !important;
-    right: 15% !important;
-    left: auto !important;
-    top: auto !important;
-  }
-  
-  .floating-element:nth-child(5) { /* 🚀 */
-    top: 50% !important;
-    right: 5% !important;
-    left: auto !important;
-  }
-  
-  .floating-element:nth-child(6) { /* 💡 */
-    bottom: 50% !important;
-    left: 5% !important;
-    top: auto !important;
-  }
-  
-  /* Button and social improvements */
-  .cta-buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    align-items: center;
-    padding: 0 1rem;
-  }
-  
-  .btn {
-    width: 100%;
-    max-width: 280px;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-  }
-  
-  .social-links {
-    gap: 0.8rem;
-    justify-content: center;
-    padding: 0 1rem;
-  }
-  
-  .social-link {
-    padding: 0.7rem 1rem;
-    font-size: 0.8rem;
-  }
-  
-  .social-name {
-    font-size: 0.7rem;
-  }
-  
-  .social-icon {
-    font-size: 1rem;
+    right: auto;
+    left: 50%;
+    bottom: -60px;
+    transform: translateX(-50%) !important;
+    width: 90%;
+    max-width: 320px;
+    min-width: auto;
+    margin: 0;
   }
 }
 
 @media (max-width: 480px) {
-  .profile {
-    padding: 3rem 0 2rem;
-  }
-  
-  .profile-container {
-    padding: 0 1rem;
-    gap: 1.5rem;
-  }
-  
-  .profile-content {
-    padding: 0 0.5rem;
-  }
-  
-  .profile-visual {
-    margin-top: 0.5rem;
-    padding: 1.5rem 2rem; /* Adequate padding for very small screens */
-    overflow: visible;
-    position: relative;
-    transform: translateZ(0);
-    will-change: transform;
-  }
-  
-  .name {
-    font-size: 2rem;
-    line-height: 1.3;
-  }
-  
-  .role-container {
-    font-size: 1.1rem;
-    flex-direction: column;
-    gap: 0.3rem;
-    text-align: center;
-    line-height: 1.5;
-  }
-  
-  .role-prefix {
-    font-size: 1.1rem;
-  }
-  
-  .typewriter {
-    font-size: 1.1rem;
-  }
-  
-  .greeting {
-    font-size: 1.2rem;
-  }
-  
-  .description {
-    font-size: 0.95rem;
-  }
-  
-  .avatar-container {
-    width: 180px;
-    height: 180px;
-    margin: 0.5rem auto;
-    position: relative;
-    z-index: 3;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-  }
-  
-  .avatar-fallback {
-    font-size: 4rem;
-  }
-  
-  /* Optimized floating elements for small screens */
-  .floating-elements {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: visible;
-    pointer-events: none;
-    transform: translateZ(0);
-    z-index: 8;
-  }
-  
-  .floating-element {
-    font-size: 1.2rem;
-    opacity: 0.6;
-    will-change: transform;
-    transform: translateZ(0);
-    z-index: 8;
-  }
-  
-  /* Better positioning for very small screens */
-  .floating-element:nth-child(1) { /* 📱 */
-    top: 15% !important;
-    right: 15% !important;
-    left: auto !important;
-  }
-  
-  .floating-element:nth-child(2) { /* 💻 */
-    bottom: 35% !important;
-    left: 15% !important;
-    top: auto !important;
-  }
-  
-  .floating-element:nth-child(3) { /* 📊 */
-    top: 35% !important;
-    left: 20% !important;
-  }
-  
-  .floating-element:nth-child(4) { /* ⚡ */
-    bottom: 20% !important;
-    right: 20% !important;
-    left: auto !important;
-    top: auto !important;
-  }
-  
-  /* Hide some elements to prevent overcrowding */
-  .floating-element:nth-child(5),
-  .floating-element:nth-child(6) {
-    display: none;
-  }
-  
-  .code-animation {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    font-size: 0.7rem;
-    min-width: auto;
-    width: 90%;
-    max-width: 240px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .btn {
-    max-width: 240px;
-    padding: 0.9rem 1.5rem;
-    font-size: 0.9rem;
-  }
-  
-  .social-links {
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    padding: 0 0.5rem;
-  }
-  
-  .social-link {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.75rem;
-  }
+  .name-main, .name-sub { font-size: clamp(2.5rem, 12vw, 3.5rem); }
+  .name-sub { letter-spacing: 6px; }
+  .cyber-actions { flex-direction: column; width: 100%; }
+  .premium-btn-primary, .premium-btn-secondary { width: 100%; }
 }
 
-@media (max-width: 360px) {
-  .profile-container {
-    padding: 0 0.75rem;
-  }
-  
-  .profile-content {
-    padding: 0 0.25rem;
-  }
-  
-  .profile-visual {
-    margin-top: 0;
-    padding: 1rem 1.5rem; /* Sufficient padding for tiny screens */
-    transform: translateZ(0);
-    will-change: transform;
-    overflow: visible;
-  }
-  
-  .name {
-    font-size: 1.8rem;
-  }
-  
-  .role-container {
-    font-size: 1rem;
-  }
-  
-  .avatar-container {
-    width: 160px;
-    height: 160px;
-    margin: 0.25rem auto;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    z-index: 3;
-  }
-  
-  /* Minimal floating elements for tiny screens */
-  .floating-elements {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: translateZ(0);
-    z-index: 8;
-    overflow: visible;
-  }
-  
-  .floating-element {
-    font-size: 1rem;
-    opacity: 0.5;
-    will-change: transform;
-    transform: translateZ(0);
-    z-index: 8;
-  }
-  
-  /* Only show 2 elements for best performance and visibility */
-  .floating-element:nth-child(1) { /* 📱 */
-    top: 20% !important;
-    right: 20% !important;
-    left: auto !important;
-  }
-  
-  .floating-element:nth-child(2) { /* 💻 */
-    bottom: 30% !important;
-    left: 20% !important;
-    top: auto !important;
-  }
-  
-  .floating-element:nth-child(3),
-  .floating-element:nth-child(4),
-  .floating-element:nth-child(5),
-  .floating-element:nth-child(6) {
-    display: none;
-  }
-  
-  .btn {
-    max-width: 200px;
-    padding: 0.8rem 1.2rem;
-    font-size: 0.85rem;
-  }
-}
-
-/* Landscape Mobile - Updated */
-@media (max-width: 968px) and (orientation: landscape) {
-  .profile {
-    padding: 2rem 0;
-    min-height: 90vh;
-  }
-  
-  .profile-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    padding: 0 1.5rem;
-  }
-  
-  .profile-content {
-    order: 1;
-    padding: 0 0.5rem;
-  }
-  
-  .profile-visual {
-    order: 2;
-    margin-top: 0;
-    padding: 1rem;
-    transform: translateZ(0);
-    will-change: transform;
-  }
-  
-  .name {
-    font-size: 2.2rem;
-  }
-  
-  .role-container {
-    font-size: 1.2rem;
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: left;
-  }
-  
-  .avatar-container {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    z-index: 3;
-  }
-  
-  /* Adjust floating elements for landscape */
-  .floating-elements {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: translateZ(0);
-    z-index: 8;
-  }
-  
-  .floating-element {
-    font-size: 1rem;
-    opacity: 0.6;
-    will-change: transform;
-    transform: translateZ(0);
-    z-index: 8;
-  }
-  
-  .description {
-    text-align: left;
-  }
-  
-  .cta-buttons {
-    justify-content: flex-start;
-    flex-direction: row;
-  }
-  
-  .social-links {
-    justify-content: flex-start;
-  }
-}
+@keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }

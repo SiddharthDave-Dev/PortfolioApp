@@ -1,3 +1,8 @@
+/* ==========================================================================
+   ABOUT SECTION WRAPPER
+   - Handles the overall container, background animations, and layout spacing
+   ========================================================================== */
+
 .about {
   padding: 8rem 0;
   position: relative;
@@ -5,6 +10,7 @@
   min-height: 100vh;
 }
 
+/* Dynamic background with moving radial gradients */
 .about::before {
   content: '';
   position: absolute;
@@ -20,6 +26,7 @@
   animation: backgroundPulse 15s ease-in-out infinite;
 }
 
+/* Pulse effect for the background gradients */
 @keyframes backgroundPulse {
   0%, 100% { opacity: 0.5; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.05); }
@@ -30,14 +37,20 @@
   margin: 0 auto;
   padding: 0 2rem;
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Ensures content stays above the ::before background */
 }
+
+/* ==========================================================================
+   TYPOGRAPHY & HEADERS
+   - Gradient text styles and layout for the intro section
+   ========================================================================== */
 
 .about-header {
   text-align: center;
   margin-bottom: 6rem;
 }
 
+/* Main hero title with 3-color linear gradient */
 .about-title {
   font-size: 4.5rem;
   font-weight: 900;
@@ -71,9 +84,10 @@
   max-width: 900px;
   margin: 0 auto;
   font-weight: 400;
-  white-space: pre-line;
+  white-space: pre-line; /* Preserves line breaks from the data */
 }
 
+/* Shared section title style (Education, Experience, etc.) */
 .section-title {
   font-size: 2.8rem;
   font-weight: 800;
@@ -86,7 +100,11 @@
   background-clip: text;
 }
 
-/* Education Section Styles */
+/* ==========================================================================
+   EDUCATION SECTION
+   - Cards with left-border accents and pill-style tags
+   ========================================================================== */
+
 .education-section {
   margin: 4rem 0;
 }
@@ -122,6 +140,7 @@
   margin: 0;
 }
 
+/* Year indicator with subtle glass effect */
 .education-year {
   font-size: 1rem;
   color: #667eea;
@@ -151,6 +170,7 @@
   margin-bottom: 2rem;
 }
 
+/* Tag container for honors or specific focus areas */
 .achievements {
   display: flex;
   flex-wrap: wrap;
@@ -167,7 +187,11 @@
   border: 1px solid rgba(240, 147, 251, 0.2);
 }
 
-/* Highlights Grid */
+/* ==========================================================================
+   HIGHLIGHTS GRID (Key Skills / Pillars)
+   - Features 3D-style hover effects and icon glow
+   ========================================================================== */
+
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -186,6 +210,7 @@
   transform-style: preserve-3d;
 }
 
+/* Sliding shine effect on hover */
 .highlight-card::before {
   content: '';
   position: absolute;
@@ -257,6 +282,7 @@
   cursor: pointer;
 }
 
+/* Background blur element for card hover intensity */
 .card-glow {
   position: absolute;
   top: -10px;
@@ -268,6 +294,11 @@
   z-index: -1;
   filter: blur(20px);
 }
+
+/* ==========================================================================
+   STATS SECTION
+   - Large numbers for quick impact (Years of Exp, Projects, etc.)
+   ========================================================================== */
 
 .stats-section {
   margin: 4rem 0;
@@ -313,6 +344,11 @@
   letter-spacing: 1px;
 }
 
+/* ==========================================================================
+   JOURNEY / TIMELINE SECTION
+   - Vertical timeline that alternates left/right on desktop
+   ========================================================================== */
+
 .journey-section {
   margin: 6rem 0;
 }
@@ -323,6 +359,7 @@
   margin: 0 auto;
 }
 
+/* The vertical center line */
 .timeline::before {
   content: '';
   position: absolute;
@@ -342,14 +379,17 @@
   align-items: center;
 }
 
+/* Odd items appear on the left */
 .timeline-item:nth-child(odd) {
   flex-direction: row;
 }
 
+/* Even items appear on the right */
 .timeline-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
+/* Decorative dot on the center line */
 .timeline-dot {
   position: absolute;
   left: 50%;
@@ -365,6 +405,7 @@
   justify-content: center;
 }
 
+/* Fix for Emojis inside gradient text wrappers */
 .emoji-colored {
   -webkit-text-fill-color: initial !important;
   color: initial !important;
@@ -427,337 +468,82 @@
   letter-spacing: 1px;
 }
 
-/* Responsive Design - Mobile First */
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   - Mobile-first adjustments for all screen sizes
+   ========================================================================== */
+
+/* Laptop / Desktop refinements */
 @media (max-width: 1400px) {
-  .about-container {
-    max-width: 1200px;
-  }
+  .about-container { max-width: 1200px; }
 }
 
 @media (max-width: 1200px) {
-  .about-container {
-    padding: 0 1.5rem;
-  }
-  
-  .about-title {
-    font-size: 3.5rem;
-  }
-  
-  .highlights-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  .education-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .about-content {
-    gap: 6rem;
-  }
+  .about-container { padding: 0 1.5rem; }
+  .about-title { font-size: 3.5rem; }
+  .highlights-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+  .education-grid { grid-template-columns: 1fr; }
+  .about-content { gap: 6rem; }
 }
 
+/* Tablet / Large Mobile (Vertical Timeline Switch) */
 @media (max-width: 968px) {
-  .about {
-    padding: 5rem 0;
-  }
+  .about { padding: 5rem 0; }
+  .about-title { font-size: 2.8rem; }
+  .highlights-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
   
-  .about-container {
-    padding: 0 1rem;
-  }
-
-  .about-title {
-    font-size: 2.8rem;
-  }
-
-  .about-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .about-description {
-    font-size: 1.2rem;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .highlights-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .highlight-card {
-    padding: 2rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .timeline::before {
-    left: 30px;
-  }
-
-  .timeline-dot {
-    left: 30px;
-  }
-
-  .timeline-item {
-    flex-direction: row !important;
-  }
-
+  /* Timeline shifts to single-column side-aligned */
+  .timeline::before { left: 30px; }
+  .timeline-dot { left: 30px; }
+  .timeline-item { flex-direction: row !important; }
   .timeline-content {
     width: calc(100% - 80px);
     margin-left: 80px !important;
     margin-right: 0 !important;
   }
-
-  .education-card {
-    padding: 2rem;
-  }
-
-  .education-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .education-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
 }
 
+/* Standard Mobile Phones */
 @media (max-width: 640px) {
-  .about {
-    padding: 4rem 0;
-  }
-  
-  .about-container {
-    padding: 0 0.5rem;
-  }
-
-  .about-title {
-    font-size: 2.2rem;
-  }
-
-  .about-subtitle {
-    font-size: 1rem;
-  }
-
-  .about-description {
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-  }
-
-  .highlight-icon-img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .highlight-title {
-    font-size: 1.5rem;
-  }
-
-  .highlight-description {
-    font-size: 1rem;
-  }
-
-  .education-card {
-    padding: 1.5rem;
-  }
-
-  .education-degree {
-    font-size: 1.3rem;
-  }
-
-  .education-year {
-    font-size: 0.9rem;
-  }
-
-  .timeline-content {
-    padding: 1.5rem;
-  }
-
-  .timeline-year {
-    font-size: 1.4rem;
-  }
-
-  .timeline-title {
-    font-size: 1.2rem;
-  }
-
-  .timeline-description {
-    font-size: 0.9rem;
-  }
+  .about-title { font-size: 2.2rem; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-number { font-size: 2.5rem; }
+  .highlight-icon-img { width: 60px; height: 60px; }
 }
 
+/* Small Mobile Phones */
 @media (max-width: 480px) {
-  .about-container {
-    padding: 0 0.25rem;
-  }
-
-  .about-title {
-    font-size: 1.8rem;
-  }
-
-  .about-subtitle {
-    font-size: 0.9rem;
-  }
-
-  .about-description {
-    font-size: 0.9rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .education-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .education-card {
-    padding: 1rem;
-  }
-
-  .highlight-card {
-    padding: 1.5rem;
-  }
-
-  .highlight-icon-img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .highlight-title {
-    font-size: 1.3rem;
-  }
-
-  .stat-item {
-    padding: 2rem 1rem;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-  }
-
-  .stat-label {
-    font-size: 1rem;
-  }
-
-  .timeline-content {
-    padding: 1rem;
-  }
-
-  .timeline-year {
-    font-size: 1.2rem;
-  }
-
-  .timeline-title {
-    font-size: 1rem;
-  }
-
-  .timeline-description {
-    font-size: 0.8rem;
-  }
-
-  .achievement-tag {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-  }
-
-  .skill-tag {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.8rem;
-  }
+  .about-title { font-size: 1.8rem; }
+  .education-card, .highlight-card { padding: 1.5rem; }
+  .stat-number { font-size: 2rem; }
 }
 
-/* Extra Small Screens */
+/* Extra Small / Old Devices */
 @media (max-width: 360px) {
-  .about {
-    padding: 3rem 0;
-  }
-
-  .about-container {
-    padding: 0 0.5rem;
-  }
-
-  .about-title {
-    font-size: 1.6rem;
-  }
-
-  .section-title {
-    font-size: 1.3rem;
-  }
-
-  .about-content {
-    gap: 4rem;
-  }
-
-  .education-section,
-  .stats-section,
-  .journey-section {
-    margin: 3rem 0;
-  }
-
-  .timeline-item {
-    margin: 2rem 0;
-  }
+  .about-title { font-size: 1.6rem; }
+  .section-title { font-size: 1.3rem; }
 }
 
-/* Landscape Tablet */
+/* Tablet Landscape Optimizations */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .about {
-    padding: 4rem 0;
-  }
-
-  .about-content {
-    gap: 4rem;
-  }
-
-  .highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  .about { padding: 4rem 0; }
+  .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* High Resolution Screens */
+/* Ultra-wide / 4K Screens */
 @media (min-width: 1600px) {
-  .about-container {
-    max-width: 1600px;
-  }
-
-  .about-title {
-    font-size: 5rem;
-  }
-
-  .section-title {
-    font-size: 3rem;
-  }
-
-  .about-description {
-    font-size: 1.5rem;
-  }
+  .about-container { max-width: 1600px; }
+  .about-title { font-size: 5rem; }
+  .about-description { font-size: 1.5rem; }
 }
 
 
-/* ---------------------- EXPERIENCE SECTION (MATCH EDUCATION) ---------------------- */
+/* ==========================================================================
+   EXPERIENCE SECTION (Professional History)
+   - Matches Education layout but uses Italics and List items
+   ========================================================================== */
 
 .experience-section {
   margin: 4rem 0;
@@ -775,8 +561,8 @@
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-left: 5px solid #667eea;           /* SAME AS EDUCATION */
-  background: rgba(255,255,255,0.05);       /* glass effect match */
+  border-left: 5px solid #667eea;
+  background: rgba(255,255,255,0.05); /* Glassmorphism background */
   backdrop-filter: blur(12px);
 }
 
@@ -812,17 +598,17 @@
   border: 1px solid rgba(102,126,234,0.2);
 }
 
-/* ⭐ Description DIFFERENT from Education (as you requested) */
+/* Intro text for the job role, styled with Italics */
 .experience-description {
   color: #c8c8c8;
   line-height: 1.7;
   margin: 1rem 0 1.5rem;
   font-size: 1.05rem;
-  font-style: italic;       /* 🔥 DIFFERENCE HERE */
+  font-style: italic;
   opacity: 0.95;
 }
 
-/* Responsibilities (bullet points) */
+/* Detailed bullet points for job duties */
 .responsibilities-list {
   margin-left: 1.2rem;
   margin-bottom: 1.5rem;
@@ -834,7 +620,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Skills / Tech Tags */
+/* Technology used in this specific role */
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
@@ -851,7 +637,7 @@
   border: 1px solid rgba(102,126,234,0.2);
 }
 
-/* Achievements */
+/* Major wins or KPIs for this job */
 .job-achievements {
   display: flex;
   flex-wrap: wrap;
@@ -865,7 +651,11 @@
   border: 1px solid rgba(240,147,251,0.2);
 }
 
-/* ---------------------- CERTIFICATIONS SECTION ---------------------- */
+/* ==========================================================================
+   CERTIFICATIONS SECTION (Modern UI)
+   - Uses a glass-morphism approach with a 'Verification' feel
+   ========================================================================== */
+
 .cert-modern-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -895,6 +685,7 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Shine overlay animation for cert cards */
 .cert-shine {
   position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
   background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
@@ -910,6 +701,7 @@
   display: flex; align-items: center; justify-content: center; font-size: 1.8rem;
 }
 
+/* Verification badge (green highlight) */
 .cert-verify-badge {
   font-size: 0.65rem; font-weight: 800; color: #43e97b;
   background: rgba(67, 233, 123, 0.1); padding: 4px 10px; border-radius: 20px;
@@ -919,6 +711,7 @@
 .cert-name { font-size: 1.3rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem; line-height: 1.3; }
 .cert-issuer { font-size: 0.95rem; color: #b8b8b8; margin-bottom: 1.5rem; font-weight: 500; }
 
+/* Box for Credential ID / Serial Numbers */
 .cert-id-container {
   background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 10px 15px; border-radius: 12px; display: flex; flex-direction: column; gap: 2px;
@@ -935,10 +728,9 @@
 .cert-date-text { font-size: 0.85rem; color: #f093fb; font-weight: 600; }
 .cert-view-link { font-size: 0.9rem; font-weight: 700; color: #667eea; }
 
-/* --- Featured Certificate Highlights --- */
+/* --- Highlighted Certificates (Featured) --- */
 
 .featured-cert {
-  /* Subtle glow using your accent blue */
   box-shadow: 0 0 20px rgba(102, 126, 234, 0.15);
   border: 1px solid rgba(102, 126, 234, 0.4) !important;
   background: linear-gradient(
@@ -950,9 +742,10 @@
 
 .featured-cert:hover {
   box-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-  border-color: rgba(240, 147, 251, 0.5) !important; /* Glow shifts to pink on hover */
+  border-color: rgba(240, 147, 251, 0.5) !important;
 }
 
+/* Ribbon-style badge for top credentials */
 .featured-badge {
   position: absolute;
   top: 0;
@@ -968,11 +761,15 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Optional: Make the featured certificate slightly larger or pulse */
 .featured-cert .cert-logo-box {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
 }
+
+/* ==========================================================================
+   BUTTONS & UI CONTROLS
+   - "Show More" functionality styles
+   ========================================================================== */
 
 .show-more-container {
   display: flex;
@@ -1008,26 +805,28 @@
   color: #f093fb;
 }
 
-/* Ensure the grid updates smoothly */
 .cert-modern-grid {
   transition: all 0.5s ease;
 }
 
-/* --- FULL LIST OVERLAY (SWIFT TABLE VIEW) --- */
+/* ==========================================================================
+   CERTIFICATE SIDE-PANEL (SWIFT TABLE VIEW)
+   - Slide-out menu for browsing the full certificate list
+   ========================================================================== */
 
-/* 1. Backdrop/Overlay Container */
+/* Full-screen backdrop when list is open */
 .cert-overlay {
   position: fixed;
-  inset: 0; /* Modern shortcut for top/left/right/bottom: 0 */
+  inset: 0; 
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(10px);
   z-index: 9999;
   display: flex;
   justify-content: flex-end;
-  cursor: pointer; /* Indicates clicking outside dismisses */
+  cursor: pointer;
 }
 
-/* 2. Side Panel Container */
+/* Right-aligned side panel */
 .cert-table-view {
   width: 100%;
   max-width: 600px;
@@ -1036,11 +835,10 @@
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  cursor: default; /* Prevents click-to-dismiss inside the panel */
+  cursor: default;
   overflow: hidden;
 }
 
-/* 3. Consolidated Header Styles */
 .table-header {
   padding: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1063,7 +861,7 @@
   font-weight: 800;
 }
 
-/* Close Button Customization */
+/* Rotates and changes color on hover */
 .close-table-btn {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1086,18 +884,18 @@
   transform: rotate(90deg);
 }
 
-/* 4. Filter Navigation */
+/* Filter buttons for the table (e.g., Cloud, Frontend, Cyber) */
 .filter-pill-container {
   display: flex;
   gap: 0.8rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
-  -ms-overflow-style: none; /* IE/Edge */
-  scrollbar-width: none;    /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .filter-pill-container::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .filter-pill {
@@ -1125,12 +923,10 @@
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* 5. Table Body & Rows */
 .table-body {
   flex: 1;
   overflow-y: auto;
   padding: 1rem 0;
-  /* Smooth scrolling for Swift feel */
   scroll-behavior: smooth;
 }
 
@@ -1147,7 +943,6 @@
   background: rgba(102, 126, 234, 0.08);
 }
 
-/* Row Icon (Brand Logo) */
 .row-icon {
   width: 48px;
   height: 48px;
@@ -1167,7 +962,6 @@
   object-fit: contain;
 }
 
-/* Row Content */
 .row-content {
   flex: 1;
   display: flex;
@@ -1189,6 +983,7 @@
   font-weight: 500;
 }
 
+/* Arrow indicator that slides right on row hover */
 .row-arrow {
   color: #333;
   font-size: 1.2rem;
@@ -1201,7 +996,7 @@
   transform: translateX(5px);
 }
 
-/* 6. Featured Credentials Styling */
+/* Featured row has a distinct colored vertical strip */
 .table-row-featured {
   background: rgba(102, 126, 234, 0.03);
   position: relative;
@@ -1231,7 +1026,7 @@
   border: 1px solid rgba(240, 147, 251, 0.2);
 }
 
-/* 7. Empty State & Utilities */
+/* Fallback UI for search/filter with no matches */
 .no-results {
   padding: 4rem 2rem;
   text-align: center;
@@ -1240,22 +1035,144 @@
   font-weight: 500;
 }
 
-/* Body Scroll Lock */
+/* Lock page scrolling when the overlay panel is active */
 body:has(.cert-overlay) {
   overflow: hidden;
 }
 
-/* 8. Responsive adjustments */
 @media (max-width: 640px) {
-  .cert-table-view {
-    max-width: 100%;
-  }
-  
-  .table-row {
-    padding: 1.2rem 1.5rem;
-  }
+  .cert-table-view { max-width: 100%; }
+  .table-row { padding: 1.2rem 1.5rem; }
+  .table-header { padding: 1.5rem; }
+}
 
-  .table-header {
-    padding: 1.5rem;
+
+/* ==========================================================================
+   DESCRIPTION UI (About Me Text)
+   ========================================================================== */
+
+.description-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.description-glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 4rem;
+  position: relative;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
+}
+
+/* Status bar style header inside the card */
+.description-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.pulse-indicator {
+  width: 10px;
+  height: 10px;
+  background: #43e97b; /* Success/Live green */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #43e97b;
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(67, 233, 123, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(67, 233, 123, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(67, 233, 123, 0); }
+}
+
+.status-text {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Markdown Content Styling */
+.description-body {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  text-align: left; /* Better for reading long lists */
+}
+
+/* Bold text styling within the markdown */
+.description-body strong {
+  color: #ffffff;
+  background: linear-gradient(120deg, rgba(102, 126, 234, 0.2) 0%, rgba(102, 126, 234, 0.2) 100%);
+  padding: 0 4px;
+  font-weight: 700;
+}
+
+/* Bullet list styling */
+.description-body ul {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.description-body li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.description-body li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #f093fb;
+  font-weight: bold;
+}
+
+/* Header inside markdown (###) */
+.description-body h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #fff 0%, #b8b8b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Footer element for a professional finish */
+.description-footer {
+  margin-top: 3rem;
+}
+
+.footer-line {
+  height: 1px;
+  width: 60px;
+  background: #667eea;
+  margin-bottom: 1.5rem;
+}
+
+.footer-tagline {
+  font-style: italic;
+  font-weight: 600;
+  color: #b8b8b8;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .description-glass-card {
+    padding: 2.5rem;
+    border-radius: 20px;
+  }
+  .description-body {
+    font-size: 1.1rem;
+  }
+  .description-body h3 {
+    font-size: 1.7rem;
   }
 }

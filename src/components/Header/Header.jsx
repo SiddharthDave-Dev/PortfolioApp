@@ -15,9 +15,29 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Simple navigation to home page
   const handleLogoClick = () => {
-    window.location.href = '/';
+    // Scroll to top instead of reloading or changing URL
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Custom Navigation Logic
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault(); // This prevents the #target from being added to the URL
+    
+    const targetElement = document.getElementById(targetId.toLowerCase());
+    
+    if (targetElement) {
+      const offset = 80; // Matches your header height to prevent overlapping
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    
+    setIsMobileMenuOpen(false); // Close mobile menu if open
   };
 
   const headerVariants = {
@@ -70,7 +90,7 @@ const Header = () => {
       <div className="header-container glass-effect">
         <motion.div
           className="logo"
-          onClick={handleLogoClick} // Navigate to home on click
+          onClick={handleLogoClick}
           variants={logoVariants}
           whileHover={{
             scale: 1.1,
@@ -79,7 +99,7 @@ const Header = () => {
           }}
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          style={{ cursor: 'pointer' }} // Show it's clickable
+          style={{ cursor: 'pointer' }}
         >
           <span className="logo-text">{portfolioContent.header.logo}</span>
           <motion.div
@@ -97,12 +117,14 @@ const Header = () => {
         </motion.div>
 
         <nav className="nav">
-          {portfolioContent.header.navItems.map((item, index) => (
+          {portfolioContent.header.navItems.map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
               className="nav-link"
               variants={navItemVariants}
+              // TRIGGER CUSTOM SCROLL HERE
+              onClick={(e) => handleNavClick(e, item)}
               whileHover={{
                 scale: 1.1,
                 y: -2,
@@ -110,11 +132,6 @@ const Header = () => {
                 textShadow: "0 0 10px rgba(102, 126, 234, 0.8)"
               }}
               whileTap={{ scale: 0.95 }}
-              transition={{
-                type: "tween",
-                duration: 0.15,     // Very short duration
-                ease: "easeOut"     // Quick start, smooth finish
-              }}
             >
               <span className="nav-text">{item}</span>
               <motion.div
@@ -131,26 +148,10 @@ const Header = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          animate={isMobileMenuOpen ? "open" : "closed"}
         >
-          <motion.span
-            variants={{
-              closed: { rotate: 0, y: 0 },
-              open: { rotate: 45, y: 6 }
-            }}
-          />
-          <motion.span
-            variants={{
-              closed: { opacity: 1 },
-              open: { opacity: 0 }
-            }}
-          />
-          <motion.span
-            variants={{
-              closed: { rotate: 0, y: 0 },
-              open: { rotate: -45, y: -6 }
-            }}
-          />
+          <motion.span animate={isMobileMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }} />
+          <motion.span animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }} />
+          <motion.span animate={isMobileMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }} />
         </motion.button>
       </div>
 
@@ -161,7 +162,6 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
           >
             {portfolioContent.header.navItems.map((item, index) => (
               <motion.a
@@ -171,7 +171,8 @@ const Header = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
-                onClick={() => setIsMobileMenuOpen(false)}
+                // TRIGGER CUSTOM SCROLL HERE TOO
+                onClick={(e) => handleNavClick(e, item)}
               >
                 {item}
               </motion.a>

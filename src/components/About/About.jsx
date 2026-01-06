@@ -155,9 +155,25 @@ const About = () => {
           viewport={{ once: true, amount: 0.0 }}
           variants={containerVariants}
         >
-          <motion.p className="about-description" variants={itemVariants}>
-            <ReactMarkdown>{about.description}</ReactMarkdown>
-          </motion.p>
+         {/* About Description with Structured UI */}
+<motion.div className="description-container" variants={itemVariants}>
+  <div className="description-glass-card">
+    <div className="description-header">
+      <div className="pulse-indicator"></div>
+      <span className="status-text">Professional Summary</span>
+    </div>
+    
+    <div className="description-body">
+      <ReactMarkdown>{about.description}</ReactMarkdown>
+    </div>
+
+    {/* Optional: Add a signature or a high-level summary line */}
+    <div className="description-footer">
+      <div className="footer-line"></div>
+      <p className="footer-tagline">Turning technical complexity into strategic clarity.</p>
+    </div>
+  </div>
+</motion.div>
 
           {/* Education */}
           {about.education && (
