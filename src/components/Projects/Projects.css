@@ -4,7 +4,6 @@
 .projects-section {
   padding: 80px 0;
   min-height: 100vh;
-  /* Respects global background */
 }
 
 .projects-container {
@@ -56,7 +55,7 @@
 }
 
 /* ==========================================================================
-   3. TEXT-FOCUS MESH GRID (IMAGE-LESS VIEW)
+   3. TEXT-FOCUS MESH GRID
    ========================================================================== */
 .projects-text-grid {
   display: grid;
@@ -158,7 +157,7 @@
 }
 
 /* ==========================================================================
-   4. LOAD MORE BUTTON
+   4. LOAD MORE
    ========================================================================== */
 .load-more-container {
   display: flex;
@@ -184,16 +183,8 @@
   box-shadow: 0 0 25px rgba(102, 126, 234, 0.4);
 }
 
-.btn-count-tag {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 0.75rem;
-  margin-left: 8px;
-}
-
 /* ==========================================================================
-   5. MODERN CASE STUDY VIEW (DRAWER)
+   5. DRAWER & CASE STUDY VIEW
    ========================================================================== */
 .drawer-overlay {
   position: fixed;
@@ -209,7 +200,7 @@
   width: 100%;
   max-width: 850px;
   height: 100vh;
-  background: #0d0d14; /* Solid color to prevent text bleed from main page */
+  background: #0d0d14; 
   overflow-y: auto;
   position: relative;
   box-shadow: -15px 0 40px rgba(0,0,0,0.6);
@@ -227,6 +218,7 @@
   z-index: 100;
 }
 
+/* REVERTED: BACK BUTTON (NO BACKGROUND) */
 .drawer-back-btn {
   background: none;
   border: none;
@@ -234,9 +226,13 @@
   cursor: pointer;
   font-weight: 700;
   transition: 0.3s;
+  padding: 0; /* Remove padding to keep it text-like */
 }
 
-.drawer-back-btn:hover { color: #fff; }
+.drawer-back-btn:hover {
+  color: #fff;
+  background: none; /* Ensure no background on hover */
+}
 
 .drawer-header-actions {
   display: flex;
@@ -259,85 +255,56 @@
   border-color: #667eea;
 }
 
-/* Case Study Hero Section */
-.drawer-main-content {
-  padding: 40px 50px;
-}
-
-.case-category-label {
-  color: #667eea;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 0.7rem;
-  font-weight: 800;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.case-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: #fff;
-  margin: 0 0 35px 0;
-  font-weight: 800;
-  line-height: 1.1;
-}
-
-/* Horizontal Specs Bar */
-.case-specs-bar {
-  display: flex;
-  gap: 40px;
-  padding: 25px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.spec-item {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.spec-label {
-  font-size: 0.6rem;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-.spec-value {
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.status-flex {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #43e97b;
-}
-
-/* Gallery Controls */
+/* --- IMAGE GALLERY OPTIMIZATIONS --- */
 .case-gallery-container {
   margin: 40px 0 60px 0;
 }
 
-.case-main-image {
+.case-image-viewport {
+  position: relative;
   width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: contain;
-  background: #000;
+  aspect-ratio: 16 / 9;
+  background: rgba(255, 255, 255, 0.02);
   border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.case-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+.case-image-loader {
+  position: absolute;
+  inset: 0;
+  background: #0d0d14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modern-spinner {
+  width: 45px;
+  height: 45px;
+  border: 3px solid rgba(102, 126, 234, 0.1);
+  border-radius: 50%;
+  border-top-color: #667eea;
+  animation: spin 0.8s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- GALLERY CONTROLS --- */
 .case-gallery-controls {
   display: flex;
   justify-content: space-between;
@@ -345,14 +312,18 @@
   margin-top: 15px;
 }
 
-.case-gallery-controls button {
+.nav-arrow-btn {
   background: none;
   border: none;
   color: #667eea;
   font-weight: 800;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   cursor: pointer;
+  letter-spacing: 1.5px;
+  transition: opacity 0.3s;
 }
+
+.nav-arrow-btn:hover { opacity: 0.7; }
 
 .case-dot-nav {
   display: flex;
@@ -364,6 +335,7 @@
   height: 5px;
   border-radius: 50%;
   background: rgba(255,255,255,0.2);
+  transition: 0.3s;
 }
 
 .nav-dot.active {
@@ -372,50 +344,31 @@
   border-radius: 10px;
 }
 
-/* Description Grid */
-.case-details-grid {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr;
-  gap: 60px;
-  margin-top: 40px;
+/* --- CASE STUDY CONTENT --- */
+.drawer-main-content { padding: 40px 50px; }
+.case-category-label { color: #667eea; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; font-weight: 800; display: block; margin-bottom: 10px; }
+.case-title { font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; margin: 0 0 35px 0; font-weight: 800; line-height: 1.1; }
+
+.case-specs-bar {
+  display: flex;
+  gap: 40px;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.case-section-heading {
-  font-size: 1rem;
-  color: #fff;
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+.spec-item { display: flex; flex-direction: column; gap: 5px; }
+.spec-label { font-size: 0.6rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.spec-value { color: #fff; font-weight: 600; font-size: 0.95rem; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #43e97b; }
 
-.case-text {
-  color: #94a3b8;
-  line-height: 1.8;
-  font-size: 1rem;
-}
+.case-details-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 60px; margin-top: 40px; }
+.case-section-heading { font-size: 1rem; color: #fff; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.case-text { color: #94a3b8; line-height: 1.8; font-size: 1rem; }
 
-.modern-feature-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.modern-feature-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-  color: #e2e8f0;
-  font-size: 0.95rem;
-  padding-left: 20px;
-  position: relative;
-}
-
-.modern-feature-list li::before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: #667eea;
-}
+.modern-feature-list { list-style: none; padding: 0; }
+.modern-feature-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); color: #e2e8f0; font-size: 0.95rem; padding-left: 20px; position: relative; }
+.modern-feature-list li::before { content: "→"; position: absolute; left: 0; color: #667eea; }
 
 .tech-tag-modern {
   display: inline-block;
@@ -432,4 +385,5 @@
   .case-details-grid { grid-template-columns: 1fr; gap: 40px; }
   .case-specs-bar { gap: 20px; flex-wrap: wrap; }
   .drawer-main-content { padding: 30px; }
+  .case-image-viewport { aspect-ratio: 4 / 3; }
 }

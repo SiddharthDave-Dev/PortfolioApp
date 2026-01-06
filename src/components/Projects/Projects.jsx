@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioContent } from '../../data/content';
 import './Projects.css';
@@ -17,6 +17,7 @@ const Projects = () => {
   
   const sectionRef = useRef(null);
 
+  // Filter Logic
   const categories = ['All', ...new Set(portfolioContent.projects.items.map(p => p.category || 'iOS App'))];
   const filteredProjects = activeFilter === 'All'
     ? portfolioContent.projects.items
@@ -42,7 +43,6 @@ const Projects = () => {
     }
   };
 
-  // --- REFINED ANIMATIONS ---
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -63,10 +63,7 @@ const Projects = () => {
       y: 0, 
       scale: 1,
       filter: "blur(0px)",
-      transition: { 
-        duration: 0.7, 
-        ease: [0.23, 1, 0.32, 1] // Custom quint ease-out
-      } 
+      transition: { duration: 0.7, ease: [0.23, 1, 0.32, 1] } 
     }
   };
 
@@ -113,6 +110,7 @@ const Projects = () => {
                 className="text-card"
                 onClick={() => {
                   setSelectedProject(project);
+                  setCurrentImageIndex(0); // Reset index on open
                   document.body.style.overflow = 'hidden';
                 }}
               >
@@ -163,6 +161,27 @@ const Projects = () => {
 
 const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
   const images = project.images || [];
+  const [isImgLoading, setIsImgLoading] = useState(true);
+
+  // Background Preload: Fetches all images for this project so gallery is instant
+  useEffect(() => {
+    if (images.length > 0) {
+      images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    }
+  }, [images]);
+
+  const handleNext = () => {
+    setIsImgLoading(true);
+    setIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const handlePrev = () => {
+    setIsImgLoading(true);
+    setIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
+  };
 
   return (
     <motion.div className="drawer-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose}>
@@ -175,7 +194,6 @@ const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="drawer-inner-container">
-          {/* Top Navigation Bar */}
           <header className="drawer-sticky-header">
             <button className="drawer-back-btn" onClick={onClose}>
               <span className="back-icon">←</span> Close Case Study
@@ -187,12 +205,10 @@ const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
           </header>
 
           <div className="drawer-main-content">
-            {/* 1. Hero Header Section */}
             <div className="case-study-hero">
               <span className="case-category-label">{project.category}</span>
               <h2 className="case-title">{project.name}</h2>
               
-              {/* Horizontal Specs Bar */}
               <div className="case-specs-bar">
                 <div className="spec-item">
                   <span className="spec-label">Duration</span>
@@ -212,34 +228,50 @@ const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
               </div>
             </div>
 
-            {/* 2. Visual Showcase (Gallery) */}
+            {/* Visual Showcase with Loader */}
             {images.length > 0 && (
               <div className="case-gallery-container">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={currentIndex}
-                    src={images[currentIndex]}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="case-main-image"
-                  />
-                </AnimatePresence>
+                <div className="case-image-viewport">
+                  <AnimatePresence>
+                    {isImgLoading && (
+                      <motion.div 
+                        className="case-image-loader"
+                        initial={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <div className="modern-spinner"></div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentIndex}
+                      src={images[currentIndex]}
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: isImgLoading ? 0 : 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                      onLoad={() => setIsImgLoading(false)}
+                      className="case-main-image"
+                      alt={`${project.name} screenshot`}
+                    />
+                  </AnimatePresence>
+                </div>
+                
                 {images.length > 1 && (
                   <div className="case-gallery-controls">
-                    <button onClick={() => setIndex(prev => (prev === 0 ? images.length - 1 : prev - 1))}>PREV</button>
+                    <button className="nav-arrow-btn" onClick={handlePrev}>PREV</button>
                     <div className="case-dot-nav">
                         {images.map((_, i) => (
                             <span key={i} className={`nav-dot ${i === currentIndex ? 'active' : ''}`}></span>
                         ))}
                     </div>
-                    <button onClick={() => setIndex(prev => (prev === images.length - 1 ? 0 : prev + 1))}>NEXT</button>
+                    <button className="nav-arrow-btn" onClick={handleNext}>NEXT</button>
                   </div>
                 )}
               </div>
             )}
 
-            {/* 3. Detailed Information Grid */}
             <div className="case-details-grid">
               <div className="case-col-left">
                 <section className="case-block">
