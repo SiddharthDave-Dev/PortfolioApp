@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioContent } from '../../data/content';
 import './Projects.css';
@@ -17,8 +17,11 @@ const Projects = () => {
   
   const sectionRef = useRef(null);
 
-  // Filter Logic
-  const categories = ['All', ...new Set(portfolioContent.projects.items.map(p => p.category || 'iOS App'))];
+  const categories = useMemo(() => 
+    ['All', ...new Set(portfolioContent.projects.items.map(p => p.category || 'iOS App'))], 
+    []
+  );
+
   const filteredProjects = activeFilter === 'All'
     ? portfolioContent.projects.items
     : portfolioContent.projects.items.filter(p => (p.category || 'iOS App') === activeFilter);
@@ -110,7 +113,7 @@ const Projects = () => {
                 className="text-card"
                 onClick={() => {
                   setSelectedProject(project);
-                  setCurrentImageIndex(0); // Reset index on open
+                  setCurrentImageIndex(0);
                   document.body.style.overflow = 'hidden';
                 }}
               >
@@ -160,10 +163,10 @@ const Projects = () => {
 };
 
 const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
-  const images = project.images || [];
+  // Fixed: useMemo prevents the build error regarding useEffect dependencies
+  const images = useMemo(() => project.images || [], [project.images]);
   const [isImgLoading, setIsImgLoading] = useState(true);
 
-  // Background Preload: Fetches all images for this project so gallery is instant
   useEffect(() => {
     if (images.length > 0) {
       images.forEach((src) => {
@@ -228,7 +231,6 @@ const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
               </div>
             </div>
 
-            {/* Visual Showcase with Loader */}
             {images.length > 0 && (
               <div className="case-gallery-container">
                 <div className="case-image-viewport">
