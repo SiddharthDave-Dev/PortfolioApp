@@ -55,6 +55,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
+  
+  perspective: 1000px;
 }
 
 .modern-card {
@@ -64,7 +66,9 @@
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
+  transform-origin: center center;
+  will-change: transform, opacity;
 }
 
 .modern-card:hover {
@@ -81,6 +85,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card-overlay {
@@ -93,6 +98,7 @@
   opacity: 0;
   transition: 0.3s ease;
 }
+
 
 .modern-card:hover .card-overlay { opacity: 1; }
 
@@ -118,21 +124,70 @@
 }
 
 .card-content { padding: 20px; }
-
 .card-name { color: #fff; font-size: 1.3rem; margin-bottom: 8px; }
-
 .card-summary { color: #aaa; font-size: 0.9rem; line-height: 1.5; margin-bottom: 15px; }
 
-/* .tech-mini-pill {
+.card-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tech-mini-pill {
   background: rgba(102, 126, 234, 0.15);
   color: #667eea;
-  padding: 3px 10px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  margin-right: 5px;
-} */
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  transition: 0.3s ease;
+}
 
-/* Drawer */
+/* Pagination Button */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.load-more-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #667eea;
+  padding: 12px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-count-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  margin-left: 8px;
+  vertical-align: middle;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.load-more-btn:hover .btn-count-tag {
+  background: #fff;
+  color: #667eea;
+}
+
+.load-more-btn:hover {
+  background: #667eea;
+  box-shadow: 0 0 25px rgba(102, 126, 234, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Drawer Styles */
 .drawer-overlay {
   position: fixed;
   inset: 0;
@@ -165,12 +220,10 @@
   border-radius: 50%;
   cursor: pointer;
   z-index: 100;
-  transition: 0.3s;
 }
 
 .drawer-close-x:hover { background: #ff4d4d; }
 
-/* Gallery Logic */
 .drawer-gallery-container {
   height: 380px;
   background: #000;
@@ -223,40 +276,17 @@
   font-size: 0.8rem;
 }
 
-/* Content Area */
 .drawer-body-content { padding: 40px; }
-
 .drawer-project-title { font-size: 2.2rem; color: #fff; margin-bottom: 10px; }
 
-.drawer-status-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #888;
-  margin-bottom: 30px;
-  text-transform: capitalize;
-}
-
 .status-indicator {
+  display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #43e97b;
+  margin-right: 8px;
 }
-
-.drawer-description-box h3, .drawer-section h3 {
-  color: #667eea;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.drawer-description-box p { color: #ccc; line-height: 1.8; margin-bottom: 35px; }
-
-.drawer-feature-list { list-style: none; padding: 0; }
-
-.drawer-feature-list li { color: #ccc; margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; }
 
 .drawer-action-footer {
   display: grid;
@@ -275,41 +305,18 @@
 }
 
 .action-btn.primary { background: #667eea; color: #fff; }
-.action-btn.primary:hover { background: #764ba2; transform: translateY(-3px); }
-
 .action-btn.secondary { border: 1px solid #667eea; color: #667eea; }
-.action-btn.secondary:hover { background: rgba(102, 126, 234, 0.1); transform: translateY(-3px); }
 
-/* Mobile Optimization */
 @media (max-width: 768px) {
   .drawer-side-panel { max-width: 100%; }
   .drawer-gallery-container { height: 260px; }
-  .drawer-body-content { padding: 25px; }
   .drawer-action-footer { grid-template-columns: 1fr; }
 }
 
-/* Update these specific classes in Projects.css */
-
-.card-tech-stack {
-  display: flex;
-  flex-wrap: wrap; /* Allows pills to move to the next line instead of cutting off */
-  gap: 8px;       /* Adds spacing between pills */
-  margin-top: 10px;
-}
-
-.tech-mini-pill {
-  background: rgba(102, 126, 234, 0.15);
-  color: #667eea;
-  padding: 4px 10px; /* Slightly more padding for better legibility */
-  border-radius: 6px;
-  font-size: 0.7rem;
-  white-space: nowrap; /* Prevents a single pill from breaking into two lines */
-  border: 1px solid rgba(102, 126, 234, 0.1);
-  transition: 0.3s ease;
-}
 
 /* Optional: Add a hover effect to the pills */
 .tech-mini-pill:hover {
   background: rgba(102, 126, 234, 0.3);
   transform: translateY(-2px);
 }
+

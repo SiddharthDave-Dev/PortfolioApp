@@ -11,7 +11,7 @@ export const portfolioContent = {
         greeting: "Hi there!",
         name: "Siddharth Dave",
         roles: [
-            "Data Science",
+            "Data Scienctist",
             "Data Analyst",
             "Mobile App Creator",
             "iOS Developer",

@@ -1,7 +1,6 @@
-// About.jsx
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'; // Added AnimatePresence
 import { portfolioContent } from '../../data/content';
 import './About.css';
 
@@ -37,97 +36,98 @@ const About = () => {
 
   const getJourneyIcon = (type) => {
     switch (type) {
-      case 'education':
-        return '🎓';
-      case 'work':
-        return '💼';
-      case 'achievement':
-        return '🏆';
-      case 'milestone':
-        return '🚀';
-      case 'current':
-        return '⚡';
-      default:
-        return '📍';
+      case 'education': return '🎓';
+      case 'work': return '💼';
+      case 'achievement': return '🏆';
+      case 'milestone': return '🚀';
+      case 'current': return '⚡';
+      default: return '📍';
     }
   };
 
   const getJourneyColor = (type) => {
     switch (type) {
-      case 'education':
-        return '#4facfe';
-      case 'work':
-        return '#43e97b';
-      case 'achievement':
-        return '#fa709a';
-      case 'milestone':
-        return '#667eea';
-      case 'current':
-        return '#f093fb';
-      default:
-        return '#667eea';
+      case 'education': return '#4facfe';
+      case 'work': return '#43e97b';
+      case 'achievement': return '#fa709a';
+      case 'milestone': return '#667eea';
+      case 'current': return '#f093fb';
+      default: return '#667eea';
     }
   };
 
   const getCertificateIcon = (issuer) => {
-    switch (issuer.toLowerCase()) {
-      case 'google':
-        return '/images/google.png';
-      case 'ibm':
-        return '/images/ibm.png';
-      case 'microsoft':
-        return '/images/microsoft.png';
-      case 'aws':
-        return '/images/aws.png';
-      case 'coursera':
-        return '/images/coursera.png';
-      case 'udemy':
-        return '/images/udemy.png';
-      case 'linkedin':
-        return '/images/linkedin.png';
-      case 'meta':
-        return '/images/meta.png';
-      case 'learnquest':
-        return '/images/learnquest.png';
-      case 'johns hopkins university':
-        return '/images/johns-hopkins-university.png';
-      case 'rice university':
-        return '/images/rice-university.png';
-      case 'ec-council':
-        return '/images/ec-council.png';
-      default:
-        return '/images/coursera.png';
+    switch (issuer?.toLowerCase()) {
+      case 'google': return '/images/google.png';
+      case 'ibm': return '/images/ibm.png';
+      case 'microsoft': return '/images/microsoft.png';
+      case 'aws': return '/images/aws.png';
+      case 'coursera': return '/images/coursera.png';
+      case 'udemy': return '/images/udemy.png';
+      case 'linkedin': return '/images/linkedin.png';
+      case 'meta': return '/images/meta.png';
+      case 'learnquest': return '/images/learnquest.png';
+      case 'johns hopkins university': return '/images/johns-hopkins-university.png';
+      case 'rice university': return '/images/rice-university.png';
+      case 'ec-council': return '/images/ec-council.png';
+      default: return '/images/coursera.png';
     }
   };
 
   const getCertificateColor = (issuer) => {
-    switch (issuer.toLowerCase()) {
-      case 'google':
-        return '#4285F4';
-      case 'ibm':
-        return '#054ADA';
-      case 'microsoft':
-        return '#00A4EF';
-      case 'aws':
-        return '#FF9900';
-      case 'coursera':
-        return '#0056D2';
-      case 'udemy':
-        return '#A435F0';
-      case 'linkedin':
-        return '#0A66C2';
-      case 'meta':
-        return '#0081FB';
-      default:
-        return '#667eea';
+    switch (issuer?.toLowerCase()) {
+      case 'google': return '#4285F4';
+      case 'ibm': return '#054ADA';
+      case 'microsoft': return '#00A4EF';
+      case 'aws': return '#FF9900';
+      case 'coursera': return '#0056D2';
+      case 'udemy': return '#A435F0';
+      case 'linkedin': return '#0A66C2';
+      case 'meta': return '#0081FB';
+      default: return '#667eea';
     }
   };
 
-  // defensive access
   const about = portfolioContent?.about || {};
 
+ // New States for filtering and UI
+  const [showFullList, setShowFullList] = useState(false);
+  const [activeFilter, setActiveFilter] = useState('All');
+  const panelRef = useRef(null); 
+
+  // Resets the filter whenever the overlay is closed
+  React.useEffect(() => {
+    if (!showFullList) {
+      setActiveFilter('All');
+    }
+  }, [showFullList]);
+  
+  // Sort and Prepare Certifications
+  const allCertifications = [...(about.certifications || [])].sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return 0;
+  });
+
+  // Extract unique issuers for filter buttons
+  const uniqueIssuers = ['All', ...new Set(allCertifications.map(c => c.issuer))];
+
+  // Logic for the filtered list inside overlay
+  const filteredCertifications = activeFilter === 'All' 
+    ? allCertifications 
+    : allCertifications.filter(cert => cert.issuer === activeFilter);
+
+  const featuredCerts = allCertifications.slice(0, 8);
+
   const handleCertificateClick = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+    if (url) window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  // Close when clicking the backdrop (not the panel)
+  const handleBackdropClick = (e) => {
+    if (panelRef.current && !panelRef.current.contains(e.target)) {
+      setShowFullList(false);
+    }
   };
 
   return (
@@ -143,7 +143,6 @@ const About = () => {
           <motion.h2 className="about-title" variants={itemVariants}>
             {about.title || 'About Me'}
           </motion.h2>
-
           <motion.p className="about-subtitle" variants={itemVariants}>
             {about.subtitle || 'Discover my journey'}
           </motion.p>
@@ -166,7 +165,6 @@ const About = () => {
               <motion.h3 className="section-title" variants={itemVariants}>
                 <span className="emoji-colored">🎓</span> {about.education.title}
               </motion.h3>
-
               <div className="education-grid">
                 {about.education.degrees?.map((edu, idx) => (
                   <motion.article
@@ -184,9 +182,7 @@ const About = () => {
                     <p className="education-description">{edu.description}</p>
                     <div className="achievements">
                       {edu.achievements?.map((a, i) => (
-                        <span className="achievement-tag" key={i}>
-                          {a}
-                        </span>
+                        <span className="achievement-tag" key={i}>{a}</span>
                       ))}
                     </div>
                   </motion.article>
@@ -201,7 +197,6 @@ const About = () => {
               <motion.h3 className="section-title" variants={itemVariants}>
                 <span className="emoji-colored">💼</span> {about.experience.title}
               </motion.h3>
-
               <div className="experience-grid">
                 {about.experience.jobs?.map((job, idx) => (
                   <motion.article
@@ -218,38 +213,27 @@ const About = () => {
                           <span className="experience-location">{job.location}</span>
                         </div>
                       </div>
-
                       <div className="experience-period">{job.period}</div>
                     </div>
-
                     <p className="experience-description">{job.description}</p>
-
                     {job.responsibilities && (
                       <ul className="responsibilities-list">
                         {job.responsibilities.map((r, i) => (
-                          <li className="responsibility-item" key={i}>
-                            {r}
-                          </li>
+                          <li className="responsibility-item" key={i}>{r}</li>
                         ))}
                       </ul>
                     )}
-
                     {job.tech && (
                       <div className="tech-tags">
                         {job.tech.map((t, i) => (
-                          <span className="tech-tag" key={i}>
-                            {t}
-                          </span>
+                          <span className="tech-tag" key={i}>{t}</span>
                         ))}
                       </div>
                     )}
-
                     {job.achievements && (
                       <div className="job-achievements">
                         {job.achievements.map((a, i) => (
-                          <span className="achievement-tag" key={i}>
-                            {a}
-                          </span>
+                          <span className="achievement-tag" key={i}>{a}</span>
                         ))}
                       </div>
                     )}
@@ -259,55 +243,41 @@ const About = () => {
             </motion.div>
           )}
 
-          {/* Certifications */}
           {/* Professional Certifications Section */}
-          {about.certifications && (
+          {allCertifications.length > 0 && (
             <motion.div className="certifications-section" variants={itemVariants}>
               <motion.h3 className="section-title" variants={itemVariants}>
                 <span className="emoji-colored">🏅</span> Certifications
               </motion.h3>
+
               <div className="cert-modern-grid">
-                {about.certifications.map((cert, idx) => (
+                {featuredCerts.map((cert, idx) => (
                   <motion.div
                     key={idx}
-                    // Dynamically add 'featured' class if cert.featured is true
                     className={`cert-modern-card ${cert.featured ? 'featured-cert' : ''}`}
                     variants={cardVariants}
                     whileHover={{ y: -10 }}
-                    onClick={() => cert.certificateUrl && handleCertificateClick(cert.certificateUrl)}
+                    onClick={() => handleCertificateClick(cert.certificateUrl)}
                   >
                     <div className="cert-shine"></div>
-
-                    {/* Top Badge for highlighted certificates */}
                     {cert.featured && <div className="featured-badge">TOP CREDENTIAL</div>}
-
                     <div className="cert-header">
                       <div
                         className="cert-logo-box"
                         style={{
                           borderColor: getCertificateColor(cert.issuer),
                           background: `${getCertificateColor(cert.issuer)}15`,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          overflow: 'hidden' // Keeps the image inside the border radius
                         }}
                       >
-                        {/* Use an img tag instead of a span */}
                         <img
                           src={getCertificateIcon(cert.issuer)}
                           alt={cert.issuer}
                           className="cert-logo-img"
-                          style={{
-                            width: '70%',       // Adjust as needed
-                            height: '70%',      // Adjust as needed
-                            objectFit: 'contain'
-                          }}
+                          style={{ width: '70%', height: '70%', objectFit: 'contain' }}
                         />
                       </div>
                       <div className="cert-verify-badge">VERIFIED ✓</div>
                     </div>
-
                     <div className="cert-body">
                       <h4 className="cert-name">{cert.title}</h4>
                       <p className="cert-issuer">🏢 {cert.issuer}</p>
@@ -316,17 +286,21 @@ const About = () => {
                         <span className="cert-id-value">{cert.certificateId}</span>
                       </div>
                     </div>
-
                     <div className="cert-footer">
-                      {/* <span className="cert-date-text">{cert.date}</span> */}
                       <span className="cert-date-text"></span>
-                      {cert.certificateUrl && (
-                        <span className="cert-view-link">View ↗</span>
-                      )}
+                      {cert.certificateUrl && <span className="cert-view-link">View ↗</span>}
                     </div>
                   </motion.div>
                 ))}
               </div>
+
+              {allCertifications.length > 8 && (
+                <div className="show-more-container">
+                  <button className="show-more-btn glass-effect" onClick={() => setShowFullList(true)}>
+                    See All ({allCertifications.length}) <span>→</span>
+                  </button>
+                </div>
+              )}
             </motion.div>
           )}
 
@@ -336,7 +310,7 @@ const About = () => {
               <motion.h3 className="section-title" variants={itemVariants}>
                 <span className="emoji-colored">🌟</span> Highlights
               </motion.h3>
-              <motion.div className="highlights-grid" variants={containerVariants}>
+              <div className="highlights-grid">
                 {about.highlights.map((h, i) => (
                   <motion.div
                     key={i}
@@ -357,20 +331,16 @@ const About = () => {
                       />
                       <div className="highlight-icon-fallback">{i === 0 ? '📱' : i === 1 ? '📊' : '🚀'}</div>
                     </div>
-
                     <h3 className="highlight-title">{h.title}</h3>
                     <p className="highlight-description">{h.description}</p>
-
                     <div className="skills-tags">
                       {h.skills?.map((s, si) => (
-                        <span className="skill-tag" key={si}>
-                          {s}
-                        </span>
+                        <span className="skill-tag" key={si}>{s}</span>
                       ))}
                     </div>
                   </motion.div>
                 ))}
-              </motion.div>
+              </div>
             </motion.div>
           )}
 
@@ -380,7 +350,6 @@ const About = () => {
               <motion.h3 className="section-title" variants={itemVariants}>
                 <span className="emoji-colored">📈</span> Technical Impact & Experience
               </motion.h3>
-
               <div className="stats-grid">
                 {about.stats.map((s, i) => (
                   <motion.div className="stat-item glass-effect" key={i} variants={cardVariants} whileHover={{ scale: 1.08 }}>
@@ -399,7 +368,6 @@ const About = () => {
               <motion.h3 className="section-title" variants={itemVariants}>
                 <span className="emoji-colored">🚀</span> My Journey
               </motion.h3>
-
               <div className="timeline">
                 {about.journey.milestones?.map((m, i) => (
                   <motion.div
@@ -409,12 +377,10 @@ const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.12 }}
-                    whileHover={{ scale: 1.02 }}
                   >
                     <div className="timeline-dot" style={{ backgroundColor: getJourneyColor(m.type) }}>
                       <span className="timeline-icon">{getJourneyIcon(m.type)}</span>
                     </div>
-
                     <div className="timeline-content glass-effect" style={{ borderLeftColor: getJourneyColor(m.type) }}>
                       <div className="timeline-year">{m.year}</div>
                       <h4 className="timeline-title">{m.title}</h4>
@@ -428,6 +394,74 @@ const About = () => {
           )}
         </motion.div>
       </div>
+
+      {/* FULL LIST OVERLAY (SWIFT TABLE VIEW STYLE) */}
+      <AnimatePresence>
+        {showFullList && (
+          <motion.div 
+            className="cert-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={handleBackdropClick} // 1. Dismiss on empty area click
+          >
+            <motion.div 
+              ref={panelRef} // Reference for click-away logic
+              className="cert-table-view"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            >
+              <div className="table-header">
+                <div className="table-header-top">
+                    <h3>Certifications</h3>
+                    <button className="close-table-btn" onClick={() => setShowFullList(false)}>✕</button>
+                </div>
+
+                {/* 2. Filter by Issuer */}
+                <div className="filter-pill-container">
+                    {uniqueIssuers.map(issuer => (
+                        <button 
+                            key={issuer}
+                            className={`filter-pill ${activeFilter === issuer ? 'active' : ''}`}
+                            onClick={() => setActiveFilter(issuer)}
+                        >
+                            {issuer}
+                        </button>
+                    ))}
+                </div>
+              </div>
+
+              <div className="table-body">
+                {filteredCertifications.length > 0 ? (
+                  filteredCertifications.map((cert, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`table-row ${cert.featured ? 'table-row-featured' : ''}`} // 3. Highlight featured
+                      onClick={() => handleCertificateClick(cert.certificateUrl)}
+                    >
+                      <div className="row-icon">
+                        <img src={getCertificateIcon(cert.issuer)} alt="" />
+                      </div>
+                      <div className="row-content">
+                        <div className="row-title">
+                            {cert.title}
+                            {cert.featured && <span className="row-featured-badge">Featured</span>}
+                        </div>
+                        <div className="row-subtitle">{cert.issuer} • {cert.certificateId}</div>
+                      </div>
+                      <div className="row-arrow">→</div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="no-results">No certifications found for this issuer.</div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
