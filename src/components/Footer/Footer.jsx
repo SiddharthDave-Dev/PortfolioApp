@@ -103,11 +103,11 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p>© {currentYear} {portfolioContent.header.name}. All Rights Reserved.</p>
-          <div className="footer-legal">
+          {/* <div className="footer-legal">
             <a href="#privacy">Privacy Policy</a>
             <span className="separator">|</span>
             <a href="#terms">Terms of Service</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
