@@ -1175,4 +1175,229 @@ body:has(.cert-overlay) {
   .description-body h3 {
     font-size: 1.7rem;
   }
+
+  /* ================= GLOBAL ================= */
+  .about {
+    padding: 3.5rem 0;
+    min-height: auto;
+  }
+
+  .about-container {
+    padding: 0 1.25rem;
+  }
+
+  .about-content {
+    gap: 4rem;
+  }
+
+  /* ================= HEADER ================= */
+  .about-header {
+    margin-bottom: 3rem;
+  }
+
+  .about-title {
+    font-size: 2.3rem;
+    line-height: 1.2;
+  }
+
+  .about-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .about-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  /* ================= SECTION TITLES ================= */
+  .section-title {
+    font-size: 1.85rem;
+    margin-bottom: 2rem;
+  }
+
+  /* ================= EDUCATION ================= */
+  .education-section {
+    margin: 2.5rem 0;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .education-card {
+    padding: 1.8rem;
+    border-radius: 18px;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .education-degree {
+    font-size: 1.25rem;
+  }
+
+  .education-university {
+    font-size: 1rem;
+  }
+
+  .education-gpa,
+  .education-description {
+    font-size: 0.95rem;
+  }
+
+  /* ================= EXPERIENCE ================= */
+  .experience-section {
+    margin: 2.5rem 0;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .experience-card {
+    padding: 1.8rem;
+    border-radius: 18px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .experience-role {
+    font-size: 1.25rem;
+  }
+
+  .experience-company {
+    font-size: 1rem;
+  }
+
+  .experience-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================================================
+   UPDATED MOBILE UI FOR CERTIFICATIONS
+   - Prevents excessive scrolling by switching from bulky cards to compact rows
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* 1. Change grid to a tight vertical list */
+  .cert-modern-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Tight spacing between items */
+    margin-top: 1.5rem;
+  }
+
+  /* 2. Transform the card into a slim row */
+  .cert-modern-card {
+    flex-direction: row; /* Icon and text side-by-side */
+    align-items: center;
+    padding: 1rem 1.25rem;
+    min-height: auto; /* Remove the large fixed height */
+    border-radius: 16px;
+    gap: 1.2rem;
+    justify-content: flex-start;
+  }
+
+  /* 3. Re-size the logo for a list format */
+  .cert-header {
+    margin-bottom: 0; /* Align with text */
+    flex-shrink: 0;
+  }
+
+  .cert-logo-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 1.3rem; /* Scaled down icon */
+  }
+
+  /* 4. Compact Text Layout */
+  .cert-name {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .cert-issuer {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+
+  /* 5. Hide heavy Desktop-only elements to save vertical space */
+  .cert-id-container, 
+  .cert-footer, 
+  .cert-verify-badge, 
+  .cert-shine,
+  .featured-badge {
+    display: none !important;
+  }
+
+  /* 6. Featured Certificate Subtlety 
+     On mobile, we just give it a slightly stronger border 
+     instead of a bulky badge */
+  .featured-cert {
+    border-left: 4px solid #667eea !important;
+    background: rgba(102, 126, 234, 0.08) !important;
+  }
+
+  /* 7. Ensure the view link is accessible but small */
+  .cert-view-link {
+    margin-left: auto; /* Push to the right */
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==========================================================================
+   OPTIMIZED MOBILE UI OVERRIDE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  /* --- 1. TECHNICAL IMPACT (STATS) --- 
+     Optimized for a 2x2 grid to show impact at a glance */
+  .stats-section {
+    margin: 2.5rem 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 1 */
+    gap: 1rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .stat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem; /* Smaller but punchy */
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+  }
 }

@@ -123,7 +123,7 @@ const Profile = () => {
                 <div className="code-content">
                   <code>
                     <span className="keyword">func</span> <span className="func-name">createAwesome</span>() &#123;<br />
-                    &nbsp;&nbsp;<span className="keyword">return</span> innovation + passion<br />
+                    &nbsp;&nbsp;<span className="keyword">return</span> innovation + passion <br />
                     &#125;
                   </code>
                 </div>

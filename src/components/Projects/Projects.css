@@ -61,7 +61,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 24px;
-  perspective: 1000px;
 }
 
 .text-card {
@@ -75,7 +74,6 @@
   transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
   overflow: hidden;
-  will-change: transform, opacity;
   display: flex;
   flex-direction: column;
 }
@@ -218,7 +216,6 @@
   z-index: 100;
 }
 
-/* REVERTED: BACK BUTTON (NO BACKGROUND) */
 .drawer-back-btn {
   background: none;
   border: none;
@@ -226,13 +223,10 @@
   cursor: pointer;
   font-weight: 700;
   transition: 0.3s;
-  padding: 0; /* Remove padding to keep it text-like */
+  padding: 0;
 }
 
-.drawer-back-btn:hover {
-  color: #fff;
-  background: none; /* Ensure no background on hover */
-}
+.drawer-back-btn:hover { color: #fff; }
 
 .drawer-header-actions {
   display: flex;
@@ -255,16 +249,16 @@
   border-color: #667eea;
 }
 
-/* --- IMAGE GALLERY OPTIMIZATIONS --- */
+/* --- GALLERY SYSTEM --- */
 .case-gallery-container {
-  margin: 40px 0 60px 0;
+  margin: 30px 0 40px 0;
 }
 
 .case-image-viewport {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: rgba(255, 255, 255, 0.02);
+  background: #000;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -274,20 +268,43 @@
 }
 
 .case-main-image {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  /* Use 'initial' for width/height to let max-width/max-height do the work */
+  width: initial; 
+  height: initial;
   object-fit: contain;
-  background: #000;
   display: block;
+  margin: 0 auto; /* Keeps it centered if it's narrower than the viewport */
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
+.is-mobile-view .case-image-viewport {
+  aspect-ratio: 3 / 4; /* Or 9 / 16 */
+  max-width: 400px;
+  margin: 0 auto;
+}
+/* NAVIGATION CLICK ZONES (Over image) */
+.nav-zone-left, .nav-zone-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  cursor: pointer;
+  z-index: 5;
+}
+.nav-zone-left { left: 0; }
+.nav-zone-right { right: 0; }
+
+/* CENTERED LOADER */
 .case-image-loader {
   position: absolute;
   inset: 0;
-  background: #0d0d14;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #0d0d14;
   z-index: 10;
 }
 
@@ -297,54 +314,69 @@
   border: 3px solid rgba(102, 126, 234, 0.1);
   border-radius: 50%;
   border-top-color: #667eea;
-  animation: spin 0.8s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: spin 0.8s linear infinite;
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 
-/* --- GALLERY CONTROLS --- */
-.case-gallery-controls {
+/* SIMPLE COUNTER NAVIGATION */
+.case-gallery-simple-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
 }
 
-.nav-arrow-btn {
-  background: none;
-  border: none;
-  color: #667eea;
-  font-weight: 800;
-  font-size: 0.75rem;
-  cursor: pointer;
-  letter-spacing: 1.5px;
-  transition: opacity 0.3s;
-}
-
-.nav-arrow-btn:hover { opacity: 0.7; }
-
-.case-dot-nav {
+.gallery-counter-view {
   display: flex;
-  gap: 6px;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1px;
 }
 
-.nav-dot {
-  width: 5px;
-  height: 5px;
+.counter-current {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.counter-divider {
+  color: #4b5563;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.counter-total {
+  color: #9ca3af;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-circle-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.nav-dot.active {
+.nav-circle-btn:hover {
   background: #667eea;
-  width: 15px;
-  border-radius: 10px;
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* --- CASE STUDY CONTENT --- */
+/* --- CASE STUDY DETAILS --- */
 .drawer-main-content { padding: 40px 50px; }
 .case-category-label { color: #667eea; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; font-weight: 800; display: block; margin-bottom: 10px; }
 .case-title { font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; margin: 0 0 35px 0; font-weight: 800; line-height: 1.1; }
@@ -360,7 +392,8 @@
 .spec-item { display: flex; flex-direction: column; gap: 5px; }
 .spec-label { font-size: 0.6rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
 .spec-value { color: #fff; font-weight: 600; font-size: 0.95rem; }
-.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #43e97b; }
+
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #43e97b; display: inline-block; margin-right: 8px;}
 
 .case-details-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 60px; margin-top: 40px; }
 .case-section-heading { font-size: 1rem; color: #fff; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
@@ -386,4 +419,22 @@
   .case-specs-bar { gap: 20px; flex-wrap: wrap; }
   .drawer-main-content { padding: 30px; }
   .case-image-viewport { aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 850px) {
+  .case-image-viewport {
+    /* Remove the fixed aspect ratio to allow the image to dictate height */
+    aspect-ratio: auto; 
+    min-height: 300px; /* Ensures the loader/nav still looks good */
+    height: auto;
+    padding: 20px; /* Optional: gives the image some breathing room */
+  }
+
+  .case-main-image {
+    /* Ensure it scales to fit the width of the phone */
+    width: 100%;
+    height: auto;
+    max-height: 70vh; /* Prevents extremely tall images from breaking the layout */
+    object-fit: contain;
+  }
 }

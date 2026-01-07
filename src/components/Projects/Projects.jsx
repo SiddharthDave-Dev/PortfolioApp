@@ -163,18 +163,17 @@ const Projects = () => {
 };
 
 const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
-  // Fixed: useMemo prevents the build error regarding useEffect dependencies
   const images = useMemo(() => project.images || [], [project.images]);
   const [isImgLoading, setIsImgLoading] = useState(true);
 
+  // Preload next image
   useEffect(() => {
     if (images.length > 0) {
-      images.forEach((src) => {
-        const img = new Image();
-        img.src = src;
-      });
+      const nextImg = new Image();
+      const nextIndex = (currentIndex + 1) % images.length;
+      nextImg.src = images[nextIndex];
     }
-  }, [images]);
+  }, [currentIndex, images]);
 
   const handleNext = () => {
     setIsImgLoading(true);
@@ -234,11 +233,13 @@ const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
             {images.length > 0 && (
               <div className="case-gallery-container">
                 <div className="case-image-viewport">
+                  {/* Centered Loader */}
                   <AnimatePresence>
                     {isImgLoading && (
                       <motion.div 
                         className="case-image-loader"
-                        initial={{ opacity: 1 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                       >
                         <div className="modern-spinner"></div>
@@ -250,25 +251,29 @@ const ProjectDrawer = ({ project, onClose, currentIndex, setIndex }) => {
                     <motion.img
                       key={currentIndex}
                       src={images[currentIndex]}
-                      initial={{ opacity: 0, scale: 0.98 }}
-                      animate={{ opacity: isImgLoading ? 0 : 1, scale: 1 }}
-                      transition={{ duration: 0.4 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: isImgLoading ? 0 : 1 }}
+                      transition={{ duration: 0.3 }}
                       onLoad={() => setIsImgLoading(false)}
                       className="case-main-image"
                       alt={`${project.name} screenshot`}
                     />
                   </AnimatePresence>
+
+                  {/* Overlay Click Zones for navigation */}
+                  <div className="nav-zone-left" onClick={handlePrev} />
+                  <div className="nav-zone-right" onClick={handleNext} />
                 </div>
                 
                 {images.length > 1 && (
-                  <div className="case-gallery-controls">
-                    <button className="nav-arrow-btn" onClick={handlePrev}>PREV</button>
-                    <div className="case-dot-nav">
-                        {images.map((_, i) => (
-                            <span key={i} className={`nav-dot ${i === currentIndex ? 'active' : ''}`}></span>
-                        ))}
+                  <div className="case-gallery-simple-nav">
+                    <button className="nav-circle-btn" onClick={handlePrev}>←</button>
+                    <div className="gallery-counter-view">
+                      <span className="counter-current">{currentIndex + 1}</span>
+                      <span className="counter-divider">of</span>
+                      <span className="counter-total">{images.length}</span>
                     </div>
-                    <button className="nav-arrow-btn" onClick={handleNext}>NEXT</button>
+                    <button className="nav-circle-btn" onClick={handleNext}>→</button>
                   </div>
                 )}
               </div>

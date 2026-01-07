@@ -4,29 +4,24 @@ import { portfolioContent } from '../../data/content';
 import './Skills.css';
 
 const Skills = () => {
+  // Enhanced container variant for smoother entrance
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        duration: 0.6
-      }
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.9 },
+  // 3D "Float up" animation for cards
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40, rotateX: 15, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
+      rotateX: 0,
       scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12,
-        duration: 0.6
-      }
+      transition: { type: "spring", stiffness: 80, damping: 15 }
     }
   };
 
@@ -34,27 +29,8 @@ const Skills = () => {
     hidden: { width: 0 },
     visible: (level) => ({
       width: `${level}%`,
-      transition: {
-        duration: 1.5,
-        delay: 0.5,
-        ease: "easeOut"
-      }
+      transition: { duration: 1.2, ease: [0.34, 1.56, 0.64, 1] } // Custom cubic-bezier for "bounce" effect
     })
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.8, rotateY: -15 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      rotateY: 0,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 20,
-        duration: 0.7
-      }
-    }
   };
 
   return (
@@ -63,123 +39,69 @@ const Skills = () => {
       className="skills"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.05 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={containerVariants}
     >
       <div className="skills-container">
-        {/* Header */}
-        <motion.div className="skills-header" variants={itemVariants}>
-          <motion.h2 
-            className="skills-title"
-            animate={{
-              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-            }}
-            transition={{ duration: 5, repeat: Infinity }}
-          >
-            {portfolioContent.skills.title}
-          </motion.h2>
-          <motion.p 
-            className="skills-subtitle"
-            animate={{
-              opacity: [0.7, 1, 0.7],
-            }}
-            transition={{ duration: 3, repeat: Infinity }}
-          >
-            {portfolioContent.skills.subtitle}
-          </motion.p>
+        <motion.div className="skills-header" variants={cardVariants}>
+          <h2 className="skills-title">{portfolioContent.skills.title}</h2>
+          <p className="skills-subtitle">{portfolioContent.skills.subtitle}</p>
         </motion.div>
 
         <div className="skills-content">
-          {/* Technical Skills */}
-          <motion.div className="technical-skills" variants={itemVariants}>
-            <motion.h3 className="section-title" variants={itemVariants}>
-              Technical Skills
-            </motion.h3>
-            
+          {/* Technical Skills - Highlighting the Grid */}
+          <div className="technical-skills">
+            <h3 className="section-title">Technical Expertise</h3>
             <div className="skills-grid">
               {portfolioContent.skills.technical.map((skill, index) => (
                 <motion.div
                   key={index}
                   className="skill-item"
                   variants={cardVariants}
-                  whileHover={{ 
-                    scale: 1.05,
-                    boxShadow: "0 10px 30px rgba(102, 126, 234, 0.3)"
-                  }}
+                  whileHover={{ y: -8, transition: { duration: 0.2 } }}
                 >
                   <div className="skill-header">
-                    <div className="skill-icon">
-                      <img 
-                        src={skill.icon} 
-                        alt={skill.name}
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextSibling.style.display = 'flex';
-                        }}
-                      />
-                      <div className="skill-icon-fallback">
-                        {skill.fallback}
-                      </div>
+                    <div className="skill-icon-wrapper">
+                      <img src={skill.icon} alt={skill.name} />
                     </div>
                     <div className="skill-info">
                       <h4 className="skill-name">{skill.name}</h4>
-                      <span className="skill-level-text">{skill.levelText}</span>
                     </div>
                   </div>
                   
-                  <div className="skill-progress">
-                    <motion.div 
-                      className="skill-progress-bar"
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      variants={skillBarVariants}
-                      custom={skill.level}
-                      style={{
-                        background: `linear-gradient(90deg, ${skill.color} 0%, ${skill.colorEnd || skill.color} 100%)`
-                      }}
-                    />
+                  <div className="skill-progress-container">
+                    <div className="skill-progress-meta">
+                      <span className="skill-level-text">{skill.levelText}</span>
+                      <span className="skill-percentage">{skill.level}%</span>
+                    </div>
+                    <div className="skill-progress-track">
+                      <motion.div 
+                        className="skill-progress-fill"
+                        variants={skillBarVariants}
+                        custom={skill.level}
+                        style={{ background: `linear-gradient(90deg, ${skill.color}, ${skill.colorEnd || skill.color})` }}
+                      />
+                    </div>
                   </div>
-                  
-                  <p className="skill-description">{skill.description}</p>
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          {/* Tools & Technologies */}
-          <motion.div className="tools-section" variants={itemVariants}>
-            <motion.h3 className="section-title" variants={itemVariants}>
-              Tools & Technologies
-            </motion.h3>
-            
+          {/* Tools - Tag Cloud Style */}
+          <div className="tools-section">
+            <h3 className="section-title">Tools & Tech</h3>
             <div className="tools-categories">
-              {portfolioContent.skills.tools.map((category, categoryIndex) => (
-                <motion.div 
-                  key={categoryIndex}
-                  className="tool-category glass-effect"
-                  variants={cardVariants}
-                  whileHover={{ 
-                    scale: 1.02,
-                    y: -5,
-                    boxShadow: "0 15px 40px rgba(102, 126, 234, 0.2)"
-                  }}
-                >
-                  <h4 className="category-title">{category.category}</h4>
+              {portfolioContent.skills.tools.map((category, idx) => (
+                <motion.div key={idx} className="tool-category glass-effect" variants={cardVariants}>
+                  <h4>{category.category}</h4>
                   <div className="tools-list">
-                    {category.items.map((tool, toolIndex) => (
-                      <motion.span
-                        key={toolIndex}
+                    {category.items.map((tool, i) => (
+                      <motion.span 
+                        key={i} 
                         className="tool-tag"
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: toolIndex * 0.1 }}
-                        whileHover={{ 
-                          scale: 1.1,
-                          backgroundColor: "rgba(102, 126, 234, 0.2)",
-                          color: "#ffffff"
-                        }}
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
                       >
                         {tool}
                       </motion.span>
@@ -188,83 +110,7 @@ const Skills = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
-
-          {/* Soft Skills */}
-          <motion.div className="soft-skills" variants={itemVariants}>
-            <motion.h3 className="section-title" variants={itemVariants}>
-              Core Competencies
-            </motion.h3>
-            
-            <div className="soft-skills-grid">
-              {portfolioContent.skills.soft.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  className="soft-skill-card glass-effect"
-                  variants={cardVariants}
-                  whileHover={{ 
-                    scale: 1.05,
-                    rotateY: 5,
-                    boxShadow: "0 20px 40px rgba(102, 126, 234, 0.25)"
-                  }}
-                >
-                  <div className="soft-skill-icon">
-                    {skill.icon}
-                  </div>
-                  <h4 className="soft-skill-name">{skill.name}</h4>
-                  <p className="soft-skill-description">{skill.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Certifications */}
-          {/* <motion.div className="certifications-section" variants={itemVariants}>
-            <motion.h3 className="section-title" variants={itemVariants}>
-              Certifications & Achievements
-            </motion.h3>
-            
-            <div className="certifications-grid">
-              {portfolioContent.skills.certifications.map((cert, index) => (
-                <motion.div
-                  key={index}
-                  className="certification-card glass-effect"
-                  variants={cardVariants}
-                  whileHover={{ 
-                    scale: 1.03,
-                    y: -8,
-                    boxShadow: "0 25px 50px rgba(102, 126, 234, 0.3)"
-                  }}
-                >
-                  <div className="cert-header">
-                    <div className="cert-badge">
-                      <img 
-                        src={cert.badge} 
-                        alt={cert.name}
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextSibling.style.display = 'flex';
-                        }}
-                      />
-                      <div className="cert-badge-fallback">
-                        {cert.fallback}
-                      </div>
-                    </div>
-                    <div className="cert-info">
-                      <h4 className="cert-name">{cert.name}</h4>
-                      <p className="cert-issuer">{cert.issuer}</p>
-                      <span className="cert-date">{cert.date}</span>
-                    </div>
-                  </div>
-                  {cert.credentialId && (
-                    <div className="cert-credential">
-                      <span>ID: {cert.credentialId}</span>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div> */}
+          </div>
         </div>
       </div>
     </motion.section>
