@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { portfolioContent } from '../../data/content';
 import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const contact = portfolioContent.contact;
+  
+  // State to track if the "Back to Top" button should be visible
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Helper to extract name for CSS targeting (e.g., "linkedin" from the URL)
+  // Monitor scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Smooth scroll handler
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   const getSocialName = (url) => {
     if (url.includes('github')) return 'Github';
     if (url.includes('linkedin')) return 'Linkedin';
@@ -103,13 +127,28 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p>© {currentYear} {portfolioContent.header.name}. All Rights Reserved.</p>
-          {/* <div className="footer-legal">
-            <a href="#privacy">Privacy Policy</a>
-            <span className="separator">|</span>
-            <a href="#terms">Terms of Service</a>
-          </div> */}
         </div>
       </div>
+
+      {/* Back to Top Button */}
+      <button 
+        className={`back-to-top ${showScrollTop ? 'visible' : ''}`} 
+        onClick={scrollToTop}
+        aria-label="Back to top"
+      >
+        <svg 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="3" 
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+        >
+          <path d="m18 15-6-6-6 6"/>
+        </svg>
+      </button>
     </footer>
   );
 };

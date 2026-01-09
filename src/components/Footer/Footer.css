@@ -55,7 +55,7 @@
   max-width: 320px;
 }
 
-/* --- Social Icons Visibility Fix --- */
+/* --- Social Icons --- */
 .footer-social-grid {
   display: flex;
   gap: 12px;
@@ -77,7 +77,6 @@
   width: 22px;
   height: 22px;
   object-fit: contain;
-  /* Original colors visible by default */
   filter: none !important; 
   transition: transform 0.3s ease;
 }
@@ -91,16 +90,9 @@
 
 .footer-social-link:hover .footer-social-img {
   transform: scale(1.15);
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)) !important;
 }
 
-/* Specific brightness for dark icons like GitHub or X on dark BG */
-.footer-social-link[title*="Github"] .footer-social-img,
-.footer-social-link[title*="X"] .footer-social-img {
-  filter: brightness(1.5) !important;
-}
-
-/* --- Column Styling --- */
+/* --- Navigation & Links --- */
 .footer-heading {
   color: #fff;
   font-size: 1.1rem;
@@ -142,10 +134,6 @@
   transform: translateX(6px);
 }
 
-.footer-contact-icon {
-  font-size: 1.2rem;
-}
-
 /* --- Bottom Bar --- */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -164,17 +152,48 @@
   font-size: 0.9rem;
 }
 
-.footer-legal {
+/* --- BACK TO TOP BUTTON STYLES --- */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
   display: flex;
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  z-index: 999;
 }
 
-.footer-legal a {
-  color: #6a6d7a;
-  text-decoration: none;
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-.separator { opacity: 0.3; }
+.back-to-top:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(118, 75, 162, 0.6);
+  filter: brightness(1.15);
+}
+
+.back-to-top svg {
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover svg {
+  transform: translateY(-2px);
+}
 
 /* Responsive */
 @media (max-width: 1100px) {
@@ -184,4 +203,11 @@
 @media (max-width: 650px) {
   .footer-container { grid-template-columns: 1fr; }
   .footer-bottom-content { flex-direction: column; gap: 1.5rem; text-align: center; }
+  
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
 }
