@@ -24,7 +24,6 @@ function App() {
 
   return (
     <div className="App">
-        {/* <ParticlesBackground /> */}
       <AnimatePresence mode="wait">
         {loading ? (
           /* Loader Component */
