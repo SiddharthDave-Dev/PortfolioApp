@@ -862,6 +862,124 @@ export const portfolioContent = {
                 "githubUrl": "https://github.com/SiddharthDave-Dev/SpotifyProject"
             },
 
+            {
+                "id": "spotify-playlisttrack-analysis",
+                "name": "Spotify PlaylistTrack Analysis",
+                "category": "SQL",
+                "summary": "A comprehensive SQL-based analysis of Spotify streaming data, solving complex business questions ranging from basic retrieval to advanced analytics.",
+                "description": "This project explores a large-scale dataset of global music trends using DBeaver as the primary database management tool. Unlike standard CSV imports, this project focuses on robust database construction, including manual data insertion and schema definition. It covers a wide spectrum of SQL challenges involving multi-level joins, recursive queries, and statistical aggregations to provide deep insights into track popularity and artist growth.",
+                "thumbnail": "/images/projects/Thumbnail/thumbnail.jpg",
+                "images": [],
+                "technologies": [
+                    "SQL (PostgreSQL/MySQL)",
+                    "DDL/DML Scripting",
+                    "Schema Design",
+                    "Window Functions",
+                    "CTEs",
+                    "DBeaver"
+                ],
+                "duration": "3 days",
+                "status": "Completed",
+                "role": "Lead Data Analyst (Personal Project)",
+                "features": [
+                    "Scripted Data Entry: Developed DML scripts for precise data insertion and management of relational records",
+                    "Schema Architecture: Designed the database from the ground up, ensuring referential integrity and optimized indexing",
+                    "Rolling Analytics: Calculated complex metrics like rolling averages for streaming numbers",
+                    "Ranking Logic: Utilized RANK() and DENSE_RANK() to identify top-performing artists across decades",
+                    "Performance Tuning: Refined complex queries for efficiency on high-volume datasets"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Spotify_PlaylistTrack_Analysis"
+            },
+
+            {
+                "id": "fifa-world-cup-analysis",
+                "name": "FIFA World Cup Analysis",
+                "category": "SQL",
+                "summary": "An in-depth SQL exploration of historical FIFA World Cup data, analyzing team performances, goal trends, and tournament evolution.",
+                "description": "This project utilizes SQL to dissect decades of World Cup history, from 1930 to the present. By importing and processing large CSV datasets, the analysis uncovers patterns in home-field advantage, high-scoring eras, and the dominance of specific confederations. It demonstrates the ability to transform raw tournament data into actionable sporting insights through complex aggregations and historical trend mapping.",
+                "thumbnail": "/images/projects/Thumbnail/thumbnail.jpg",
+                "images": [],
+                "technologies": [
+                    "SQL (PostgreSQL/MySQL)",
+                    "CSV Data Migration",
+                    "Data Cleaning & Transformation",
+                    "Aggregate Functions",
+                    "Window Functions",
+                    "DBeaver"
+                ],
+                "duration": "3 days",
+                "status": "Completed",
+                "role": "Lead Data Analyst (Personal Project)",
+                "features": [
+                    "Tournament Analytics: Evaluated win/loss ratios and goal averages across different host nations and eras",
+                    "Player Performance Tracking: Identified top-scoring trends and historical milestones using advanced grouping logic",
+                    "CSV Lifecycle Management: Handled the end-to-end process of importing, cleaning, and structuring flat-file data into relational tables",
+                    "Trend Discovery: Used Window Functions to track the progression of participating teams and their relative rankings over time",
+                    "Complex Filtering: Built queries to isolate high-stakes match data and extra-time performance metrics"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/FIFA_World_Cup_Analysis"
+            },
+
+            {
+                "id": "sky-sports-analysis",
+                "name": "Sky Sports Analysis",
+                "category": "SQL",
+                "summary": "A sports-centric data analysis project focused on broadcasting trends, match statistics, and team performance metrics.",
+                "description": "Leveraging Sky Sports datasets, this project focuses on the intersection of media and sports performance. Through the import of structured CSV data, the analysis explores team standings, seasonal point distributions, and match-day variables. The project highlights proficiency in handling sports-specific logic, such as point accumulation systems and league table generation using SQL.",
+                "thumbnail": "/images/projects/Thumbnail/thumbnail.jpg",
+                "images": [],
+                "technologies": [
+                    "SQL (PostgreSQL/MySQL)",
+                    "Data Normalization",
+                    "Relational Mapping",
+                    "Conditional Logic (CASE statements)",
+                    "Views & Subqueries"
+                ],
+                "duration": "3 days",
+                "status": "Completed",
+                "role": "Lead Data Analyst (Personal Project)",
+                "features": [
+                    "League Table Construction: Programmatically generated dynamic league standings using sophisticated SQL CASE logic and ordering",
+                    "Match Statistics Deep-Dive: Analyzed home vs. away performance disparities across multiple seasons",
+                    "Data Integrity Checks: Implemented cleaning scripts to handle null values and inconsistencies found in raw sports CSVs",
+                    "Broadcasting Insights: Aggregated match data to identify peak performance periods and high-impact sporting events",
+                    "Performance Benchmarking: Compared team metrics against league averages using subqueries and statistical aggregations"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Sky_Sports_Analysis"
+            },
+
+            {
+                "id": "airbnb-analysis",
+                "name": "Airbnb Analysis",
+                "category": "SQL",
+                "summary": "A data-driven analysis of short-term rental markets, focusing on pricing optimization, occupancy rates, and host performance.",
+                "description": "This project dives into the hospitality sector by analyzing Airbnb listing and review data. By importing extensive CSV files into a relational database, the study identifies key drivers of rental pricing, the impact of review scores on occupancy, and geographic hotspots. It showcases the ability to use SQL for market research and business intelligence in a real-world commercial context.",
+                "thumbnail": "/images/projects/Thumbnail/thumbnail.jpg",
+                "images": [],
+                "technologies": [
+                    "SQL (PostgreSQL/MySQL)",
+                    "Market Trend Analysis",
+                    "Statistical SQL Functions",
+                    "String Manipulation",
+                    "Data Type Casting"
+                ],
+                "duration": "3 days",
+                "status": "Completed",
+                "role": "Lead Data Analyst (Personal Project)",
+                "features": [
+                    "Pricing Intelligence: Calculated average nightly rates across different neighborhoods and property types",
+                    "Review Sentiment Correlation: Linked review frequency and scores to estimate listing popularity and reliability",
+                    "Geospatial Grouping: Categorized listings by city districts to identify high-revenue 'hotspots'",
+                    "Host Analytics: Evaluated host success by analyzing multi-listing ownership and response metrics",
+                    "Data Transformation: Converted raw text-based CSV values into numeric and date formats for chronological analysis"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Airbnb_Analysis"
+            },
+
             //Tableau Projects
 
             {

@@ -136,12 +136,20 @@
 
 /* --- DESKTOP VISUAL FRAME --- */
 .cyber-frame { position: relative; width: 100%; max-width: 380px; margin: 0 auto; z-index: 5; }
-.glass-card { padding: 10px; background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; position: relative; z-index: 2; }
-.cyber-img { width: 100%; height: 480px; object-fit: cover; border-radius: 8px; }
+/* .glass-card { padding: 10px; background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; position: relative; z-index: 2; } */
+/* .cyber-img { width: 100%; height: 480px; object-fit: cover; border-radius: 8px; } */
 
-.geo-corner { position: absolute; width: 30px; height: 30px; border: 1px solid #667eea; z-index: 1; }
+
+.glass-card { padding: 10px; background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 80px; position: relative; z-index: 2; }
+.cyber-img { width: 100%; height: 480px; object-fit: cover; border-radius: 70px; }
+
+/* .geo-corner { position: absolute; width: 40px; height: 40px; border: 1px solid #667eea; z-index: 1; }
 .top-left { top: -10px; left: -10px; border-right: none; border-bottom: none; }
-.bottom-right { bottom: -10px; right: -10px; border-left: none; border-top: none; }
+.bottom-right { bottom: -10px; right: -10px; border-left: none; border-top: none; } */
+
+.geo-corner { position: absolute; width: 40px; height: 40px; border: 1px solid #667eea; z-index: 1; pointer-events: none;}
+.top-left { top: -10px; left: -10px; border-right: none; border-bottom: none; border-top-left-radius: 88px;}
+.bottom-right { bottom: -10px; right: -10px; border-left: none; border-top: none; border-bottom-right-radius: 88px;}
 
 .floating-code-card {
   position: absolute;
