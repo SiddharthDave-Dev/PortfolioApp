@@ -422,86 +422,76 @@ export const portfolioContent = {
                 certificateUrl: "https://coursera.org/verify/N12D1D192PN3",
                 featured: false
             },
-            {
-                title: "Creative Designing in Power BI",
-                issuer: "Microsoft",
-                certificateId: "9SSF2HSZKHT3",
-                date: "June 2023",
-                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
-                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
-                certificateUrl: "https://coursera.org/verify/9SSF2HSZKHT3",
-                featured: false
-            },
-            {
-                title: "Data Analysis and Visualization with Power BI",
-                issuer: "Microsoft",
-                certificateId: "6JKHO33MUOXL",
-                date: "June 2023",
-                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
-                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
-                certificateUrl: "https://coursera.org/verify/6JKHO33MUOXL",
-                featured: false
-            },
-            {
-                title: "Data Modeling in Power BI",
-                issuer: "Microsoft",
-                certificateId: "PPCAAM0RJ26R",
-                date: "June 2023",
-                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
-                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
-                certificateUrl: "https://coursera.org/verify/PPCAAM0RJ26R",
-                featured: false
-            },
-            {
-                title: "Deploy and Maintain Power BI Assets and Capstone project",
-                issuer: "Microsoft",
-                certificateId: "XZ0JPV7FANX2",
-                date: "June 2023",
-                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
-                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
-                certificateUrl: "https://coursera.org/verify/XZ0JPV7FANX2",
-                featured: false
-            },
-            {
-                title: "Extract, Transform and Load Data in Power BI",
-                issuer: "Microsoft",
-                certificateId: "DB2TH1UCZ45E",
-                date: "June 2023",
-                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
-                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
-                certificateUrl: "https://coursera.org/verify/DB2TH1UCZ45E",
-                featured: false
-            },
-            {
-                title: "Harnessing the Power of Data with Power BI",
-                issuer: "Microsoft",
-                certificateId: "0BEY4SV651D0",
-                date: "June 2023",
-                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
-                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
-                certificateUrl: "https://coursera.org/verify/0BEY4SV651D0",
-                featured: false
-            },
-            {
-                title: "Microsoft PL-300 Exam Preparation and Practice",
-                issuer: "Microsoft",
-                certificateId: "321ZOKD5R0L8",
-                date: "June 2023",
-                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
-                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
-                certificateUrl: "https://coursera.org/verify/321ZOKD5R0L8",
-                featured: false
-            },
-            {
-                title: "Microsoft Power BI Data Analyst",
-                issuer: "Microsoft",
-                certificateId: "O19PVRW3NVLZ",
-                date: "June 2023",
-                description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
-                skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
-                certificateUrl: "https://coursera.org/verify/professional-cert/O19PVRW3NVLZ",
-                featured: true
-            },
+            // {
+            //     title: "Creative Designing in Power BI",
+            //     issuer: "Microsoft",
+            //     certificateId: "9SSF2HSZKHT3",
+            //     date: "June 2023",
+            //     description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+            //     skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+            //     certificateUrl: "https://coursera.org/verify/9SSF2HSZKHT3",
+            //     featured: false
+            // },
+            // {
+            //     title: "Data Analysis and Visualization with Power BI",
+            //     issuer: "Microsoft",
+            //     certificateId: "6JKHO33MUOXL",
+            //     date: "June 2023",
+            //     description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+            //     skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+            //     certificateUrl: "https://coursera.org/verify/6JKHO33MUOXL",
+            //     featured: false
+            // },
+            // {
+            //     title: "Data Modeling in Power BI",
+            //     issuer: "Microsoft",
+            //     certificateId: "PPCAAM0RJ26R",
+            //     date: "June 2023",
+            //     description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+            //     skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+            //     certificateUrl: "https://coursera.org/verify/PPCAAM0RJ26R",
+            //     featured: false
+            // },
+            // {
+            //     title: "Deploy and Maintain Power BI Assets and Capstone project",
+            //     issuer: "Microsoft",
+            //     certificateId: "XZ0JPV7FANX2",
+            //     date: "June 2023",
+            //     description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+            //     skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+            //     certificateUrl: "https://coursera.org/verify/XZ0JPV7FANX2",
+            //     featured: false
+            // },
+            // {
+            //     title: "Extract, Transform and Load Data in Power BI",
+            //     issuer: "Microsoft",
+            //     certificateId: "DB2TH1UCZ45E",
+            //     date: "June 2023",
+            //     description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+            //     skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+            //     certificateUrl: "https://coursera.org/verify/DB2TH1UCZ45E",
+            //     featured: false
+            // },
+            // {
+            //     title: "Harnessing the Power of Data with Power BI",
+            //     issuer: "Microsoft",
+            //     certificateId: "0BEY4SV651D0",
+            //     date: "June 2023",
+            //     description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+            //     skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+            //     certificateUrl: "https://coursera.org/verify/0BEY4SV651D0",
+            //     featured: false
+            // },
+            // {
+            //     title: "Microsoft Power BI Data Analyst",
+            //     issuer: "Microsoft",
+            //     certificateId: "O19PVRW3NVLZ",
+            //     date: "June 2023",
+            //     description: "Validates expertise in designing data processing systems and machine learning models on Google Cloud.",
+            //     skills: ["GCP", "BigQuery", "Dataflow", "Pub/Sub", "ML"],
+            //     certificateUrl: "https://coursera.org/verify/professional-cert/O19PVRW3NVLZ",
+            //     featured: true
+            // },
             {
                 title: "Preparing Data for Analysis with Microsoft Excel",
                 issuer: "Microsoft",
