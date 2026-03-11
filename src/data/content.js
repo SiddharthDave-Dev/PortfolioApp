@@ -16,9 +16,10 @@ export const portfolioContent = {
             "Mobile App Creator",
             "iOS Developer",
             "Problem Solver",
+            "Machine Learning ",
             "Swift Expert"
         ],
-        description: "TechnData Analyst with a 2+ year professional foundation in iOS Engineering. I bridge the gap between technical development and strategic insights by leveraging Advanced SQL, Python, and Tableau to transform complex datasets into actionable business intelligence. Specialized in cleaning large-scale data and building interactive stories that drive decision-making.",
+        description: "TechnData Analyst with a 3+ year professional foundation in iOS Engineering. I bridge the gap between technical development and strategic insights by leveraging Advanced SQL, Python, Machine Learning and Tableau to transform complex datasets into actionable business intelligence. Specialized in cleaning large-scale data and building interactive stories that drive decision-making.",
         resumeText: "Download Resume",
         contactText: "Let's Connect",
         profileImage: "/images/profile-avatar.jpg",
@@ -51,7 +52,7 @@ export const portfolioContent = {
     about: {
         title: "About Me",
         subtitle: "Discover my journey & passion",
-        description: "### From Building Apps to Building Insights\n\nAfter **2+ years of engineering high-performance mobile applications**, I pivoted into Data Science to focus on the 'why' behind the technology. My background as an iOS Developer gives me a unique technical edge; I approach every dataset with a developer’s focus on **performance optimization, clean code, and data integrity.**\n\nToday, I specialize in the full analytical lifecycle across multiple domains:\n\n* **Advanced SQL Analytics:** Expert in writing high-performance queries to solve complex business questions. Proficient in multi-level joins, window functions (Ranking, Lead/Lag), and CTEs to extract insights from massive relational databases.\n* **Python Data Engineering:** Specialized in building robust data cleaning pipelines. I leverage **Pandas and NumPy** to sanitize raw datasets, handle missing values, and perform complex data transformations for analytical readiness.\n* **Strategic Data Storytelling:** Expert in transforming dry numbers into interactive visual narratives using **Tableau**. I focus on building dynamic dashboards with advanced filtering and 'Story' flows that guide stakeholders to data-driven decisions.\n\nI am dedicated to helping organizations turn raw numbers into the **strategic clarity** that shapes their future.",
+        description: "### From Building Apps to Building Insights\n\nAfter **3+ years of engineering high-performance mobile applications**, I pivoted into Data Science to focus on the 'why' behind the technology. My background as an iOS Developer gives me a unique technical edge; I approach every dataset with a developer’s focus on **performance optimization, clean code, and data integrity.**\n\nToday, I specialize in the full analytical lifecycle across multiple domains:\n\n* **Advanced SQL Analytics:** Expert in writing high-performance queries to solve complex business questions. Proficient in multi-level joins, window functions (Ranking, Lead/Lag), and CTEs to extract insights from massive relational databases.\n* **Python Data Engineering:** Specialized in building robust data cleaning pipelines. I leverage **Pandas and NumPy** to sanitize raw datasets, handle missing values, and perform complex data transformations for analytical readiness.\n* **Machine Learning & Predictive Modeling:** Experienced in building predictive models using **Scikit-learn**, applying algorithms such as Linear Regression, Logistic Regression, Decision Trees, Random Forest, KNN, Naïve Bayes, and Clustering to uncover patterns and forecast outcomes from real-world datasets.\n* **Strategic Data Storytelling:** Expert in transforming dry numbers into interactive visual narratives using **Tableau**. I focus on building dynamic dashboards with advanced filtering and 'Story' flows that guide stakeholders to data-driven decisions.\n\nI am dedicated to helping organizations turn raw numbers into the **strategic clarity** that shapes their future.",
         education: {
             title: "Education",
             degrees: [
@@ -91,16 +92,57 @@ export const portfolioContent = {
                     location: "Ahmedabad, India",
                     description: "Developed scalable, high-performance native iOS applications with emphasis on clean architecture, modular code, and smooth user experience.",
                     responsibilities: [
-                        "Developed native iOS applications using Swift, focusing on performance and clean architectural patterns.",
-                        "Integrated RESTful APIs to ensure reliable and smooth backend communication.",
-                        "Built user-friendly interfaces using UIKit and basic SwiftUI components.",
-                        "Performed debugging, profiling, and testing to enhance app stability and performance.",
-                        "Managed App Store submissions, provisioning profiles, and application updates."
+                        "Worked on live iOS projects using Swift.",
+                        "Explored and implemented new features using SwiftUI.",
+                        "Collaborated with clients and teams during project deadlines and deployed application builds."
                     ],
-                    tech: ["Swift", "UIKit", "SwiftUI", "REST APIs", "Xcode", "App Store Connect"],
+                    tech: [
+                        "Swift",
+                        "UIKit",
+                        "SwiftUI",
+                        "REST APIs",
+                        "Auto Layout",
+                        "Git",
+                        "Xcode",
+                        "App Store Connect",
+                        "Core Data",
+                        "URLSession"
+                    ],
                     achievements: [
-                        "Delivered multiple production-ready app features within deadlines",
-                        "Improved app performance and reduced crash rates through optimization"
+                        "Delivered multiple production-ready features across live iOS applications within strict deadlines.",
+                        "Optimized application performance and reduced crash occurrences through debugging and code improvements.",
+                        "Successfully deployed builds and managed releases on App Store Connect.",
+                        "Improved code maintainability by following modular architecture and clean coding practices."
+                    ]
+                },
+
+                {
+                    role: "iOS Developer",
+                    company: "TechInnate Solutions OPC Private Limited",
+                    period: "Jun 2022 – Jul 2023",
+                    location: "Ahmedabad, India",
+                    description: "Developed scalable, high-performance native iOS applications with emphasis on clean architecture, modular code, and smooth user experience.",
+                    responsibilities: [
+                        "Developed and maintained iOS applications using Swift and Xcode.",
+                        "Implemented responsive user interfaces based on UI/UX designs.",
+                        "Integrated RESTful APIs and handled data exchange with backend services.",
+                        "Performed testing, debugging, and troubleshooting to ensure application stability."
+                    ],
+                    tech: [
+                        "Swift",
+                        "UIKit",
+                        "REST APIs",
+                        "Auto Layout",
+                        "JSON Parsing",
+                        "Git",
+                        "Xcode",
+                        "App Store Connect"
+                    ],
+                    achievements: [
+                        "Built and maintained multiple iOS modules used in production applications.",
+                        "Improved application stability by identifying and fixing bugs during testing.",
+                        "Collaborated with designers and backend developers to deliver smooth user experiences.",
+                        "Successfully supported application releases and updates on the App Store."
                     ]
                 }
             ]
@@ -119,7 +161,7 @@ export const portfolioContent = {
                 title: "Data Science",
                 description:
                     "Building a strong foundation in Python, machine learning basics, data cleaning, and exploratory analysis. Applying analytical thinking to derive meaningful insights from raw data.",
-                skills: ["Python", "Data Cleaning", "SQL", "Pandas", "NumPy", "Tableau", "Statistics"]
+                skills: ["Python", "Data Cleaning", "SQL", "Pandas", "NumPy", "Tableau", "Statistics", "Machine Learning "]
             },
             {
                 icon: "/images/data-viz-icon.png",
@@ -140,7 +182,7 @@ export const portfolioContent = {
 
         "stats": [
             {
-                "number": "2+",
+                "number": "3+",
                 "label": "Years Technical Experience",
                 "icon": ""
             },
@@ -165,7 +207,7 @@ export const portfolioContent = {
                 "icon": ""
             },
             {
-                "number": "Active",
+                "number": "8+",
                 "label": "ML & Predictive Analytics",
                 "icon": ""
             }
@@ -177,25 +219,25 @@ export const portfolioContent = {
                 {
                     "year": "2019",
                     "title": "Diploma in Information Technology",
-                    "description": "Established core technical foundations at LJ Polytechnic, mastering data structures, logic design, and relational database fundamentals.",
+                    "description": "Completed Diploma in Information Technology at LJ Polytechnic, building strong foundations in programming, data structures, and relational databases.",
                     "type": "education"
                 },
                 {
                     "year": "2022",
-                    "title": "Bachelor of Engineering (IT)",
-                    "description": "Pursued advanced software engineering at LJ University, focusing on enterprise-level system design and emerging technologies.",
+                    "title": "Bachelor of Engineering (Information Technology)",
+                    "description": "Started Bachelor of Engineering in Information Technology at LJ University while continuing to strengthen software development and system design skills.",
                     "type": "education"
                 },
                 {
-                    "year": "2023",
-                    "title": "iOS Engineering Phase",
-                    "description": "Built high-performance mobile applications professionally. Specialized in clean architecture and complex state management using Swift and UIKit.",
+                    "year": "2022",
+                    "title": "iOS Developer Career Start",
+                    "description": "Started professional career as an iOS Developer, building native mobile applications using Swift, UIKit, and REST APIs while gaining real-world development experience.",
                     "type": "work"
                 },
                 {
                     "year": "2025",
-                    "title": "Data Analytics Specialization",
-                    "description": "In August 2025, transitioned fully from mobile development to Data Science. Dedicated to engineering robust data pipelines and delivering business intelligence through SQL, Python, and Tableau.",
+                    "title": "Data Analytics & Machine Learning Transition",
+                    "description": "Transitioned focus from mobile development to Data Analytics and Machine Learning, working with Python, SQL, data visualization, and predictive modeling techniques.",
                     "type": "current"
                 }
             ]
@@ -622,6 +664,18 @@ export const portfolioContent = {
 
         technical: [
             {
+                name: "Machine Learning & Predictive Analytics",
+                level: 50,
+                levelText: "Intermediate",
+                icon: "/images/python-icon.png",
+                fallback: "🤖",
+                color: "#306998",
+                colorEnd: "#FFD43B",
+                description:
+                    "Develops machine learning models using Python and Scikit-learn, performs data preprocessing, feature engineering, and model evaluation. Experienced with regression, classification, clustering techniques, and building predictive analytics solutions using real-world datasets."
+            },
+
+            {
                 name: "Working with Tableau",
                 level: 100,
                 levelText: "Advanced",
@@ -729,31 +783,85 @@ export const portfolioContent = {
             },
             {
                 category: "Frameworks & Libraries",
-                items: ["SwiftUI", "UIKit", "React"]
+                items: ["SwiftUI", "UIKit", "React", "Scikit-learn"]
+            },
+            {
+                category: "Machine Learning",
+                items: [
+                    "Linear Regression",
+                    "Logistic Regression",
+                    "Decision Tree",
+                    "Random Forest",
+                    "K-Nearest Neighbors (KNN)",
+                    "Naïve Bayes",
+                    "Clustering",
+                    "Model Evaluation",
+                    "Feature Engineering"
+                ]
+            },
+            {
+                category: "Data Analysis & Handling",
+                items: [
+                    "Pandas",
+                    "NumPy",
+                    "Data Cleaning",
+                    "Exploratory Data Analysis (EDA)"
+                ]
             },
             {
                 category: "Data Visualization",
-                items: ["Tableau", "Matplotlib", "Seaborn"]
-            },
-            {
-                category: "Data Handling & Analysis",
-                items: ["Data Cleaning", "Pandas", "NumPy"]
+                items: [
+                    "Tableau",
+                    "Matplotlib",
+                    "Seaborn"
+                ]
             },
             {
                 category: "Tools & Platforms",
-                items: ["Xcode", "VS Code", "Jupyter", " Git", "GitHub", "SourceTree", "Terminal", "Postman", "Anaconda"]
+                items: [
+                    "Xcode",
+                    "VS Code",
+                    "Jupyter Notebook",
+                    "Git",
+                    "GitHub",
+                    "SourceTree",
+                    "Terminal",
+                    "Postman",
+                    "Anaconda"
+                ]
             },
             {
                 category: "Cloud & Backend Services",
-                items: ["Firebase", "MondoDB", "Realm", "App Store Connect", "Analytics"]
+                items: [
+                    "Firebase",
+                    "MongoDB",
+                    "Realm",
+                    "App Store Connect",
+                    "Analytics"
+                ]
             },
             {
                 category: "Database Management",
-                items: ["SQL", "MongoDB", "Realm", "Core Data", "Firebase", "Swift Data"]
+                items: [
+                    "SQL",
+                    "MongoDB",
+                    "Realm",
+                    "Core Data",
+                    "Firebase",
+                    "Swift Data"
+                ]
             },
             {
                 category: "Soft Skills",
-                items: ["Teamwork", "Communication", "Problem-Solving", "Adaptability", "Time Management", "Leadership", "Creativity"]
+                items: [
+                    "Teamwork",
+                    "Communication",
+                    "Problem-Solving",
+                    "Adaptability",
+                    "Time Management",
+                    "Leadership",
+                    "Creativity"
+                ]
             }
         ],
 
@@ -814,10 +922,198 @@ export const portfolioContent = {
             }
         ]
     },
+
     projects: {
         title: "My Projects",
         subtitle: "A showcase of my recent work and creative solutions",
         items: [
+
+            // Machine Learning Projects
+
+            {
+                "id": "ml-linear-regression-home-price",
+                "name": "ML Linear Regression Home Price Prediction & Analysis Project",
+                "category": "Machine Learning",
+                "summary": "Predicts residential property prices using Linear Regression by analyzing housing features.",
+                "description": "This project implements a Linear Regression model to estimate house prices using features such as area, number of bedrooms, and location factors. Data preprocessing, feature engineering, and model evaluation were performed using Python and Scikit-learn.",
+                "thumbnail": "/images/projects/Thumbnail/house-price.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Jupyter Notebook"],
+                "duration": "2 days",
+                "status": "Completed",
+                "role": "Machine Learning Developer (Personal Project)",
+                "features": [
+                    "Cleaned and preprocessed housing dataset",
+                    "Implemented Linear Regression model using Scikit-learn",
+                    "Evaluated model with R² score and Mean Squared Error",
+                    "Visualized correlations between property features and price",
+                    "Predicted house prices based on multiple input variables"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Machine-Learning/blob/main/ML%20Linear%20Regression%20Home%20Price%20Prediction%20%26%20Analysis%20Project.ipynb"
+            },
+
+            {
+                "id": "decision-tree-airline-satisfaction",
+                "name": "ML Project - Decision Tree Airline Customer Satisfaction",
+                "category": "Machine Learning",
+                "summary": "Classifies airline passenger satisfaction using Decision Tree algorithm.",
+                "description": "This project builds a Decision Tree classification model to predict airline passenger satisfaction based on flight experience attributes such as seat comfort, inflight service, and delays.",
+                "thumbnail": "/images/projects/Thumbnail/airline.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+                "duration": "2 days",
+                "status": "Completed",
+                "role": "Machine Learning Developer (Personal Project)",
+                "features": [
+                    "Performed exploratory data analysis on airline satisfaction dataset",
+                    "Built Decision Tree classifier for satisfaction prediction",
+                    "Applied feature encoding and preprocessing",
+                    "Evaluated model with accuracy and confusion matrix",
+                    "Visualized feature importance influencing passenger satisfaction"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Machine-Learning/blob/main/ML%20Project%20-%20Decision%20Tree%20Airline%20Customer%20Satisfaction.ipynb"
+            },
+
+            {
+                "id": "knn-loan-credit-risk",
+                "name": "ML Project - KNN Loan Applicant Credit Risk Analysis",
+                "category": "Machine Learning",
+                "summary": "Analyzes loan applicant credit risk using the K-Nearest Neighbors algorithm.",
+                "description": "This project applies the KNN algorithm to classify loan applicants into risk categories based on financial and demographic attributes such as income, credit history, and loan amount.",
+                "thumbnail": "/images/projects/Thumbnail/loan-risk.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "StandardScaler", "Matplotlib"],
+                "duration": "2 days",
+                "status": "Completed",
+                "role": "Machine Learning Developer (Personal Project)",
+                "features": [
+                    "Performed feature scaling for KNN distance calculations",
+                    "Trained classification model for credit risk prediction",
+                    "Optimized K value for better model performance",
+                    "Evaluated accuracy and confusion matrix",
+                    "Visualized loan applicant risk distribution"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Machine-Learning/blob/main/ML%20Project%20-%20KNN%20Loan%20Applicant%20Credit%20Risk%20Analysis.ipynb"
+            },
+
+            {
+                "id": "linear-regression-insurance",
+                "name": "ML Project - Linear Regression Insurance Prediction",
+                "category": "Machine Learning",
+                "summary": "Predicts medical insurance charges based on personal and health factors.",
+                "description": "This project predicts insurance charges using Linear Regression by analyzing attributes such as age, BMI, smoking habits, and number of dependents.",
+                "thumbnail": "/images/projects/Thumbnail/insurance.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+                "duration": "2 days",
+                "status": "Completed",
+                "role": "Machine Learning Developer (Personal Project)",
+                "features": [
+                    "Performed preprocessing and feature encoding",
+                    "Implemented regression model for insurance cost prediction",
+                    "Evaluated model performance with regression metrics",
+                    "Visualized correlations between health features and insurance charges",
+                    "Identified key factors affecting insurance costs"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Machine-Learning/blob/main/ML%20Project%20-%20Linear%20Regression%20Insurance%20Prediction.ipynb"
+            },
+
+            {
+                "id": "logistic-regression-titanic",
+                "name": "ML Project - Logistic Regression Titanic Survival",
+                "category": "Machine Learning",
+                "summary": "Predicts passenger survival in the Titanic disaster using Logistic Regression.",
+                "description": "This project applies Logistic Regression to classify whether a passenger survived the Titanic disaster based on attributes such as age, ticket class, gender, and fare.",
+                "thumbnail": "/images/projects/Thumbnail/titanic.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+                "duration": "2 days",
+                "status": "Completed",
+                "role": "Machine Learning Developer (Personal Project)",
+                "features": [
+                    "Performed data cleaning and missing value handling",
+                    "Applied feature encoding for categorical variables",
+                    "Built Logistic Regression classification model",
+                    "Evaluated accuracy and classification metrics",
+                    "Visualized survival probability patterns"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Machine-Learning/blob/main/ML%20Project%20-%20Logistic%20Regression%20Titanic%20Survival.ipynb"
+            },
+
+            {
+                "id": "naive-bayes-loan-status",
+                "name": "ML Project - Naïve Bayes Loan Status Classification",
+                "category": "Machine Learning",
+                "summary": "Predicts loan approval status using the Naive Bayes classification algorithm.",
+                "description": "This project uses the Naive Bayes algorithm to classify loan applications as approved or rejected based on applicant financial attributes.",
+                "thumbnail": "/images/projects/Thumbnail/loan-status.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
+                "duration": "2 days",
+                "status": "Completed",
+                "role": "Machine Learning Developer (Personal Project)",
+                "features": [
+                    "Prepared and cleaned loan dataset",
+                    "Implemented Naive Bayes classifier",
+                    "Evaluated model using accuracy and confusion matrix",
+                    "Analyzed key features affecting loan approval",
+                    "Visualized classification results"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Machine-Learning/blob/main/ML%20Project%20-%20Naïve%20Bayes%20Loan%20Status%20Classification.ipynb"
+            },
+
+            {
+                "id": "random-forest-hotel-cancellation",
+                "name": "ML Project - Random Forest Hotel Cancellation Prediction Analysis",
+                "category": "Machine Learning",
+                "summary": "Predicts hotel booking cancellations using Random Forest classification.",
+                "description": "This project uses Random Forest algorithm to predict hotel booking cancellations using reservation details such as lead time, number of guests, and previous cancellations.",
+                "thumbnail": "/images/projects/Thumbnail/hotel.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+                "duration": "2 days",
+                "status": "Completed",
+                "role": "Machine Learning Developer (Personal Project)",
+                "features": [
+                    "Analyzed hotel booking dataset for cancellation trends",
+                    "Built Random Forest classifier for prediction",
+                    "Performed feature importance analysis",
+                    "Evaluated model performance using classification metrics",
+                    "Visualized booking cancellation patterns"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Machine-Learning/blob/main/ML%20Project%20-%20Random%20Forest%20Hotel%20Cancellation%20Prediction%20Analysis.ipynb"
+            },
+
+            {
+                "id": "clustering-cardiac-arrest",
+                "name": "ML Project Clustering Cardiac Arrest Prediction",
+                "category": "Machine Learning",
+                "summary": "Applies clustering techniques to analyze cardiac arrest risk patterns.",
+                "description": "This project applies unsupervised learning using clustering algorithms to identify patterns and risk groups associated with cardiac arrest cases based on medical indicators.",
+                "thumbnail": "/images/projects/Thumbnail/cardiac.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+                "duration": "2 days",
+                "status": "Completed",
+                "role": "Machine Learning Developer (Personal Project)",
+                "features": [
+                    "Performed exploratory data analysis on medical dataset",
+                    "Implemented clustering algorithm for patient segmentation",
+                    "Analyzed clusters to identify high-risk groups",
+                    "Visualized clusters using dimensionality reduction",
+                    "Generated insights into cardiac arrest risk patterns"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Machine-Learning/blob/main/ML%20Project%20Clustering%20Cardiac%20Arrest%20Prediction.ipynb"
+            },
+
 
             // SQL Projects
 
@@ -1035,10 +1331,6 @@ export const portfolioContent = {
                 "demoUrl": null,
                 "githubUrl": "https://github.com/SiddharthDave-Dev/SpotifyProject/tree/main/Spotify_Data_Cleaning"
             },
-
-            //Python Projects
-
-
 
             // Swift Projects
 

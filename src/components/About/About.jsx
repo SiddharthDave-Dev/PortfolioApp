@@ -222,13 +222,13 @@ const About = () => {
                     whileHover={{ scale: 1.03, y: -6 }}
                   >
                     <div className="experience-header">
-                      <div>
-                        <h4 className="experience-role">{job.role}</h4>
-                        <div className="experience-company">
-                          {job.company} <span className="experience-dot">•</span>{' '}
-                          <span className="experience-location">{job.location}</span>
-                        </div>
-                      </div>
+                     <div className="experience-title-container">
+    <h4 className="experience-role">{job.role}</h4>
+    <div className="experience-company">
+      {job.company} <span className="experience-dot">•</span>{' '}
+      <span className="experience-location">{job.location}</span>
+    </div>
+  </div>
                       <div className="experience-period">{job.period}</div>
                     </div>
                     <p className="experience-description">{job.description}</p>
