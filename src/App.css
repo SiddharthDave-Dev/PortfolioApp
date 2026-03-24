@@ -179,3 +179,15 @@ body::before {
   background: linear-gradient(90deg, #667eea, #f093fb);
   box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
 }
+
+main {
+  position: relative;
+  /* Ensure children with absolute positioning can overflow their parents */
+  overflow: visible; 
+}
+
+section {
+  position: relative;
+  /* CRITICAL: If this is 'hidden', your dropdown will never be seen outside the section */
+  overflow: visible !important; 
+}

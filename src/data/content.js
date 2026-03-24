@@ -13,10 +13,11 @@ export const portfolioContent = {
         roles: [
             "Data Scienctist",
             "Data Analyst",
+            "AI/ML Engineer",
+            "Business Analyst",
             "Mobile App Creator",
             "iOS Developer",
             "Problem Solver",
-            "Machine Learning ",
             "Swift Expert"
         ],
         description: "TechnData Analyst with a 3+ year professional foundation in iOS Engineering. I bridge the gap between technical development and strategic insights by leveraging Advanced SQL, Python, Machine Learning and Tableau to transform complex datasets into actionable business intelligence. Specialized in cleaning large-scale data and building interactive stories that drive decision-making.",
