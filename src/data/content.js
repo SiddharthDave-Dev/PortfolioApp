@@ -929,6 +929,32 @@ export const portfolioContent = {
         subtitle: "A showcase of my recent work and creative solutions",
         items: [
 
+            // Data Science Projects
+
+            {
+                "id": "bank-customer-churn-analysis",
+                "name": "Bank Customer Churn Analysis & Prediction",
+                "category": "Data Science",
+                "summary": "Analyzes bank customer data to identify churn patterns and predict customer retention using machine learning.",
+                "description": "This project builds an end-to-end data pipeline for bank customer churn analysis. It includes data cleaning, feature engineering, SQL-based analysis, and visualization using Tableau. Machine learning models such as SVM and Random Forest are applied to predict customer churn and derive actionable business insights.",
+                "thumbnail": "/images/projects/Thumbnail/churn.jpg",
+                "images": [],
+                "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn", "SQL", "Tableau"],
+                "duration": "3-4 days",
+                "status": "Completed",
+                "role": "Data Analyst / Machine Learning (Personal Project)",
+                "features": [
+                    "Performed data cleaning and preprocessing on customer dataset",
+                    "Handled missing values using statistical techniques",
+                    "Created fact and dimension tables for structured analysis",
+                    "Executed SQL queries to extract business insights",
+                    "Built and evaluated ML models (SVM, Random Forest) for churn prediction",
+                    "Visualized trends and insights using Tableau dashboards"
+                ],
+                "demoUrl": null,
+                "githubUrl": "https://github.com/SiddharthDave-Dev/Bank-Churn-Analysis"
+            },
+
             // Machine Learning Projects
 
             {

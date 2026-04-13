@@ -24,12 +24,14 @@ const Profile = () => {
   const yText = useTransform(scrollY, [0, 500], [0, 40]);
 
   const resumeCategories = [
-    { label: 'AI / ML Engineer', icon: '🤖', file: 'Siddharth_Dave_Resume_AIML.pdf' },
-    { label: 'Data Scientist', icon: '📊', file: 'Siddharth_Dave_Resume_DS.pdf' },
-    { label: 'Data Analyst', icon: '🔍', file: 'Siddharth_Dave_Resume_DA.pdf' },
-    { label: 'Business Analyst', icon: '💼', file: 'Siddharth_Dave_Resume_BA.pdf' },
-    { label: 'ML Engineer', icon: '🤖', file: 'Siddharth_Dave_Resume_ML.pdf' },
+    // { label: 'AI / ML Engineer', icon: '🤖', file: 'Siddharth_Dave_Resume_AIML.pdf' },
+    // { label: 'Data Scientist', icon: '📊', file: 'Siddharth_Dave_Resume_DS.pdf' },
+    // { label: 'Data Analyst', icon: '🔍', file: 'Siddharth_Dave_Resume_DA.pdf' },
+    // { label: 'Business Analyst', icon: '💼', file: 'Siddharth_Dave_Resume_BA.pdf' },
+    // { label: 'ML Engineer', icon: '🤖', file: 'Siddharth_Dave_Resume_ML.pdf' },
     // { label: 'iOS Developer', icon: '📱', file: 'Siddharth_Dave_Resume_iOS.pdf' },
+
+    { label: 'General Resume', icon: '📄', file: 'Siddharth_Dave_Resume.pdf' },
   ];
 
   const handleDownload = (fileName) => {
