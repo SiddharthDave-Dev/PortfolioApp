@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { motion, useSpring, useMotionValue, useTransform } from 'framer-motion';
 
-const roles = [
-  { label: 'AI / ML', x: '10%', y: '15%', color: '#6366f1' },
-  { label: 'DATA SCIENTIST', x: '70%', y: '10%', color: '#a855f7' },
-  { label: 'iOS DEV', x: '75%', y: '60%', color: '#ec4899' },
-  { label: 'BIZ ANALYST', x: '15%', y: '70%', color: '#22c55e' },
-  { label: 'GENERALIST', x: '45%', y: '40%', color: '#3b82f6' },
-];
+// const roles = [
+//   { label: 'AI / ML', x: '10%', y: '15%', color: '#6366f1' },
+//   { label: 'DATA SCIENTIST', x: '70%', y: '10%', color: '#a855f7' },
+//   { label: 'iOS DEV', x: '75%', y: '60%', color: '#ec4899' },
+//   { label: 'BIZ ANALYST', x: '15%', y: '70%', color: '#22c55e' },
+//   { label: 'GENERALIST', x: '45%', y: '40%', color: '#3b82f6' },
+// ];
 
 const DynamicBackground = () => {
   const mouseX = useMotionValue(0);
