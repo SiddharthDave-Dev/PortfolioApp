@@ -8,6 +8,7 @@ import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import DynamicBackground from './components/Background/DynamicBackground';
+import ParticlesBackground from './components/ParticlesBackground';
 import './App.css';
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
             transition={{ duration: 1 }}
           >
             <DynamicBackground /> {/* Background stays fixed behind content */}
+            <ParticlesBackground />
             <Header />
             <main>
               <Profile />
