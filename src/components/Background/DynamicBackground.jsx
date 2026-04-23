@@ -45,29 +45,29 @@ const DynamicBackground = () => {
   );
 };
 
-const AuraCard = ({ role, mX, mY }) => {
-  // 3D Rotation logic
-  const rotateX = useTransform(mY, [-0.5, 0.5], [20, -20]);
-  const rotateY = useTransform(mX, [-0.5, 0.5], [-20, 20]);
+// const AuraCard = ({ role, mX, mY }) => {
+//   // 3D Rotation logic
+//   const rotateX = useTransform(mY, [-0.5, 0.5], [20, -20]);
+//   const rotateY = useTransform(mX, [-0.5, 0.5], [-20, 20]);
 
-  return (
-    <motion.div
-      className="aura-card"
-      style={{
-        left: role.x,
-        top: role.y,
-        rotateX,
-        rotateY,
-        perspective: 1000,
-        borderColor: role.color,
-        boxShadow: `0 0 20px ${role.color}22`,
-      }}
-    >
-      <div className="card-glow" style={{ background: role.color }} />
-      <span className="card-label">{role.label}</span>
-      <div className="card-scanline" />
-    </motion.div>
-  );
-};
+//   return (
+//     <motion.div
+//       className="aura-card"
+//       style={{
+//         left: role.x,
+//         top: role.y,
+//         rotateX,
+//         rotateY,
+//         perspective: 1000,
+//         borderColor: role.color,
+//         boxShadow: `0 0 20px ${role.color}22`,
+//       }}
+//     >
+//       <div className="card-glow" style={{ background: role.color }} />
+//       <span className="card-label">{role.label}</span>
+//       <div className="card-scanline" />
+//     </motion.div>
+//   );
+// };
 
 export default DynamicBackground;
