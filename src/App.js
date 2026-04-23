@@ -7,6 +7,7 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import DynamicBackground from './components/Background/DynamicBackground';
 import './App.css';
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
+            <DynamicBackground /> {/* Background stays fixed behind content */}
             <Header />
             <main>
               <Profile />
