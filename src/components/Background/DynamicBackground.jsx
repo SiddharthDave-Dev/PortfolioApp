@@ -40,15 +40,7 @@ const DynamicBackground = () => {
           y: useTransform(smoothY, [ -0.5, 0.5], [50, -50]),
         }}
       />
-
-      {/* {roles.map((role, i) => (
-        <AuraCard 
-          key={i} 
-          role={role} 
-          mX={smoothX} 
-          mY={smoothY} 
-        />
-      ))} */}
+      
     </div>
   );
 };
