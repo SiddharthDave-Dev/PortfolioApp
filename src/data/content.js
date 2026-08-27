@@ -53,10 +53,18 @@ export const portfolioContent = {
     about: {
         title: "About Me",
         subtitle: "Discover my journey & passion",
-        description: "### From Building Apps to Building Insights\n\nAfter **3+ years of engineering high-performance mobile applications**, I pivoted into Data Science to focus on the 'why' behind the technology. My background as an iOS Developer gives me a unique technical edge; I approach every dataset with a developer’s focus on **performance optimization, clean code, and data integrity.**\n\nToday, I specialize in the full analytical lifecycle across multiple domains:\n\n* **Advanced SQL Analytics:** Expert in writing high-performance queries to solve complex business questions. Proficient in multi-level joins, window functions (Ranking, Lead/Lag), and CTEs to extract insights from massive relational databases.\n* **Python Data Engineering:** Specialized in building robust data cleaning pipelines. I leverage **Pandas and NumPy** to sanitize raw datasets, handle missing values, and perform complex data transformations for analytical readiness.\n* **Machine Learning & Predictive Modeling:** Experienced in building predictive models using **Scikit-learn**, applying algorithms such as Linear Regression, Logistic Regression, Decision Trees, Random Forest, KNN, Naïve Bayes, and Clustering to uncover patterns and forecast outcomes from real-world datasets.\n* **Strategic Data Storytelling:** Expert in transforming dry numbers into interactive visual narratives using **Tableau**. I focus on building dynamic dashboards with advanced filtering and 'Story' flows that guide stakeholders to data-driven decisions.\n\nI am dedicated to helping organizations turn raw numbers into the **strategic clarity** that shapes their future.",
+        description: "### From Building Apps to Building Insights\n\nAfter **3+ years of engineering high-performance mobile applications**, I pivoted into Data Science to focus on the 'why' behind the technology. My background as an iOS Developer gives me a unique technical edge; I approach every dataset with a developer's focus on **performance optimization, clean code, and data integrity.**\n\nToday, I specialize in the full analytical lifecycle across multiple domains:\n\n* **Advanced SQL Analytics:** Expert in writing high-performance queries to solve complex business questions. Proficient in multi-level joins, window functions (Ranking, Lead/Lag), and CTEs to extract insights from massive relational databases.\n* **Python Data Engineering:** Specialized in building robust data cleaning pipelines. I leverage **Pandas and NumPy** to sanitize raw datasets, handle missing values, and perform complex data transformations for analytical readiness.\n* **Machine Learning & Predictive Modeling:** Experienced in building predictive models using **Scikit-learn**, applying algorithms such as Linear Regression, Logistic Regression, Decision Trees, Random Forest, KNN, Naïve Bayes, and Clustering to uncover patterns and forecast outcomes from real-world datasets.\n* **Strategic Data Storytelling:** Expert in transforming dry numbers into interactive visual narratives using **Tableau**. I focus on building dynamic dashboards with advanced filtering and 'Story' flows that guide stakeholders to data-driven decisions.\n\nI am dedicated to helping organizations turn raw numbers into the **strategic clarity** that shapes their future.",
         education: {
             title: "Education",
             degrees: [
+                {
+                    degree: "M.Tech in Data Science",
+                    university: "Indus University, Ahmedabad",
+                    year: "2026 - 2028",
+                    gpa: "In Progress",
+                    achievements: [],
+                    description: "Pursuing advanced coursework in Data Science, building on an undergraduate foundation in Information Technology and three years of professional software engineering experience. Focus areas include statistical modeling, machine learning, and applied data analysis."
+                },
                 {
                     degree: "B.E. / B.Tech. in Information Technology",
                     university: "LJ University",
@@ -239,6 +247,12 @@ export const portfolioContent = {
                     "year": "2025",
                     "title": "Data Analytics & Machine Learning Transition",
                     "description": "Transitioned focus from mobile development to Data Analytics and Machine Learning, working with Python, SQL, data visualization, and predictive modeling techniques.",
+                    "type": "current"
+                },
+                {
+                    "year": "2026",
+                    "title": "M.Tech in Data Science",
+                    "description": "Began M.Tech in Data Science at Indus University, Ahmedabad, deepening expertise in statistical modeling, machine learning, and applied data analysis.",
                     "type": "current"
                 }
             ]
