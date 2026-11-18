@@ -61,7 +61,8 @@ const About = () => {
       case 'google': return '/images/google.png';
       case 'ibm': return '/images/ibm.png';
       case 'microsoft': return '/images/microsoft.png';
-      case 'aws': return '/images/aws.png';
+      case 'amazon web services (aws)': return '/images/Amazon Web Services (AWS).png';
+      case 'fingertips': return '/images/Fingertips.jpeg';
       case 'coursera': return '/images/coursera.png';
       case 'udemy': return '/images/udemy.png';
       case 'linkedin': return '/images/linkedin.png';
@@ -70,7 +71,7 @@ const About = () => {
       case 'johns hopkins university': return '/images/johns-hopkins-university.png';
       case 'rice university': return '/images/rice-university.png';
       case 'ec-council': return '/images/ec-council.png';
-      default: return '/images/coursera.png';
+      default: return '';
     }
   };
 
@@ -90,10 +91,10 @@ const About = () => {
 
   const about = portfolioContent?.about || {};
 
- // New States for filtering and UI
+  // New States for filtering and UI
   const [showFullList, setShowFullList] = useState(false);
   const [activeFilter, setActiveFilter] = useState('All');
-  const panelRef = useRef(null); 
+  const panelRef = useRef(null);
 
   // Resets the filter whenever the overlay is closed
   React.useEffect(() => {
@@ -101,7 +102,7 @@ const About = () => {
       setActiveFilter('All');
     }
   }, [showFullList]);
-  
+
   // Sort and Prepare Certifications
   const allCertifications = [...(about.certifications || [])].sort((a, b) => {
     if (a.featured && !b.featured) return -1;
@@ -113,8 +114,8 @@ const About = () => {
   const uniqueIssuers = ['All', ...new Set(allCertifications.map(c => c.issuer))];
 
   // Logic for the filtered list inside overlay
-  const filteredCertifications = activeFilter === 'All' 
-    ? allCertifications 
+  const filteredCertifications = activeFilter === 'All'
+    ? allCertifications
     : allCertifications.filter(cert => cert.issuer === activeFilter);
 
   const featuredCerts = allCertifications.slice(0, 8);
@@ -155,25 +156,25 @@ const About = () => {
           viewport={{ once: true, amount: 0.0 }}
           variants={containerVariants}
         >
-         {/* About Description with Structured UI */}
-<motion.div className="description-container" variants={itemVariants}>
-  <div className="description-glass-card">
-    <div className="description-header">
-      <div className="pulse-indicator"></div>
-      <span className="status-text">Professional Summary</span>
-    </div>
-    
-    <div className="description-body">
-      <ReactMarkdown>{about.description}</ReactMarkdown>
-    </div>
+          {/* About Description with Structured UI */}
+          <motion.div className="description-container" variants={itemVariants}>
+            <div className="description-glass-card">
+              <div className="description-header">
+                <div className="pulse-indicator"></div>
+                <span className="status-text">Professional Summary</span>
+              </div>
 
-    {/* Optional: Add a signature or a high-level summary line */}
-    <div className="description-footer">
-      <div className="footer-line"></div>
-      <p className="footer-tagline">Turning technical complexity into strategic clarity.</p>
-    </div>
-  </div>
-</motion.div>
+              <div className="description-body">
+                <ReactMarkdown>{about.description}</ReactMarkdown>
+              </div>
+
+              {/* Optional: Add a signature or a high-level summary line */}
+              <div className="description-footer">
+                <div className="footer-line"></div>
+                <p className="footer-tagline">Turning technical complexity into strategic clarity.</p>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Education */}
           {about.education && (
@@ -222,13 +223,13 @@ const About = () => {
                     whileHover={{ scale: 1.03, y: -6 }}
                   >
                     <div className="experience-header">
-                     <div className="experience-title-container">
-    <h4 className="experience-role">{job.role}</h4>
-    <div className="experience-company">
-      {job.company} <span className="experience-dot">•</span>{' '}
-      <span className="experience-location">{job.location}</span>
-    </div>
-  </div>
+                      <div className="experience-title-container">
+                        <h4 className="experience-role">{job.role}</h4>
+                        <div className="experience-company">
+                          {job.company} <span className="experience-dot">•</span>{' '}
+                          <span className="experience-location">{job.location}</span>
+                        </div>
+                      </div>
                       <div className="experience-period">{job.period}</div>
                     </div>
                     <p className="experience-description">{job.description}</p>
@@ -297,10 +298,16 @@ const About = () => {
                     <div className="cert-body">
                       <h4 className="cert-name">{cert.title}</h4>
                       <p className="cert-issuer">🏢 {cert.issuer}</p>
-                      <div className="cert-id-container">
+                      {/* <div className="cert-id-container">
                         <span className="cert-id-label">CREDENTIAL ID</span>
                         <span className="cert-id-value">{cert.certificateId}</span>
-                      </div>
+                      </div> */}
+                      {cert.certificateId && (
+                        <div className="cert-id-container">
+                          <span className="cert-id-label">CREDENTIAL ID</span>
+                          <span className="cert-id-value">{cert.certificateId}</span>
+                        </div>
+                      )}
                     </div>
                     <div className="cert-footer">
                       <span className="cert-date-text"></span>
@@ -414,14 +421,14 @@ const About = () => {
       {/* FULL LIST OVERLAY (SWIFT TABLE VIEW STYLE) */}
       <AnimatePresence>
         {showFullList && (
-          <motion.div 
+          <motion.div
             className="cert-overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleBackdropClick} // 1. Dismiss on empty area click
           >
-            <motion.div 
+            <motion.div
               ref={panelRef} // Reference for click-away logic
               className="cert-table-view"
               initial={{ x: '100%' }}
@@ -431,29 +438,29 @@ const About = () => {
             >
               <div className="table-header">
                 <div className="table-header-top">
-                    <h3>Certifications</h3>
-                    <button className="close-table-btn" onClick={() => setShowFullList(false)}>✕</button>
+                  <h3>Certifications</h3>
+                  <button className="close-table-btn" onClick={() => setShowFullList(false)}>✕</button>
                 </div>
 
                 {/* 2. Filter by Issuer */}
                 <div className="filter-pill-container">
-                    {uniqueIssuers.map(issuer => (
-                        <button 
-                            key={issuer}
-                            className={`filter-pill ${activeFilter === issuer ? 'active' : ''}`}
-                            onClick={() => setActiveFilter(issuer)}
-                        >
-                            {issuer}
-                        </button>
-                    ))}
+                  {uniqueIssuers.map(issuer => (
+                    <button
+                      key={issuer}
+                      className={`filter-pill ${activeFilter === issuer ? 'active' : ''}`}
+                      onClick={() => setActiveFilter(issuer)}
+                    >
+                      {issuer}
+                    </button>
+                  ))}
                 </div>
               </div>
 
               <div className="table-body">
                 {filteredCertifications.length > 0 ? (
                   filteredCertifications.map((cert, idx) => (
-                    <div 
-                      key={idx} 
+                    <div
+                      key={idx}
                       className={`table-row ${cert.featured ? 'table-row-featured' : ''}`} // 3. Highlight featured
                       onClick={() => handleCertificateClick(cert.certificateUrl)}
                     >
@@ -462,8 +469,8 @@ const About = () => {
                       </div>
                       <div className="row-content">
                         <div className="row-title">
-                            {cert.title}
-                            {cert.featured && <span className="row-featured-badge">Featured</span>}
+                          {cert.title}
+                          {cert.featured && <span className="row-featured-badge">Featured</span>}
                         </div>
                         <div className="row-subtitle">{cert.issuer} • {cert.certificateId}</div>
                       </div>

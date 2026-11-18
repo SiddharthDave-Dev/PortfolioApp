@@ -260,6 +260,46 @@ export const portfolioContent = {
         // In your data/content.js file
         certifications: [
             {
+                title: "Cloud Foundations - Training Badge",
+                issuer: "Amazon Web Services (AWS)",
+                certificateId: "",
+                date: "October 2026",
+                description: "Demonstrates foundational knowledge of AWS cloud architecture, core services, pricing models, and support resources.",
+                skills: ["AWS Architecture", "AWS Cloud", "AWS Core Services", "AWS Pricing", "AWS Support"],
+                certificateUrl: "https://www.credly.com/go/sGY9mirR",
+                featured: true
+            },
+            {
+                title: "Machine Learning for Natural Language Processing - Training Badge",
+                issuer: "Amazon Web Services (AWS)",
+                certificateId: "",
+                date: "October 2026",
+                description: "Covers machine learning concepts, natural language processing fundamentals, and building ML-based solutions on AWS.",
+                skills: ["AWS Cloud Best Practices", "Build A Solution Using Machine Learning", "Introduction To Natural Language Processing", "Machine Learning"],
+                certificateUrl: "https://www.credly.com/go/vBo7Vw30",
+                featured: true
+            },
+            {
+                title: "Machine Learning Foundations - Training Badge",
+                issuer: "Amazon Web Services (AWS)",
+                certificateId: "",
+                date: "October 2026",
+                description: "Demonstrates foundational understanding of machine learning concepts, principles, and AWS machine learning services.",
+                skills: ["AWS", "AWS Cloud Computing", "Artificial Intelligence: Machine Learning", "Machine Learning", "Machine Learning (ML) Foundations"],
+                certificateUrl: "https://www.credly.com/go/SqLaBd4b",
+                featured: true
+            },
+            {
+                title: "Data Science Master",
+                issuer: "Fingertips",
+                certificateId: "CERT-3281f8",
+                date: "October 2026",
+                description: "Demonstrates knowledge of Data Science, Data Analytics, and Machine Learning.",
+                skills: ["Tableau", "Python", "SQL", "Python with Machine Learning", "Statstics", "Big data", "Power BI", "Deep Learning", "Advanced Excel"],
+                certificateUrl: "https://lms.fingertips.co.in/public/certificate/verify/6ac377a63299bb28273281f8",
+                featured: true
+            },
+            {
                 title: "Accelerate Your Job Search with AI",
                 issuer: "Google",
                 certificateId: "XIDUCGI2LDJU",
